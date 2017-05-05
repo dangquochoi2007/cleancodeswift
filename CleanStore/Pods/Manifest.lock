@@ -1,0 +1,12 @@
+PODS:
+  - BaseViewSwift (1.0.0)
+
+DEPENDENCIES:
+  - BaseViewSwift
+
+SPEC CHECKSUMS:
+  BaseViewSwift: fc4705b9e238fcac7a796a565a7471e1f5d08a39
+
+PODFILE CHECKSUM: 943ad55a25e82eb1294fecc8c8de513f16cc2598
+
+COCOAPODS: 1.1.1
