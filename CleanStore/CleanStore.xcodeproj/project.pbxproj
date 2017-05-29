@@ -28,6 +28,15 @@
 		E65B195D1EB9DD8000237163 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B195C1EB9DD8000237163 /* Artist.swift */; };
 		E65B195F1EB9DEBD00237163 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B195E1EB9DEBD00237163 /* Strings.swift */; };
 		E65B19611EB9E3FC00237163 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B19601EB9E3FC00237163 /* User.swift */; };
+		E68D2DCC1EDBD6F10084F01C /* iBeaconConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DBF1EDBD6F10084F01C /* iBeaconConfigurator.swift */; };
+		E68D2DCD1EDBD6F10084F01C /* iBeaconInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DC11EDBD6F10084F01C /* iBeaconInteractor.swift */; };
+		E68D2DCE1EDBD6F10084F01C /* iBeaconPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DC31EDBD6F10084F01C /* iBeaconPresenter.swift */; };
+		E68D2DCF1EDBD6F10084F01C /* iBeaconRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DC51EDBD6F10084F01C /* iBeaconRouter.swift */; };
+		E68D2DD11EDBD6F10084F01C /* iBeaconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DC91EDBD6F10084F01C /* iBeaconViewModel.swift */; };
+		E68D2DD21EDBD6F10084F01C /* iBeaconWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DCB1EDBD6F10084F01C /* iBeaconWorker.swift */; };
+		E68D2DD71EDBDCA10084F01C /* iBeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DD51EDBDCA10084F01C /* iBeaconViewController.swift */; };
+		E68D2DD81EDBDCA10084F01C /* iBeaconViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E68D2DD61EDBDCA10084F01C /* iBeaconViewController.xib */; };
+		E68D2DDA1EDC06030084F01C /* RegionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DD91EDC06030084F01C /* RegionMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +90,15 @@
 		E65B195C1EB9DD8000237163 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		E65B195E1EB9DEBD00237163 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		E65B19601EB9E3FC00237163 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E68D2DBF1EDBD6F10084F01C /* iBeaconConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconConfigurator.swift; sourceTree = "<group>"; };
+		E68D2DC11EDBD6F10084F01C /* iBeaconInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconInteractor.swift; sourceTree = "<group>"; };
+		E68D2DC31EDBD6F10084F01C /* iBeaconPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconPresenter.swift; sourceTree = "<group>"; };
+		E68D2DC51EDBD6F10084F01C /* iBeaconRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconRouter.swift; sourceTree = "<group>"; };
+		E68D2DC91EDBD6F10084F01C /* iBeaconViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconViewModel.swift; sourceTree = "<group>"; };
+		E68D2DCB1EDBD6F10084F01C /* iBeaconWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconWorker.swift; sourceTree = "<group>"; };
+		E68D2DD51EDBDCA10084F01C /* iBeaconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconViewController.swift; sourceTree = "<group>"; };
+		E68D2DD61EDBDCA10084F01C /* iBeaconViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iBeaconViewController.xib; sourceTree = "<group>"; };
+		E68D2DD91EDC06030084F01C /* RegionMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +239,7 @@
 				E65B195C1EB9DD8000237163 /* Artist.swift */,
 				E65B195E1EB9DEBD00237163 /* Strings.swift */,
 				E65B19601EB9E3FC00237163 /* User.swift */,
+				E68D2DD91EDC06030084F01C /* RegionMonitor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -228,6 +247,7 @@
 		E65B19191EB9987D00237163 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E68D2DBD1EDBD6F10084F01C /* iBeacon */,
 				E65B193C1EB9D4EF00237163 /* Artists */,
 			);
 			path = Scenes;
@@ -318,6 +338,77 @@
 			path = Worker;
 			sourceTree = "<group>";
 		};
+		E68D2DBD1EDBD6F10084F01C /* iBeacon */ = {
+			isa = PBXGroup;
+			children = (
+				E68D2DBE1EDBD6F10084F01C /* Configurator */,
+				E68D2DC01EDBD6F10084F01C /* Interactor */,
+				E68D2DC21EDBD6F10084F01C /* Presenter */,
+				E68D2DC41EDBD6F10084F01C /* Router */,
+				E68D2DC61EDBD6F10084F01C /* View */,
+				E68D2DC81EDBD6F10084F01C /* ViewModel */,
+				E68D2DCA1EDBD6F10084F01C /* Worker */,
+			);
+			path = iBeacon;
+			sourceTree = "<group>";
+		};
+		E68D2DBE1EDBD6F10084F01C /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				E68D2DBF1EDBD6F10084F01C /* iBeaconConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		E68D2DC01EDBD6F10084F01C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E68D2DC11EDBD6F10084F01C /* iBeaconInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E68D2DC21EDBD6F10084F01C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E68D2DC31EDBD6F10084F01C /* iBeaconPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E68D2DC41EDBD6F10084F01C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E68D2DC51EDBD6F10084F01C /* iBeaconRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E68D2DC61EDBD6F10084F01C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E68D2DD51EDBDCA10084F01C /* iBeaconViewController.swift */,
+				E68D2DD61EDBDCA10084F01C /* iBeaconViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E68D2DC81EDBD6F10084F01C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E68D2DC91EDBD6F10084F01C /* iBeaconViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E68D2DCA1EDBD6F10084F01C /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				E68D2DCB1EDBD6F10084F01C /* iBeaconWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -396,6 +487,11 @@
 					E65B18E11EB98F0000237163 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					E65B18F81EB98F0000237163 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -436,6 +532,7 @@
 			files = (
 				E65B19571EB9D71100237163 /* ArtistsViewController.xib in Resources */,
 				E65B18F31EB98F0000237163 /* LaunchScreen.storyboard in Resources */,
+				E68D2DD81EDBDCA10084F01C /* iBeaconViewController.xib in Resources */,
 				E65B18F01EB98F0000237163 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -603,14 +700,22 @@
 				E65B19561EB9D71100237163 /* ArtistsViewController.swift in Sources */,
 				E65B18EE1EB98F0000237163 /* CleanStore.xcdatamodeld in Sources */,
 				E65B194B1EB9D4EF00237163 /* ArtistsConfigurator.swift in Sources */,
+				E68D2DCD1EDBD6F10084F01C /* iBeaconInteractor.swift in Sources */,
 				E65B19511EB9D4EF00237163 /* ArtistsWorker.swift in Sources */,
 				E65B194D1EB9D4EF00237163 /* ArtistsPresenter.swift in Sources */,
 				E65B194E1EB9D4EF00237163 /* ArtistsRouter.swift in Sources */,
 				E65B18E61EB98F0000237163 /* AppDelegate.swift in Sources */,
+				E68D2DCC1EDBD6F10084F01C /* iBeaconConfigurator.swift in Sources */,
+				E68D2DD11EDBD6F10084F01C /* iBeaconViewModel.swift in Sources */,
+				E68D2DCE1EDBD6F10084F01C /* iBeaconPresenter.swift in Sources */,
 				E65B194C1EB9D4EF00237163 /* ArtistsInteractor.swift in Sources */,
 				E65B19501EB9D4EF00237163 /* ArtistsViewModel.swift in Sources */,
+				E68D2DD71EDBDCA10084F01C /* iBeaconViewController.swift in Sources */,
+				E68D2DCF1EDBD6F10084F01C /* iBeaconRouter.swift in Sources */,
 				E65B19591EB9DC6A00237163 /* Album.swift in Sources */,
+				E68D2DD21EDBD6F10084F01C /* iBeaconWorker.swift in Sources */,
 				E65B195F1EB9DEBD00237163 /* Strings.swift in Sources */,
+				E68D2DDA1EDC06030084F01C /* RegionMonitor.swift in Sources */,
 				E65B195D1EB9DD8000237163 /* Artist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
