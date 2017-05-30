@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let screen = UIScreen.main
         self.window = UIWindow(frame: screen.bounds)
-        self.window?.rootViewController = iBeaconViewController()
+        self.window?.rootViewController = MeViewController()
         self.window?.makeKeyAndVisible()
         return true
     }

@@ -25,7 +25,7 @@ final class iBeaconViewController: UIViewController, CBCentralManagerDelegate {
     
     var centralManager:CBCentralManager!
     
-    @IBOutlet weak var ibeconLabel: UILabel!
+
     
     
     

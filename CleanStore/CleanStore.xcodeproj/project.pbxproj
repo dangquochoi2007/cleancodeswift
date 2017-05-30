@@ -10,6 +10,16 @@
 		469BB0E036E90F8D37F9104A /* Pods_CleanStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9892EA30C9D73B5C95FAD4 /* Pods_CleanStoreTests.framework */; };
 		8107C8CC77D828635F9D89AA /* Pods_CleanStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62BCFA0D3257683AE02D5434 /* Pods_CleanStore.framework */; };
 		B4611D3378C389D889A3321B /* Pods_CleanStoreUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89069F81FADBE31BE71FB1D4 /* Pods_CleanStoreUITests.framework */; };
+		E63D7CE71EDD4AFC0033F7ED /* MeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63D7CDA1EDD4AFC0033F7ED /* MeConfigurator.swift */; };
+		E63D7CE81EDD4AFC0033F7ED /* MeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63D7CDC1EDD4AFC0033F7ED /* MeInteractor.swift */; };
+		E63D7CE91EDD4AFC0033F7ED /* MePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63D7CDE1EDD4AFC0033F7ED /* MePresenter.swift */; };
+		E63D7CEA1EDD4AFC0033F7ED /* MeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63D7CE01EDD4AFC0033F7ED /* MeRouter.swift */; };
+		E63D7CEC1EDD4AFC0033F7ED /* MeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63D7CE41EDD4AFC0033F7ED /* MeViewModel.swift */; };
+		E63D7CED1EDD4AFC0033F7ED /* MeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63D7CE61EDD4AFC0033F7ED /* MeWorker.swift */; };
+		E63D7CF21EDD4C1E0033F7ED /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63D7CF01EDD4C1E0033F7ED /* MeViewController.swift */; };
+		E63D7CF31EDD4C1E0033F7ED /* MeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63D7CF11EDD4C1E0033F7ED /* MeViewController.xib */; };
+		E63D7CF61EDD58820033F7ED /* MeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63D7CF41EDD58820033F7ED /* MeTableViewCell.swift */; };
+		E63D7CF71EDD58820033F7ED /* MeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63D7CF51EDD58820033F7ED /* MeTableViewCell.xib */; };
 		E65B18E61EB98F0000237163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B18E51EB98F0000237163 /* AppDelegate.swift */; };
 		E65B18EE1EB98F0000237163 /* CleanStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E65B18EC1EB98F0000237163 /* CleanStore.xcdatamodeld */; };
 		E65B18F01EB98F0000237163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E65B18EF1EB98F0000237163 /* Assets.xcassets */; };
@@ -66,6 +76,16 @@
 		C2CE5346774C94920F7D5FC9 /* Pods-CleanStoreUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanStoreUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanStoreUITests/Pods-CleanStoreUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D37CFFEAF36AFC1A06C8E154 /* Pods-CleanStoreUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanStoreUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanStoreUITests/Pods-CleanStoreUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB2A25C20E5E1BC12DD1FDFF /* Pods-CleanStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanStoreTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanStoreTests/Pods-CleanStoreTests.release.xcconfig"; sourceTree = "<group>"; };
+		E63D7CDA1EDD4AFC0033F7ED /* MeConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeConfigurator.swift; sourceTree = "<group>"; };
+		E63D7CDC1EDD4AFC0033F7ED /* MeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeInteractor.swift; sourceTree = "<group>"; };
+		E63D7CDE1EDD4AFC0033F7ED /* MePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MePresenter.swift; sourceTree = "<group>"; };
+		E63D7CE01EDD4AFC0033F7ED /* MeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeRouter.swift; sourceTree = "<group>"; };
+		E63D7CE41EDD4AFC0033F7ED /* MeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewModel.swift; sourceTree = "<group>"; };
+		E63D7CE61EDD4AFC0033F7ED /* MeWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeWorker.swift; sourceTree = "<group>"; };
+		E63D7CF01EDD4C1E0033F7ED /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		E63D7CF11EDD4C1E0033F7ED /* MeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeViewController.xib; sourceTree = "<group>"; };
+		E63D7CF41EDD58820033F7ED /* MeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTableViewCell.swift; sourceTree = "<group>"; };
+		E63D7CF51EDD58820033F7ED /* MeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeTableViewCell.xib; sourceTree = "<group>"; };
 		E65B18E21EB98F0000237163 /* CleanStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E65B18E51EB98F0000237163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E65B18ED1EB98F0000237163 /* CleanStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CleanStore.xcdatamodel; sourceTree = "<group>"; };
@@ -159,6 +179,79 @@
 			path = Opencv;
 			sourceTree = "<group>";
 		};
+		E63D7CD81EDD4AFC0033F7ED /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				E63D7CD91EDD4AFC0033F7ED /* Configurator */,
+				E63D7CDB1EDD4AFC0033F7ED /* Interactor */,
+				E63D7CDD1EDD4AFC0033F7ED /* Presenter */,
+				E63D7CDF1EDD4AFC0033F7ED /* Router */,
+				E63D7CE11EDD4AFC0033F7ED /* View */,
+				E63D7CE31EDD4AFC0033F7ED /* ViewModel */,
+				E63D7CE51EDD4AFC0033F7ED /* Worker */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		E63D7CD91EDD4AFC0033F7ED /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				E63D7CDA1EDD4AFC0033F7ED /* MeConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		E63D7CDB1EDD4AFC0033F7ED /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E63D7CDC1EDD4AFC0033F7ED /* MeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E63D7CDD1EDD4AFC0033F7ED /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E63D7CDE1EDD4AFC0033F7ED /* MePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E63D7CDF1EDD4AFC0033F7ED /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E63D7CE01EDD4AFC0033F7ED /* MeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E63D7CE11EDD4AFC0033F7ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E63D7CF01EDD4C1E0033F7ED /* MeViewController.swift */,
+				E63D7CF11EDD4C1E0033F7ED /* MeViewController.xib */,
+				E63D7CF41EDD58820033F7ED /* MeTableViewCell.swift */,
+				E63D7CF51EDD58820033F7ED /* MeTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E63D7CE31EDD4AFC0033F7ED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E63D7CE41EDD4AFC0033F7ED /* MeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E63D7CE51EDD4AFC0033F7ED /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				E63D7CE61EDD4AFC0033F7ED /* MeWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
 		E65B18D91EB98F0000237163 = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +340,7 @@
 		E65B19191EB9987D00237163 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E63D7CD81EDD4AFC0033F7ED /* Me */,
 				E68D2DBD1EDBD6F10084F01C /* iBeacon */,
 				E65B193C1EB9D4EF00237163 /* Artists */,
 			);
@@ -532,8 +626,10 @@
 			files = (
 				E65B19571EB9D71100237163 /* ArtistsViewController.xib in Resources */,
 				E65B18F31EB98F0000237163 /* LaunchScreen.storyboard in Resources */,
+				E63D7CF31EDD4C1E0033F7ED /* MeViewController.xib in Resources */,
 				E68D2DD81EDBDCA10084F01C /* iBeaconViewController.xib in Resources */,
 				E65B18F01EB98F0000237163 /* Assets.xcassets in Resources */,
+				E63D7CF71EDD58820033F7ED /* MeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,7 +792,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E63D7CE81EDD4AFC0033F7ED /* MeInteractor.swift in Sources */,
 				E65B19611EB9E3FC00237163 /* User.swift in Sources */,
+				E63D7CF61EDD58820033F7ED /* MeTableViewCell.swift in Sources */,
 				E65B19561EB9D71100237163 /* ArtistsViewController.swift in Sources */,
 				E65B18EE1EB98F0000237163 /* CleanStore.xcdatamodeld in Sources */,
 				E65B194B1EB9D4EF00237163 /* ArtistsConfigurator.swift in Sources */,
@@ -708,14 +806,20 @@
 				E68D2DCC1EDBD6F10084F01C /* iBeaconConfigurator.swift in Sources */,
 				E68D2DD11EDBD6F10084F01C /* iBeaconViewModel.swift in Sources */,
 				E68D2DCE1EDBD6F10084F01C /* iBeaconPresenter.swift in Sources */,
+				E63D7CEA1EDD4AFC0033F7ED /* MeRouter.swift in Sources */,
 				E65B194C1EB9D4EF00237163 /* ArtistsInteractor.swift in Sources */,
 				E65B19501EB9D4EF00237163 /* ArtistsViewModel.swift in Sources */,
 				E68D2DD71EDBDCA10084F01C /* iBeaconViewController.swift in Sources */,
 				E68D2DCF1EDBD6F10084F01C /* iBeaconRouter.swift in Sources */,
 				E65B19591EB9DC6A00237163 /* Album.swift in Sources */,
 				E68D2DD21EDBD6F10084F01C /* iBeaconWorker.swift in Sources */,
+				E63D7CE71EDD4AFC0033F7ED /* MeConfigurator.swift in Sources */,
 				E65B195F1EB9DEBD00237163 /* Strings.swift in Sources */,
+				E63D7CF21EDD4C1E0033F7ED /* MeViewController.swift in Sources */,
 				E68D2DDA1EDC06030084F01C /* RegionMonitor.swift in Sources */,
+				E63D7CE91EDD4AFC0033F7ED /* MePresenter.swift in Sources */,
+				E63D7CED1EDD4AFC0033F7ED /* MeWorker.swift in Sources */,
+				E63D7CEC1EDD4AFC0033F7ED /* MeViewModel.swift in Sources */,
 				E65B195D1EB9DD8000237163 /* Artist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
