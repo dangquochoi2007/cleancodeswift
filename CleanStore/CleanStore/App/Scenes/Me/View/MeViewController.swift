@@ -14,8 +14,8 @@ protocol MeViewControllerInput: MePresenterOutput {
 
 protocol MeViewControllerOutput {
     
-    func doSomething()
-    
+    func fetchPromotions(request: MeViewModel.FetchPromotion.Request)
+    var promotionList: [Promotion]? { get }
 }
 
 
@@ -23,6 +23,10 @@ class MeViewController: UIViewController {
     
     var output: MeViewControllerOutput!
     var router: MeRouterProtocol!
+    
+    var displayedPromotionsList: [MeViewModel.FetchPromotion.ViewModel.DisplayedPromotion] = []
+    
+    @IBOutlet weak var meTableView: UITableView!
     
     
     // MARK: - Initializers
@@ -50,6 +54,7 @@ class MeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.configureTableViewOnLoad()
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,9 +76,9 @@ class MeViewController: UIViewController {
     // MARK: - Load data
     func doSomethingOnLoad() {
         // TODO: Ask the Interactor to do some work
-        output.doSomething()
-    }
 
+    }
+    
 }
 
 
@@ -87,5 +92,41 @@ extension MeViewController: MeViewControllerInput {
     func displaySomething(viewModel: MeViewModel) {
         
         // TODO: Update UI
+    }
+}
+
+// MARK: - Me TableView DataSource & Delegate
+
+extension MeViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    
+    // load config default for tableview
+    func configureTableViewOnLoad() {
+        meTableView.delegate = self
+        meTableView.dataSource = self
+        meTableView.autoresizingMask = [UIViewAutoresizing.flexibleHeight, UIViewAutoresizing.flexibleWidth]
+        meTableView.register(MeTableViewCell.nib, forCellReuseIdentifier: MeTableViewCell.nibName)
+        meTableView.contentInset.top = UIApplication.shared.statusBarFrame.height
+        meTableView.estimatedRowHeight = 85.0
+        meTableView.rowHeight = UITableViewAutomaticDimension
+        automaticallyAdjustsScrollViewInsets = false
+    }
+
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: MeTableViewCell.nibName, for: indexPath) as! MeTableViewCell
+        
+        return cell
     }
 }

@@ -8,13 +8,15 @@
 
 import UIKit
 
+// https://co8xis-agency.firebaseio.com/
+
 class MeWorker {
 
 
     // MARK: - Business Logic
 
-    func doSomeWork() {
-
-        // TODO: Do the work
+    
+    func fetchPromotion() {
+        
     }
 }

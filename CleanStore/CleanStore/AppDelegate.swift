@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,8 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let screen = UIScreen.main
         self.window = UIWindow(frame: screen.bounds)
-        self.window?.rootViewController = MeViewController()
+        self.window?.rootViewController = ArtistsViewController()
         self.window?.makeKeyAndVisible()
+        
+        FIRApp.configure()
+        
         return true
     }
 

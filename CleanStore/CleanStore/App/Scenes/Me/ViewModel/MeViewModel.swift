@@ -8,6 +8,34 @@
 
 import UIKit
 
-struct MeViewModel {
-
+struct MeViewModel
+{
+    //---------------------------------
+    struct FetchPromotion
+    {
+        // -- Request
+        struct Request
+        {
+        }
+        
+        
+        // -- Response
+        struct Response
+        {
+            var promotionList: [Promotion]
+        }
+        
+        
+        // -- View Model
+        struct ViewModel
+        {
+            struct DisplayedPromotion
+            {
+                var description: String
+            }
+            
+            var displayedPromotionsList: [DisplayedPromotion]
+        }
+    }
+    //---------------------------------
 }

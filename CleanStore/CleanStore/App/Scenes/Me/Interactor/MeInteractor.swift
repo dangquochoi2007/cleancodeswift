@@ -9,18 +9,18 @@
 import UIKit
 
 protocol MeInteractorInput: MeViewControllerOutput {
-
+    
 }
 
 protocol MeInteractorOutput {
-
-    func presentSomething()
 }
 
 final class MeInteractor {
 
     let output: MeInteractorOutput
     let worker: MeWorker
+    
+    var promotionList: [Promotion]?
 
 
     // MARK: - Initializers
@@ -37,17 +37,9 @@ final class MeInteractor {
 
 extension MeInteractor: MeViewControllerOutput {
 
-
     // MARK: - Business logic
-
-    func doSomething() {
-
-        // TODO: Create some Worker to do the work
-
-        worker.doSomeWork()
-
-        // TODO: Pass the result to the Presenter
-
-        output.presentSomething()
+    func fetchPromotions(request: MeViewModel.FetchPromotion.Request) {
+        
     }
+
 }

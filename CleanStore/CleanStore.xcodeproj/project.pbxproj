@@ -38,6 +38,15 @@
 		E65B195D1EB9DD8000237163 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B195C1EB9DD8000237163 /* Artist.swift */; };
 		E65B195F1EB9DEBD00237163 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B195E1EB9DEBD00237163 /* Strings.swift */; };
 		E65B19611EB9E3FC00237163 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B19601EB9E3FC00237163 /* User.swift */; };
+		E65DD6371EDE63CB0091CA3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E65DD6361EDE63CB0091CA3C /* GoogleService-Info.plist */; };
+		E65DD63B1EDE66A80091CA3C /* Promotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD63A1EDE66A80091CA3C /* Promotion.swift */; };
+		E65DD6401EDEB0710091CA3C /* PromotionAPIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD63F1EDEB0710091CA3C /* PromotionAPIStore.swift */; };
+		E65DD6421EDEB0CF0091CA3C /* PromotionStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD6411EDEB0CF0091CA3C /* PromotionStoreProtocol.swift */; };
+		E65DD6441EDEB1B00091CA3C /* PromotionWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD6431EDEB1B00091CA3C /* PromotionWorker.swift */; };
+		E65DD6461EDEB3560091CA3C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD6451EDEB3560091CA3C /* NetworkClient.swift */; };
+		E65DD64C1EDEBDC90091CA3C /* URLRequest+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD64B1EDEBDC90091CA3C /* URLRequest+JSON.swift */; };
+		E65DD64E1EDEC0D40091CA3C /* Data+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD64D1EDEC0D40091CA3C /* Data+JSON.swift */; };
+		E65DD6501EDEC3B70091CA3C /* Parsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD64F1EDEC3B70091CA3C /* Parsable.swift */; };
 		E68D2DCC1EDBD6F10084F01C /* iBeaconConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DBF1EDBD6F10084F01C /* iBeaconConfigurator.swift */; };
 		E68D2DCD1EDBD6F10084F01C /* iBeaconInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DC11EDBD6F10084F01C /* iBeaconInteractor.swift */; };
 		E68D2DCE1EDBD6F10084F01C /* iBeaconPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DC31EDBD6F10084F01C /* iBeaconPresenter.swift */; };
@@ -110,6 +119,15 @@
 		E65B195C1EB9DD8000237163 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		E65B195E1EB9DEBD00237163 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		E65B19601EB9E3FC00237163 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E65DD6361EDE63CB0091CA3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E65DD63A1EDE66A80091CA3C /* Promotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promotion.swift; sourceTree = "<group>"; };
+		E65DD63F1EDEB0710091CA3C /* PromotionAPIStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionAPIStore.swift; sourceTree = "<group>"; };
+		E65DD6411EDEB0CF0091CA3C /* PromotionStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionStoreProtocol.swift; sourceTree = "<group>"; };
+		E65DD6431EDEB1B00091CA3C /* PromotionWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionWorker.swift; sourceTree = "<group>"; };
+		E65DD6451EDEB3560091CA3C /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		E65DD64B1EDEBDC90091CA3C /* URLRequest+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+JSON.swift"; sourceTree = "<group>"; };
+		E65DD64D1EDEC0D40091CA3C /* Data+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+JSON.swift"; sourceTree = "<group>"; };
+		E65DD64F1EDEC3B70091CA3C /* Parsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parsable.swift; sourceTree = "<group>"; };
 		E68D2DBF1EDBD6F10084F01C /* iBeaconConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconConfigurator.swift; sourceTree = "<group>"; };
 		E68D2DC11EDBD6F10084F01C /* iBeaconInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconInteractor.swift; sourceTree = "<group>"; };
 		E68D2DC31EDBD6F10084F01C /* iBeaconPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconPresenter.swift; sourceTree = "<group>"; };
@@ -184,6 +202,7 @@
 			children = (
 				E63D7CD91EDD4AFC0033F7ED /* Configurator */,
 				E63D7CDB1EDD4AFC0033F7ED /* Interactor */,
+				E65DD63E1EDEB0300091CA3C /* Model */,
 				E63D7CDD1EDD4AFC0033F7ED /* Presenter */,
 				E63D7CDF1EDD4AFC0033F7ED /* Router */,
 				E63D7CE11EDD4AFC0033F7ED /* View */,
@@ -307,6 +326,7 @@
 		E65B19161EB98F0D00237163 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E65DD6361EDE63CB0091CA3C /* GoogleService-Info.plist */,
 				E65B18EF1EB98F0000237163 /* Assets.xcassets */,
 				E65B18F11EB98F0000237163 /* LaunchScreen.storyboard */,
 			);
@@ -333,6 +353,10 @@
 				E65B195E1EB9DEBD00237163 /* Strings.swift */,
 				E65B19601EB9E3FC00237163 /* User.swift */,
 				E68D2DD91EDC06030084F01C /* RegionMonitor.swift */,
+				E65DD63A1EDE66A80091CA3C /* Promotion.swift */,
+				E65DD64B1EDEBDC90091CA3C /* URLRequest+JSON.swift */,
+				E65DD64D1EDEC0D40091CA3C /* Data+JSON.swift */,
+				E65DD64F1EDEC3B70091CA3C /* Parsable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -350,6 +374,7 @@
 		E65B191A1EB9987D00237163 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E65DD6451EDEB3560091CA3C /* NetworkClient.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -430,6 +455,16 @@
 				E65B194A1EB9D4EF00237163 /* ArtistsWorker.swift */,
 			);
 			path = Worker;
+			sourceTree = "<group>";
+		};
+		E65DD63E1EDEB0300091CA3C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E65DD63F1EDEB0710091CA3C /* PromotionAPIStore.swift */,
+				E65DD6411EDEB0CF0091CA3C /* PromotionStoreProtocol.swift */,
+				E65DD6431EDEB1B00091CA3C /* PromotionWorker.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E68D2DBD1EDBD6F10084F01C /* iBeacon */ = {
@@ -630,6 +665,7 @@
 				E68D2DD81EDBDCA10084F01C /* iBeaconViewController.xib in Resources */,
 				E65B18F01EB98F0000237163 /* Assets.xcassets in Resources */,
 				E63D7CF71EDD58820033F7ED /* MeTableViewCell.xib in Resources */,
+				E65DD6371EDE63CB0091CA3C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,7 +758,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		8C1D831221F14A0B5BB69626 /* [CP] Check Pods Manifest.lock */ = {
@@ -737,7 +773,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D7717BF6F48C8D3EE535E418 /* [CP] Copy Pods Resources */ = {
@@ -782,7 +818,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -803,22 +839,30 @@
 				E65B194D1EB9D4EF00237163 /* ArtistsPresenter.swift in Sources */,
 				E65B194E1EB9D4EF00237163 /* ArtistsRouter.swift in Sources */,
 				E65B18E61EB98F0000237163 /* AppDelegate.swift in Sources */,
+				E65DD6501EDEC3B70091CA3C /* Parsable.swift in Sources */,
 				E68D2DCC1EDBD6F10084F01C /* iBeaconConfigurator.swift in Sources */,
 				E68D2DD11EDBD6F10084F01C /* iBeaconViewModel.swift in Sources */,
 				E68D2DCE1EDBD6F10084F01C /* iBeaconPresenter.swift in Sources */,
 				E63D7CEA1EDD4AFC0033F7ED /* MeRouter.swift in Sources */,
 				E65B194C1EB9D4EF00237163 /* ArtistsInteractor.swift in Sources */,
 				E65B19501EB9D4EF00237163 /* ArtistsViewModel.swift in Sources */,
+				E65DD63B1EDE66A80091CA3C /* Promotion.swift in Sources */,
+				E65DD6441EDEB1B00091CA3C /* PromotionWorker.swift in Sources */,
+				E65DD6401EDEB0710091CA3C /* PromotionAPIStore.swift in Sources */,
 				E68D2DD71EDBDCA10084F01C /* iBeaconViewController.swift in Sources */,
+				E65DD64C1EDEBDC90091CA3C /* URLRequest+JSON.swift in Sources */,
 				E68D2DCF1EDBD6F10084F01C /* iBeaconRouter.swift in Sources */,
 				E65B19591EB9DC6A00237163 /* Album.swift in Sources */,
 				E68D2DD21EDBD6F10084F01C /* iBeaconWorker.swift in Sources */,
 				E63D7CE71EDD4AFC0033F7ED /* MeConfigurator.swift in Sources */,
+				E65DD6461EDEB3560091CA3C /* NetworkClient.swift in Sources */,
 				E65B195F1EB9DEBD00237163 /* Strings.swift in Sources */,
 				E63D7CF21EDD4C1E0033F7ED /* MeViewController.swift in Sources */,
 				E68D2DDA1EDC06030084F01C /* RegionMonitor.swift in Sources */,
 				E63D7CE91EDD4AFC0033F7ED /* MePresenter.swift in Sources */,
 				E63D7CED1EDD4AFC0033F7ED /* MeWorker.swift in Sources */,
+				E65DD6421EDEB0CF0091CA3C /* PromotionStoreProtocol.swift in Sources */,
+				E65DD64E1EDEC0D40091CA3C /* Data+JSON.swift in Sources */,
 				E63D7CEC1EDD4AFC0033F7ED /* MeViewModel.swift in Sources */,
 				E65B195D1EB9DD8000237163 /* Artist.swift in Sources */,
 			);
@@ -972,7 +1016,7 @@
 				);
 				INFOPLIST_FILE = CleanStore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co8exis.CleanStore;
+				PRODUCT_BUNDLE_IDENTIFIER = co8xis.agency.ibeacon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -990,7 +1034,7 @@
 				);
 				INFOPLIST_FILE = CleanStore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co8exis.CleanStore;
+				PRODUCT_BUNDLE_IDENTIFIER = co8xis.agency.ibeacon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

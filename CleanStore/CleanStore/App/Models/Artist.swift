@@ -31,6 +31,4 @@ extension Artist {
         static let imageSizeValue = "extralarge"
         static let imageURLKey = "#text"
     }
-    
-    
 }

@@ -37,12 +37,4 @@ extension MePresenter: MePresenterInput {
 
 
     // MARK: - Presentation logic
-
-    func presentSomething() {
-
-        // TODO: Format the response from the Interactor and pass the result back to the View Controller
-
-        let viewModel = MeViewModel()
-        output.displaySomething(viewModel: viewModel)
-    }
 }
