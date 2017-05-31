@@ -47,6 +47,9 @@
 		E65DD64C1EDEBDC90091CA3C /* URLRequest+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD64B1EDEBDC90091CA3C /* URLRequest+JSON.swift */; };
 		E65DD64E1EDEC0D40091CA3C /* Data+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD64D1EDEC0D40091CA3C /* Data+JSON.swift */; };
 		E65DD6501EDEC3B70091CA3C /* Parsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD64F1EDEC3B70091CA3C /* Parsable.swift */; };
+		E65DD6571EDED3CC0091CA3C /* ArtistsAPIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD6561EDED3CC0091CA3C /* ArtistsAPIStore.swift */; };
+		E65DD6591EDED63F0091CA3C /* ArtistsStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD6581EDED63F0091CA3C /* ArtistsStoreProtocol.swift */; };
+		E65DD65B1EDED8EB0091CA3C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD65A1EDED8EB0091CA3C /* API.swift */; };
 		E68D2DCC1EDBD6F10084F01C /* iBeaconConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DBF1EDBD6F10084F01C /* iBeaconConfigurator.swift */; };
 		E68D2DCD1EDBD6F10084F01C /* iBeaconInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DC11EDBD6F10084F01C /* iBeaconInteractor.swift */; };
 		E68D2DCE1EDBD6F10084F01C /* iBeaconPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DC31EDBD6F10084F01C /* iBeaconPresenter.swift */; };
@@ -128,6 +131,9 @@
 		E65DD64B1EDEBDC90091CA3C /* URLRequest+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+JSON.swift"; sourceTree = "<group>"; };
 		E65DD64D1EDEC0D40091CA3C /* Data+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+JSON.swift"; sourceTree = "<group>"; };
 		E65DD64F1EDEC3B70091CA3C /* Parsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parsable.swift; sourceTree = "<group>"; };
+		E65DD6561EDED3CC0091CA3C /* ArtistsAPIStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistsAPIStore.swift; sourceTree = "<group>"; };
+		E65DD6581EDED63F0091CA3C /* ArtistsStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistsStoreProtocol.swift; sourceTree = "<group>"; };
+		E65DD65A1EDED8EB0091CA3C /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		E68D2DBF1EDBD6F10084F01C /* iBeaconConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconConfigurator.swift; sourceTree = "<group>"; };
 		E68D2DC11EDBD6F10084F01C /* iBeaconInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconInteractor.swift; sourceTree = "<group>"; };
 		E68D2DC31EDBD6F10084F01C /* iBeaconPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconPresenter.swift; sourceTree = "<group>"; };
@@ -382,6 +388,7 @@
 		E65B191B1EB9987D00237163 /* Workers */ = {
 			isa = PBXGroup;
 			children = (
+				E65DD65A1EDED8EB0091CA3C /* API.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -453,6 +460,8 @@
 			isa = PBXGroup;
 			children = (
 				E65B194A1EB9D4EF00237163 /* ArtistsWorker.swift */,
+				E65DD6561EDED3CC0091CA3C /* ArtistsAPIStore.swift */,
+				E65DD6581EDED63F0091CA3C /* ArtistsStoreProtocol.swift */,
 			);
 			path = Worker;
 			sourceTree = "<group>";
@@ -842,6 +851,7 @@
 				E65DD6501EDEC3B70091CA3C /* Parsable.swift in Sources */,
 				E68D2DCC1EDBD6F10084F01C /* iBeaconConfigurator.swift in Sources */,
 				E68D2DD11EDBD6F10084F01C /* iBeaconViewModel.swift in Sources */,
+				E65DD65B1EDED8EB0091CA3C /* API.swift in Sources */,
 				E68D2DCE1EDBD6F10084F01C /* iBeaconPresenter.swift in Sources */,
 				E63D7CEA1EDD4AFC0033F7ED /* MeRouter.swift in Sources */,
 				E65B194C1EB9D4EF00237163 /* ArtistsInteractor.swift in Sources */,
@@ -857,6 +867,7 @@
 				E63D7CE71EDD4AFC0033F7ED /* MeConfigurator.swift in Sources */,
 				E65DD6461EDEB3560091CA3C /* NetworkClient.swift in Sources */,
 				E65B195F1EB9DEBD00237163 /* Strings.swift in Sources */,
+				E65DD6571EDED3CC0091CA3C /* ArtistsAPIStore.swift in Sources */,
 				E63D7CF21EDD4C1E0033F7ED /* MeViewController.swift in Sources */,
 				E68D2DDA1EDC06030084F01C /* RegionMonitor.swift in Sources */,
 				E63D7CE91EDD4AFC0033F7ED /* MePresenter.swift in Sources */,
@@ -865,6 +876,7 @@
 				E65DD64E1EDEC0D40091CA3C /* Data+JSON.swift in Sources */,
 				E63D7CEC1EDD4AFC0033F7ED /* MeViewModel.swift in Sources */,
 				E65B195D1EB9DD8000237163 /* Artist.swift in Sources */,
+				E65DD6591EDED63F0091CA3C /* ArtistsStoreProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
