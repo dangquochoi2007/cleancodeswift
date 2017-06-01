@@ -9,5 +9,6 @@
 import UIKit
 
 struct ArtistsViewModel {
-
+    let title: String
+    let imageURL: URL?
 }

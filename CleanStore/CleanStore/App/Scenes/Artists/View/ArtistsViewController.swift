@@ -14,20 +14,22 @@ protocol ArtistsViewControllerInput: ArtistsPresenterOutput {
 
 protocol ArtistsViewControllerOutput {
     
+    var artists: [Artist]? { get }
+    func fetchArtists()
    
 }
 
-final class ArtistsViewController: UIViewController {
+final class ArtistsViewController: UIViewController, ErrorPresenter {
     var output: ArtistsViewControllerOutput!
     var router: ArtistsRouterProtocol!
     
     
-    @IBOutlet weak var artistsTableView: UITableView!
+    
     // MARK: - Initializers
     
     init(configurator: ArtistsConfigurator = ArtistsConfigurator.sharedInstance) {
         
-        super.init(nibName: "ArtistsViewController", bundle: nil)
+        super.init(nibName: nil, bundle: nil)
         
         configure()
     }

@@ -10,6 +10,15 @@
 		469BB0E036E90F8D37F9104A /* Pods_CleanStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9892EA30C9D73B5C95FAD4 /* Pods_CleanStoreTests.framework */; };
 		8107C8CC77D828635F9D89AA /* Pods_CleanStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62BCFA0D3257683AE02D5434 /* Pods_CleanStore.framework */; };
 		B4611D3378C389D889A3321B /* Pods_CleanStoreUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89069F81FADBE31BE71FB1D4 /* Pods_CleanStoreUITests.framework */; };
+		E608ABAA1EE008CA00FED38D /* ErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E608ABA91EE008CA00FED38D /* ErrorPresenter.swift */; };
+		E608ABAC1EE0090600FED38D /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E608ABAB1EE0090600FED38D /* ErrorViewModel.swift */; };
+		E608ABAE1EE00AAE00FED38D /* ArtistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E608ABAD1EE00AAD00FED38D /* ArtistsView.swift */; };
+		E608ABB01EE00DB600FED38D /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E608ABAF1EE00DB600FED38D /* ArtistTableViewCell.swift */; };
+		E608ABB21EE0115300FED38D /* ArtistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E608ABB11EE0115300FED38D /* ArtistItemView.swift */; };
+		E608ABB41EE012FC00FED38D /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E608ABB31EE012FC00FED38D /* ImageManager.swift */; };
+		E608ABB61EE0132300FED38D /* ImageMemoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E608ABB51EE0132300FED38D /* ImageMemoryStore.swift */; };
+		E608ABB81EE0135400FED38D /* ImageStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E608ABB71EE0135400FED38D /* ImageStoreProtocol.swift */; };
+		E608ABBA1EE013E600FED38D /* ImageNetworkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E608ABB91EE013E500FED38D /* ImageNetworkStore.swift */; };
 		E63D7CE71EDD4AFC0033F7ED /* MeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63D7CDA1EDD4AFC0033F7ED /* MeConfigurator.swift */; };
 		E63D7CE81EDD4AFC0033F7ED /* MeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63D7CDC1EDD4AFC0033F7ED /* MeInteractor.swift */; };
 		E63D7CE91EDD4AFC0033F7ED /* MePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63D7CDE1EDD4AFC0033F7ED /* MePresenter.swift */; };
@@ -88,6 +97,15 @@
 		C2CE5346774C94920F7D5FC9 /* Pods-CleanStoreUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanStoreUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanStoreUITests/Pods-CleanStoreUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D37CFFEAF36AFC1A06C8E154 /* Pods-CleanStoreUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanStoreUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanStoreUITests/Pods-CleanStoreUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB2A25C20E5E1BC12DD1FDFF /* Pods-CleanStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanStoreTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanStoreTests/Pods-CleanStoreTests.release.xcconfig"; sourceTree = "<group>"; };
+		E608ABA91EE008CA00FED38D /* ErrorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorPresenter.swift; sourceTree = "<group>"; };
+		E608ABAB1EE0090600FED38D /* ErrorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
+		E608ABAD1EE00AAD00FED38D /* ArtistsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistsView.swift; sourceTree = "<group>"; };
+		E608ABAF1EE00DB600FED38D /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
+		E608ABB11EE0115300FED38D /* ArtistItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistItemView.swift; sourceTree = "<group>"; };
+		E608ABB31EE012FC00FED38D /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		E608ABB51EE0132300FED38D /* ImageMemoryStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMemoryStore.swift; sourceTree = "<group>"; };
+		E608ABB71EE0135400FED38D /* ImageStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStoreProtocol.swift; sourceTree = "<group>"; };
+		E608ABB91EE013E500FED38D /* ImageNetworkStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageNetworkStore.swift; sourceTree = "<group>"; };
 		E63D7CDA1EDD4AFC0033F7ED /* MeConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeConfigurator.swift; sourceTree = "<group>"; };
 		E63D7CDC1EDD4AFC0033F7ED /* MeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeInteractor.swift; sourceTree = "<group>"; };
 		E63D7CDE1EDD4AFC0033F7ED /* MePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MePresenter.swift; sourceTree = "<group>"; };
@@ -363,6 +381,8 @@
 				E65DD64B1EDEBDC90091CA3C /* URLRequest+JSON.swift */,
 				E65DD64D1EDEC0D40091CA3C /* Data+JSON.swift */,
 				E65DD64F1EDEC3B70091CA3C /* Parsable.swift */,
+				E608ABA91EE008CA00FED38D /* ErrorPresenter.swift */,
+				E608ABAB1EE0090600FED38D /* ErrorViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -381,6 +401,10 @@
 			isa = PBXGroup;
 			children = (
 				E65DD6451EDEB3560091CA3C /* NetworkClient.swift */,
+				E608ABB31EE012FC00FED38D /* ImageManager.swift */,
+				E608ABB51EE0132300FED38D /* ImageMemoryStore.swift */,
+				E608ABB71EE0135400FED38D /* ImageStoreProtocol.swift */,
+				E608ABB91EE013E500FED38D /* ImageNetworkStore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -444,6 +468,9 @@
 			children = (
 				E65B19541EB9D71100237163 /* ArtistsViewController.swift */,
 				E65B19551EB9D71100237163 /* ArtistsViewController.xib */,
+				E608ABAD1EE00AAD00FED38D /* ArtistsView.swift */,
+				E608ABAF1EE00DB600FED38D /* ArtistTableViewCell.swift */,
+				E608ABB11EE0115300FED38D /* ArtistItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -843,19 +870,25 @@
 				E65B19561EB9D71100237163 /* ArtistsViewController.swift in Sources */,
 				E65B18EE1EB98F0000237163 /* CleanStore.xcdatamodeld in Sources */,
 				E65B194B1EB9D4EF00237163 /* ArtistsConfigurator.swift in Sources */,
+				E608ABB01EE00DB600FED38D /* ArtistTableViewCell.swift in Sources */,
 				E68D2DCD1EDBD6F10084F01C /* iBeaconInteractor.swift in Sources */,
+				E608ABB21EE0115300FED38D /* ArtistItemView.swift in Sources */,
 				E65B19511EB9D4EF00237163 /* ArtistsWorker.swift in Sources */,
 				E65B194D1EB9D4EF00237163 /* ArtistsPresenter.swift in Sources */,
+				E608ABAC1EE0090600FED38D /* ErrorViewModel.swift in Sources */,
 				E65B194E1EB9D4EF00237163 /* ArtistsRouter.swift in Sources */,
 				E65B18E61EB98F0000237163 /* AppDelegate.swift in Sources */,
+				E608ABAE1EE00AAE00FED38D /* ArtistsView.swift in Sources */,
 				E65DD6501EDEC3B70091CA3C /* Parsable.swift in Sources */,
 				E68D2DCC1EDBD6F10084F01C /* iBeaconConfigurator.swift in Sources */,
 				E68D2DD11EDBD6F10084F01C /* iBeaconViewModel.swift in Sources */,
+				E608ABAA1EE008CA00FED38D /* ErrorPresenter.swift in Sources */,
 				E65DD65B1EDED8EB0091CA3C /* API.swift in Sources */,
 				E68D2DCE1EDBD6F10084F01C /* iBeaconPresenter.swift in Sources */,
 				E63D7CEA1EDD4AFC0033F7ED /* MeRouter.swift in Sources */,
 				E65B194C1EB9D4EF00237163 /* ArtistsInteractor.swift in Sources */,
 				E65B19501EB9D4EF00237163 /* ArtistsViewModel.swift in Sources */,
+				E608ABB61EE0132300FED38D /* ImageMemoryStore.swift in Sources */,
 				E65DD63B1EDE66A80091CA3C /* Promotion.swift in Sources */,
 				E65DD6441EDEB1B00091CA3C /* PromotionWorker.swift in Sources */,
 				E65DD6401EDEB0710091CA3C /* PromotionAPIStore.swift in Sources */,
@@ -863,10 +896,13 @@
 				E65DD64C1EDEBDC90091CA3C /* URLRequest+JSON.swift in Sources */,
 				E68D2DCF1EDBD6F10084F01C /* iBeaconRouter.swift in Sources */,
 				E65B19591EB9DC6A00237163 /* Album.swift in Sources */,
+				E608ABB41EE012FC00FED38D /* ImageManager.swift in Sources */,
+				E608ABBA1EE013E600FED38D /* ImageNetworkStore.swift in Sources */,
 				E68D2DD21EDBD6F10084F01C /* iBeaconWorker.swift in Sources */,
 				E63D7CE71EDD4AFC0033F7ED /* MeConfigurator.swift in Sources */,
 				E65DD6461EDEB3560091CA3C /* NetworkClient.swift in Sources */,
 				E65B195F1EB9DEBD00237163 /* Strings.swift in Sources */,
+				E608ABB81EE0135400FED38D /* ImageStoreProtocol.swift in Sources */,
 				E65DD6571EDED3CC0091CA3C /* ArtistsAPIStore.swift in Sources */,
 				E63D7CF21EDD4C1E0033F7ED /* MeViewController.swift in Sources */,
 				E68D2DDA1EDC06030084F01C /* RegionMonitor.swift in Sources */,
