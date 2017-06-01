@@ -10,7 +10,7 @@ import Foundation
 import BaseViewSwift
 
 
-final class ArtistView: BaseView {
+final class ArtistsView: BaseView {
     
     let tableView = UITableView()
     let refreshControl = UIRefreshControl()

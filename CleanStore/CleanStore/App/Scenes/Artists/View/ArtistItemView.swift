@@ -103,7 +103,7 @@ final class ArtistsItemView: BaseView {
         super.setupConstraints()
         
         setupTitleLabelConstraints()
-        setupImageOverlayConstraints()
+        setupImageOverlayViewConstraints()
         setupImageViewConstraints()
     }
     
@@ -129,7 +129,7 @@ final class ArtistsItemView: BaseView {
         imageOverlayView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
     
-    private func setupTitleLabelConstraits() {
+    private func setupTitleLabelConstraints() {
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         

@@ -20,13 +20,22 @@ protocol ArtistsViewControllerOutput {
 }
 
 final class ArtistsViewController: UIViewController, ErrorPresenter {
+    
     var output: ArtistsViewControllerOutput!
     var router: ArtistsRouterProtocol!
     
+    let artistsView = ArtistsView()
+    
+    fileprivate var artistsViewModels: [ArtistsViewModel] = []
     
     
     // MARK: - Initializers
     
+    /// Initializes an instance of _ArtistsViewController_ with a configurator
+    ///
+    /// - parameter configurator: The configurator
+    ///
+    /// - returns: The instance of _ArtistsViewController_
     init(configurator: ArtistsConfigurator = ArtistsConfigurator.sharedInstance) {
         
         super.init(nibName: nil, bundle: nil)
@@ -34,6 +43,11 @@ final class ArtistsViewController: UIViewController, ErrorPresenter {
         configure()
     }
     
+    /// Initializes an instance of _ArtistsViewController_ from storyboard
+    ///
+    /// - parameter coder: The coder
+    ///
+    /// - returns: The instance of _ArtistsViewController_
     required init?(coder aDecoder: NSCoder) {
         
         super.init(coder: aDecoder)
@@ -50,23 +64,29 @@ final class ArtistsViewController: UIViewController, ErrorPresenter {
         configurator.configure(viewController: self)
     }
     
+    
+    
+    
     // MARK: - View lifecycle
+    
+    override func loadView() {
+        view = artistsView
+    }
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        doSomethingOnLoad()
-    }
-    
-    
-    // MARK: - Load data
-    
-    func doSomethingOnLoad() {
-        
-        // TODO: Ask the Interactor to do some work
         
     }
+    
+    
+    // MARK: - Setup
+    private func setupTitle() {
+        title = String.ar
+    }
+    
+  
     
     
     // MARK: - UITableViewDelegate

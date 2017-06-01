@@ -11,9 +11,12 @@ import Foundation
 struct Strings {
     struct Artists {
         
+        static let screenTitle = NSLocalizedString("Top Artists", comment: "Top Artists screen title")
     }
     
     struct Artist {
+        
+        
     }
     
     struct Error {
