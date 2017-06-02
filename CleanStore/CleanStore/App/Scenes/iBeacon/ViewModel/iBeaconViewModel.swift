@@ -9,5 +9,12 @@
 import UIKit
 
 struct iBeaconViewModel {
-
+    
+    struct FetchPromotion {
+        
+        struct Request {
+            
+            
+        }
+    }
 }

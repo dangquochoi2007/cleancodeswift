@@ -17,6 +17,7 @@ extension URLRequest {
     ///
     /// - returns: A new URLRequest instance
     static func jsonRequest(url: URL) -> URLRequest {
+        
         var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")

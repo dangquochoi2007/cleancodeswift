@@ -29,7 +29,6 @@ extension Promotion {
         static let urlKey = "url"
         static let imageKey = "image"
         static let imageSizeKey = "size"
-        
     }
 }
 

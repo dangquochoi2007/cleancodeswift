@@ -41,7 +41,8 @@ extension ArtistsAPIStore: ArtistsStoreProtocol {
             return
         }
         
-        let requestURL = URLRequest.jsonRequest(url: url)
+        var requestURL = URLRequest.jsonRequest(url: url)
+        requestURL.httpMethod = LastFMAPIEndPoint.getTopArtists(limit).httpMethod
         
         networkClient.sendRequest(request: requestURL) { data, response, error in
             
@@ -61,17 +62,14 @@ extension ArtistsAPIStore: ArtistsStoreProtocol {
                 } else {
                 
                     artistsError = ArtistsStoreError.invalidResponse
-                    
                 }
                 
             } else {
                 
                 artistsError = ArtistsStoreError.invalidResponse
-                
             }
             
             completion(artists, artistsError)
-            
         }
     }
 }

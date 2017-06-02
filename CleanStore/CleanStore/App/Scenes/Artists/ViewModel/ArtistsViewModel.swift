@@ -14,7 +14,7 @@ struct ArtistsViewModel {
         
         struct Request {
             
-            var topArtistsLimit = 50
+            var topArtistsLimit = 100
             var topArtistsDictionaryKey = "artists"
             var topArtistsArrayKey = "artist"
         }
