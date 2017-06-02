@@ -16,10 +16,14 @@ struct Strings {
     
     struct Artist {
         
-        
+        static let screenTitle = NSLocalizedString("Artists", comment: "Artist screen title")
+        static let albumsTitle = NSLocalizedString("Top Albums", comment: "Artist header title")
     }
     
     struct Error {
         
+        static let genericTitle = NSLocalizedString("Sorry", comment: "Generic error title")
+        static let genericMessage = NSLocalizedString("Something went wrong.", comment: "Generic error message")
+        static let okButtonTitle = NSLocalizedString("Ok", comment: "Alert button title")
     }
 }

@@ -17,7 +17,7 @@ final class ArtistsView: BaseView {
     
     
     private struct Constants {
-        static let rowHeight: CGFloat = 160.0
+        static let rowHeight: CGFloat = 210.0
     }
     
     
@@ -31,8 +31,7 @@ final class ArtistsView: BaseView {
     
     private func setupTableView() {
         
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = Constants.rowHeight
+        tableView.rowHeight = Constants.rowHeight
         tableView.separatorStyle = .singleLine
         tableView.separatorColor = UIColor.white
         tableView.separatorInset = UIEdgeInsets.zero

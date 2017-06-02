@@ -20,6 +20,7 @@ struct Artist {
 
 
 extension Artist: Parsable {
+    
     private struct Constants {
         static let mbidKey = "mbid"
         static let nameKey = "name"
@@ -34,6 +35,7 @@ extension Artist: Parsable {
     
     
     static func fromJSON(json: [String : Any]) -> Artist? {
+        
         if let mbid = json[Constants.mbidKey] as? String,
             let name = json[Constants.nameKey] as? String,
             let playCount = json[Constants.playCountKey] as? String,

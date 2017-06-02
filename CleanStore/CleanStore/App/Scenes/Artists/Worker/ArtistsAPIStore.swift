@@ -11,11 +11,6 @@ import Foundation
 
 /// _ArtistsAPIStore_ is a class responsible for fetching artists
 final class ArtistsAPIStore {
-    fileprivate struct Constants {
-        static let topArtistsLimit = 50
-        static let topArtistsDictionaryKey = "artists"
-        static let topArtistsArrayKey = "artists"
-    }
     
     fileprivate let networkClient: NetworkClientProtocol
     
@@ -39,24 +34,24 @@ extension ArtistsAPIStore: ArtistsStoreProtocol {
     /// Fetches a list of top artists
     ///
     /// - parameter completion: The completion block
-    func fetchArtists(completion: @escaping ([Artist]?, Error?) -> ()) {
-        let limit = Constants.topArtistsLimit
+    func fetchArtists(request: ArtistsViewModel.FetchArtists.Request,completion: @escaping ([Artist]?, Error?) -> ()) {
+        let limit = request.topArtistsLimit
         guard let url = LastFMAPIEndPoint.getTopArtists(limit).url() else {
             completion([], ArtistsStoreError.invalidURL)
             return
         }
         
-        let request = URLRequest.jsonRequest(url: url)
+        let requestURL = URLRequest.jsonRequest(url: url)
         
-        networkClient.sendRequest(request: request) { data, response, error in
+        networkClient.sendRequest(request: requestURL) { data, response, error in
             
             var artists: [Artist]?
             var artistsError: Error?
             
             if let json = data?.jsonDictionary() {
                 
-                if let artistsDictionary = json[Constants.topArtistsDictionaryKey] as? [String: Any],
-                let artistsArray = artistsDictionary[Constants.topArtistsArrayKey] as? [[String: Any]] {
+                if let artistsDictionary = json[request.topArtistsDictionaryKey] as? [String: Any],
+                let artistsArray = artistsDictionary[request.topArtistsArrayKey] as? [[String: Any]] {
                     
                     artists = artistsArray.flatMap { artistsDictionary -> Artist? in
                         

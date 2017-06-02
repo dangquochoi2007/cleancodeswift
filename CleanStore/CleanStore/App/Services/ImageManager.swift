@@ -31,11 +31,38 @@ class ImageManager {
             
             if let strongSelf = self {
                 
+                if let _ = cachedImage {
+                    
+                    completion(cachedImage, nil)
+                } else {
+                    
+                    strongSelf.setNetworkActivityIndicatorVisible(visible: true)
+                    strongSelf.networkStore.loadImage(url: url, completion: { downloadedImage, networkStoreError in
+                        
+                        strongSelf.setNetworkActivityIndicatorVisible(visible: false)
+                        strongSelf.memoryStore.saveImage(image: downloadedImage, url: url)
+                        
+                        completion(downloadedImage, networkStoreError)
+                    })
+                }
             }
-            
-            
         }
+    }
+    
+    
+    /// Clears all images from all caches
+    func clearCache() {
         
+        memoryStore.removeAllImages()
+    }
+    
+    // MARK: - Private
+    private func setNetworkActivityIndicatorVisible(visible: Bool) {
+        
+        if (updateNetworkStatusActivityIndicator) {
+            
+            UIApplication.shared.isNetworkActivityIndicatorVisible = visible
+        }
     }
     
 }
