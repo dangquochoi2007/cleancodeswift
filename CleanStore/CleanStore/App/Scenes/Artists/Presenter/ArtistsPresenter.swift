@@ -12,14 +12,26 @@ protocol ArtistsPresenterInput: ArtistsInteractorOutput {
 
 }
 
-protocol ArtistsPresenterOutput: class {
 
-    func displaySomething(viewModel: ArtistsViewModel)
+// MARK: - ArtistsPresenterOutput
+
+/// _ArtistsPresenterOutput_ is a protocol for presenter output behaviours
+protocol ArtistsPresenterOutput: class {
+    /// Tells the output to display artists
+    ///
+    /// - parameter viewModels: The artist view models
+    func displayArtists(viewModels: [ArtistsViewModel.FetchArtists.ViewModel.DisplayedArtist])
+    
+    
+    /// Tells the output to dislpay an error
+    ///
+    /// - parameter viewModel: The error view model
+    func displayError(viewModel: ErrorViewModel)
 }
 
 final class ArtistsPresenter {
 
-    private(set) weak var output: ArtistsPresenterOutput!
+    private(set) weak var output: ArtistsPresenterOutput?
 
 
     // MARK: - Initializers
@@ -36,13 +48,28 @@ final class ArtistsPresenter {
 extension ArtistsPresenter: ArtistsPresenterInput {
 
 
-    // MARK: - Presentation logic
-
-    func presentSomething() {
-
-        // TODO: Format the response from the Interactor and pass the result back to the View Controller
-
-        let viewModel = ArtistsViewModel()
-        output.displaySomething(viewModel: viewModel)
+    /// Prepares the artist models for presentation and tells the output to display artists
+    ///
+    /// - parameter artists: The list of artists
+    func presentArtists(artists: [Artist]) {
+        
+        let viewModels = artists.flatMap { artist -> ArtistsViewModel.FetchArtists.ViewModel.DisplayedArtist in
+            
+            return ArtistsViewModel.FetchArtists.ViewModel.DisplayedArtist(title: artist.name, imageURL: artist.imageURL)
+        }
+        
+        output?.displayArtists(viewModels: viewModels)
     }
+    
+    
+    /// Prepares the error model for presentation and tells the output to display error
+    ///
+    /// - parameter error: The error
+    func presentError(error: Error) {
+        let errorViewModel = ErrorViewModel(title: Strings.Error.genericMessage, message: Strings.Error.genericMessage, buttonTitles: [Strings.Error.okButtonTitle])
+        
+        output?.displayError(viewModel: errorViewModel)
+    }
+
+    
 }

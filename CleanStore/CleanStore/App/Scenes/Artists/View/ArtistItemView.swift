@@ -37,11 +37,11 @@ extension UIImageView {
 /// _ArtistItemView_ is a view responsible for the display of artist details (title and image)
 final class ArtistsItemView: BaseView {
     
-    let imageView = UIImageView()
-    let imageOverlayView = UIView()
-    let titleLabel = UILabel()
+    lazy var imageView = UIImageView()
+    lazy var imageOverlayView = UIView()
+    lazy var titleLabel = UILabel()
     
-    var viewModel: ArtistsViewModel?  {
+    var viewModel: ArtistsViewModel.FetchArtists.ViewModel.DisplayedArtist?  {
         didSet {
             titleLabel.text = viewModel?.title
             imageView.setImageURL(url: viewModel?.imageURL)

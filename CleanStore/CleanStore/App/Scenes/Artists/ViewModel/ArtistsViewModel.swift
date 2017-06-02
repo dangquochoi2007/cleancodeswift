@@ -9,6 +9,29 @@
 import UIKit
 
 struct ArtistsViewModel {
-    let title: String
-    let imageURL: URL?
+    
+    struct FetchArtists {
+        
+        struct Request {
+            
+            var topArtistsLimit = 100
+            var topArtistsDictionaryKey = "artists"
+            var topArtistsArrayKey = "artist"
+        }
+        
+        struct Response {
+            
+            var artists: [Artist]
+        }
+        
+        struct ViewModel {
+            
+            struct DisplayedArtist {
+                var title: String
+                var imageURL: URL?
+            }
+            
+            var displayedArtists: [DisplayedArtist]
+        }
+    }
 }

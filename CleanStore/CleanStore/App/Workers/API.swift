@@ -34,6 +34,8 @@ protocol URLConvertible {
 /// - getTopArtists: The get top artists request
 enum LastFMAPIEndPoint {
     case getTopArtists(Int)
+    
+    
 }
 
 // MARK: - URLConvertible
@@ -44,6 +46,13 @@ extension LastFMAPIEndPoint: URLConvertible {
         case .getTopArtists(let limit):
             let method = "chart.gettopartists"
             return URL(string: "\(LastFMAPI.baseURLString)?method=\(method)&api_key=\(LastFMAPI.apiKey)&format=json&limit=\(limit)")
+        }
+    }
+    
+    var httpMethod: String {
+        switch self {
+        case .getTopArtists:
+            return "POST"
         }
     }
 }

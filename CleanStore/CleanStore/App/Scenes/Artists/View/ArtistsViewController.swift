@@ -15,7 +15,7 @@ protocol ArtistsViewControllerInput: ArtistsPresenterOutput {
 protocol ArtistsViewControllerOutput {
     
     var artists: [Artist]? { get }
-    func fetchArtists()
+    func fetchArtists(request: ArtistsViewModel.FetchArtists.Request)
    
 }
 
@@ -26,7 +26,7 @@ final class ArtistsViewController: UIViewController, ErrorPresenter {
     
     let artistsView = ArtistsView()
     
-    fileprivate var artistsViewModels: [ArtistsViewModel] = []
+    fileprivate var artistsViewModels: [ArtistsViewModel.FetchArtists.ViewModel.DisplayedArtist] = []
     
     
     // MARK: - Initializers
@@ -78,35 +78,93 @@ final class ArtistsViewController: UIViewController, ErrorPresenter {
         super.viewDidLoad()
         
         
+        setupTitle()
+        setupTableView()
+        fetchArtists()
     }
     
     
     // MARK: - Setup
     private func setupTitle() {
-        title = String.ar
+        title = Strings.Artists.screenTitle
     }
     
-  
     
     
-    // MARK: - UITableViewDelegate
+    private func setupTableView() {
+        
+        artistsView.tableView.delegate = self
+        artistsView.tableView.dataSource = self
+        artistsView.tableView.register(ArtistTableViewCell.self, forCellReuseIdentifier: ArtistTableViewCell.reuseIdentifier())
+        artistsView.refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+    }
     
-    // MARK: - UITableViewDataSource
     
-    // MARK: - UITable
+    func fetchArtists() {
+        
+        let request = ArtistsViewModel.FetchArtists.Request()
+        output.fetchArtists(request: request)
+    }
     
+    
+    func refresh() {
+        
+        fetchArtists()
+    }
 }
 
+
+// MARK: - UITableViewDataSource
+extension ArtistsViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return artistsViewModels.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ArtistTableViewCell.reuseIdentifier(), for: indexPath) as? ArtistTableViewCell else {
+            
+            assert(false, "Invalid table view cell, Did you forgot to register ArtistsTableViewCell")
+            return UITableViewCell()
+        }
+        
+        
+        let viewModel = artistsViewModels[indexPath.row]
+        cell.viewModel = viewModel
+        return cell
+    }
+}
+
+
+extension ArtistsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+}
 
 // MARK: - ArtistsPresenterOutput
 
 extension ArtistsViewController: ArtistsViewControllerInput {
     
     
-    // MARK: - Display logic
-    
-    func displaySomething(viewModel: ArtistsViewModel) {
+    func displayArtists(viewModels: [ArtistsViewModel.FetchArtists.ViewModel.DisplayedArtist]) {
         
-        // TODO: Update UI
+        artistsViewModels = viewModels
+        artistsView.tableView.reloadData()
+        artistsView.refreshControl.endRefreshing()
+    }
+    
+    
+    func displayError(viewModel: ErrorViewModel) {
+        
+        artistsView.refreshControl.endRefreshing()
+        presentError(viewModel: viewModel)
     }
 }

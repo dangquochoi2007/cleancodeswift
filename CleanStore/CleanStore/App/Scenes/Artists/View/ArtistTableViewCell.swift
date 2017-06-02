@@ -13,6 +13,9 @@ class BaseTableViewCell: UITableViewCell {
     // MARK: - Initializers
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        setup()
+        setupConstraints()
     }
     
     
@@ -43,7 +46,7 @@ final class ArtistTableViewCell: BaseTableViewCell {
 
     let itemView = ArtistsItemView()
     
-    var viewModel: ArtistsViewModel? {
+    var viewModel: ArtistsViewModel.FetchArtists.ViewModel.DisplayedArtist? {
         
         didSet {
             itemView.viewModel = viewModel

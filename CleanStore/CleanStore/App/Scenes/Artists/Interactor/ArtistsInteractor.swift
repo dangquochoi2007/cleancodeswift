@@ -14,7 +14,16 @@ protocol ArtistsInteractorInput: ArtistsViewControllerOutput {
 
 protocol ArtistsInteractorOutput {
 
-    func presentSomething()
+    
+    // MARK: - ArtistsInteractorOutput
+    
+    /// _ArtistsInteractorOutput_ is a protocol for interactor output behaviours
+    func presentArtists(artists: [Artist])
+    
+    /// Tells the output to present an error
+    ///
+    /// - parameter error: The error to present
+    func presentError(error: Error)
 }
 
 final class ArtistsInteractor {
@@ -22,6 +31,7 @@ final class ArtistsInteractor {
     let output: ArtistsInteractorOutput
     let worker: ArtistsWorker
 
+    var artists: [Artist]?
 
     // MARK: - Initializers
 
@@ -38,16 +48,23 @@ final class ArtistsInteractor {
 extension ArtistsInteractor: ArtistsViewControllerOutput {
 
 
-    // MARK: - Business logic
-
-    func doSomething() {
-
-        // TODO: Create some Worker to do the work
-
-        worker.doSomeWork()
-
-        // TODO: Pass the result to the Presenter
-
-        output.presentSomething()
+    /// Fetches a list of top artists through the worker
+    func fetchArtists(request: ArtistsViewModel.FetchArtists.Request) {
+        worker.fetchArtists(request: request) { [weak self] artists, error in
+            
+            if let strongSelf = self {
+                
+                if let artistsError = error {
+                    
+                    strongSelf.output.presentError(error: artistsError)
+                } else if let artistsArray = artists {
+                    
+                    strongSelf.artists = artistsArray
+                    strongSelf.output.presentArtists(artists: artistsArray)
+                }
+            }
+        }
     }
+
+   
 }

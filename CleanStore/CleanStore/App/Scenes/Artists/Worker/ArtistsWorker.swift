@@ -10,11 +10,28 @@ import UIKit
 
 class ArtistsWorker {
 
+    fileprivate var store: ArtistsStoreProtocol
+
+    
+    // MARK: - Initializers
+    
+    /// Initializes an _ArtistsWorker_ with a store
+    ///
+    /// - parameter store: A store where to fetch artists from (API, memory, etc)
+    ///
+    /// - returns: The instance of _ArtistsWorker_
+    init(store: ArtistsStoreProtocol = ArtistsAPIStore()) {
+        
+        self.store = store
+    }
 
     // MARK: - Business Logic
-
-    func doSomeWork() {
-
-        // TODO: Do the work
+    
+    /// Fetches artists from a store
+    ///
+    /// - parameter completion: The completion block
+    func fetchArtists(request: ArtistsViewModel.FetchArtists.Request ,completion: @escaping ([Artist]?, Error?) -> ()) {
+        
+        store.fetchArtists(request: request, completion: completion)
     }
 }
