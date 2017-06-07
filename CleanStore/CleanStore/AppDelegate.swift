@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let screen = UIScreen.main
         self.window = UIWindow(frame: screen.bounds)
-        self.window?.rootViewController = ArtistsViewController()
+        self.window?.rootViewController = iBeaconViewController()
         self.window?.makeKeyAndVisible()
         
     

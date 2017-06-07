@@ -12,9 +12,5 @@ class iBeaconWorker {
 
 
     // MARK: - Business Logic
-
-    func doSomeWork() {
-
-        // TODO: Do the work
-    }
+    
 }

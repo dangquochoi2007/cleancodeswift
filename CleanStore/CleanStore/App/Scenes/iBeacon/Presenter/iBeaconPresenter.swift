@@ -14,7 +14,7 @@ protocol iBeaconPresenterInput: iBeaconInteractorOutput {
 
 protocol iBeaconPresenterOutput: class {
 
-    func displaySomething(viewModel: iBeaconViewModel)
+    
 }
 
 final class iBeaconPresenter {
@@ -42,7 +42,6 @@ extension iBeaconPresenter: iBeaconPresenterInput {
 
         // TODO: Format the response from the Interactor and pass the result back to the View Controller
 
-        let viewModel = iBeaconViewModel()
-        output.displaySomething(viewModel: viewModel)
+      
     }
 }

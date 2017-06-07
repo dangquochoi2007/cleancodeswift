@@ -16,5 +16,17 @@ struct iBeaconViewModel {
             
             
         }
+        
+        struct Response {
+        
+        }
+        
+        struct ViewModel {
+            
+            struct DisplayedPromotion {
+            }
+            
+            var displayedPromotion: DisplayedPromotion
+        }
     }
 }

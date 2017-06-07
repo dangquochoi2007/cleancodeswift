@@ -44,7 +44,7 @@ extension iBeaconInteractor: iBeaconViewControllerOutput {
 
         // TODO: Create some Worker to do the work
 
-        worker.doSomeWork()
+        
 
         // TODO: Pass the result to the Presenter
 

@@ -11,19 +11,20 @@ import CoreBluetooth
 
 protocol iBeaconViewControllerInput: iBeaconPresenterOutput {
     
+    func displayPromotion(viewModel: iBeaconViewModel.FetchPromotion.ViewModel.DisplayedPromotion)
 }
 
 protocol iBeaconViewControllerOutput {
     
-    func doSomething()
+   
 }
 
-final class iBeaconViewController: UIViewController, CBCentralManagerDelegate {
+final class iBeaconViewController: UIViewController {
     
     var output: iBeaconViewControllerOutput!
     var router: iBeaconRouterProtocol!
     
-    var centralManager:CBCentralManager!
+    var centralManager: CBCentralManager!
     
 
     
@@ -66,13 +67,15 @@ final class iBeaconViewController: UIViewController, CBCentralManagerDelegate {
     
     
     // MARK: - Load data
-    
-    func doSomethingOnLoad() {
+    func configureViewOnLoad() {
         
-        // TODO: Ask the Interactor to do some work
         
-        output.doSomething()
     }
+}
+
+
+
+extension iBeaconViewController: CBCentralManagerDelegate {
     
     // MARK: - CBCentralManagerDelegate
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
@@ -100,8 +103,7 @@ extension iBeaconViewController: iBeaconViewControllerInput {
     
     // MARK: - Display logic
     
-    func displaySomething(viewModel: iBeaconViewModel) {
+    func displayPromotion(viewModel: iBeaconViewModel.FetchPromotion.ViewModel.DisplayedPromotion) {
         
-        // TODO: Update UI
     }
 }
