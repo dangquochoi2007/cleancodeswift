@@ -8,12 +8,15 @@
 
 import UIKit
 import CoreData
+import CoreLocation
+import UserNotifications
 
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+     var locationManager:CLLocationManager?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -23,7 +26,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = iBeaconViewController()
         self.window?.makeKeyAndVisible()
         
+        let beaconUUID:UUID = UUID(uuidString: iBeaconViewModel.FetchPromotion.Request.uuid)!
+        let beaconRegion:CLBeaconRegion = CLBeaconRegion(proximityUUID: beaconUUID, identifier: iBeaconViewModel.FetchPromotion.Request.beaconIdentifier)
     
+        locationManager = CLLocationManager()
+        if (CLLocationManager.responds(to: #selector(CLLocationManager.requestAlwaysAuthorization))) {
+            
+            locationManager?.requestWhenInUseAuthorization()
+        }
+        locationManager?.delegate = self
+        locationManager?.pausesLocationUpdatesAutomatically = false
+        // 20 beacons at a given time.
+        locationManager?.startMonitoring(for: beaconRegion)
+        
+        locationManager?.startRangingBeacons(in: beaconRegion)
+        //https://spin.atomicobject.com/2017/01/31/ibeacon-in-swift/
+        // Apple will reject it
+        
+        locationManager?.startUpdatingLocation()
+        
+        if #available(iOS 10.0, *) {
+            let center = UNUserNotificationCenter.current()
+            center.delegate = self
+            center.requestAuthorization(options: [UNAuthorizationOptions.sound], completionHandler: { (granted, error) in
+                
+                if error == nil {
+                    
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+            })
+        } else {
+            // Lower version > 7.0
+            let settings = UIUserNotificationSettings(types: [UIUserNotificationType.alert, UIUserNotificationType.badge, UIUserNotificationType.sound], categories: nil)
+            UIApplication.shared.registerUserNotificationSettings(settings)
+            application.registerForRemoteNotifications()
+        }
         
         return true
     }
@@ -97,5 +134,68 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+}
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        print("User info notification")
+        completionHandler([
+            UNNotificationPresentationOptions.sound,
+            UNNotificationPresentationOptions.alert,
+            UNNotificationPresentationOptions.badge
+            ])
+    }
+    
+    
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        print("user received notification")
+        completionHandler()
+    }
+}
+
+
+extension AppDelegate: CLLocationManagerDelegate {
+    
+    func sendLocalNotificationWithMessage(message: String, playSound: Bool) {
+    
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
+        
+        let knowBeacons = beacons.filter{
+            $0.proximity != CLProximity.unknown
+        }
+        
+        if (knowBeacons.count > 0) {
+            
+            
+        }
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        
+        guard region is CLBeaconRegion else {
+            return
+        }
+        
+        
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        
+        guard region is CLBeaconRegion else {
+            return
+        }
+        
+        
+        
+    }
 }
 

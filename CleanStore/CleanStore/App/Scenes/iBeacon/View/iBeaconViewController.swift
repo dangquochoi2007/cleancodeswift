@@ -8,7 +8,9 @@
 
 import UIKit
 import CoreBluetooth
+import CoreLocation
 
+//B88173F8-5680-4C39-B95C-534CB46B4E7A
 protocol iBeaconViewControllerInput: iBeaconPresenterOutput {
     
     func displayPromotion(viewModel: iBeaconViewModel.FetchPromotion.ViewModel.DisplayedPromotion)
@@ -66,6 +68,14 @@ final class iBeaconViewController: UIViewController {
     }
     
     
+    override func didReceiveMemoryWarning() {
+        
+        super.didReceiveMemoryWarning()
+        
+        
+    }
+    
+    
     // MARK: - Load data
     func configureViewOnLoad() {
         
@@ -79,6 +89,7 @@ extension iBeaconViewController: CBCentralManagerDelegate {
     
     // MARK: - CBCentralManagerDelegate
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
+        
         switch (central.state) {
         case .poweredOn:
             print("power on")
@@ -87,13 +98,27 @@ extension iBeaconViewController: CBCentralManagerDelegate {
             print("power off")
             return
         case .unauthorized:
-            return;
+            return
         default:
             print("unknow")
             return
         }
     }
 }
+
+
+extension iBeaconViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+    }
+    
+    //Passive tracking iPhone home
+    
+}
+
+
+
 
 
 // MARK: - iBeaconPresenterOutput
