@@ -23,27 +23,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let screen = UIScreen.main
         self.window = UIWindow(frame: screen.bounds)
-        self.window?.rootViewController = iBeaconViewController()
+        self.window?.rootViewController = iBeaconReceiveViewController()
         self.window?.makeKeyAndVisible()
         
-        let beaconUUID:UUID = UUID(uuidString: iBeaconViewModel.FetchPromotion.Request.uuid)!
-        let beaconRegion:CLBeaconRegion = CLBeaconRegion(proximityUUID: beaconUUID, identifier: iBeaconViewModel.FetchPromotion.Request.beaconIdentifier)
-    
-        locationManager = CLLocationManager()
-        if (CLLocationManager.responds(to: #selector(CLLocationManager.requestAlwaysAuthorization))) {
-            
-            locationManager?.requestWhenInUseAuthorization()
-        }
-        locationManager?.delegate = self
-        locationManager?.pausesLocationUpdatesAutomatically = false
-        // 20 beacons at a given time.
-        locationManager?.startMonitoring(for: beaconRegion)
-        
-        locationManager?.startRangingBeacons(in: beaconRegion)
-        //https://spin.atomicobject.com/2017/01/31/ibeacon-in-swift/
-        // Apple will reject it
-        
-        locationManager?.startUpdatingLocation()
+//        let beaconUUID:UUID = UUID(uuidString: iBeaconViewModel.FetchPromotion.Request.uuid)!
+//        let beaconRegion:CLBeaconRegion = CLBeaconRegion(proximityUUID: beaconUUID, identifier: iBeaconViewModel.FetchPromotion.Request.beaconIdentifier)
+//    
+//        locationManager = CLLocationManager()
+//        if (CLLocationManager.responds(to: #selector(CLLocationManager.requestAlwaysAuthorization))) {
+//            
+//            locationManager?.requestWhenInUseAuthorization()
+//        }
+//        locationManager?.delegate = self
+//        locationManager?.pausesLocationUpdatesAutomatically = false
+//        // 20 beacons at a given time.
+//        locationManager?.startMonitoring(for: beaconRegion)
+//        
+//        locationManager?.startRangingBeacons(in: beaconRegion)
+//        //https://spin.atomicobject.com/2017/01/31/ibeacon-in-swift/
+//        // Apple will reject it
+//        
+//        locationManager?.startUpdatingLocation()
         
         if #available(iOS 10.0, *) {
             let center = UNUserNotificationCenter.current()

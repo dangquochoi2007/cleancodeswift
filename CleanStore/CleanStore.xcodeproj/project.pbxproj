@@ -10,6 +10,14 @@
 		469BB0E036E90F8D37F9104A /* Pods_CleanStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9892EA30C9D73B5C95FAD4 /* Pods_CleanStoreTests.framework */; };
 		8107C8CC77D828635F9D89AA /* Pods_CleanStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62BCFA0D3257683AE02D5434 /* Pods_CleanStore.framework */; };
 		B4611D3378C389D889A3321B /* Pods_CleanStoreUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89069F81FADBE31BE71FB1D4 /* Pods_CleanStoreUITests.framework */; };
+		C558B90C1EEACCD6007D9E3D /* iBeaconReceiveConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B8FF1EEACCD6007D9E3D /* iBeaconReceiveConfigurator.swift */; };
+		C558B90D1EEACCD6007D9E3D /* iBeaconReceiveInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B9011EEACCD6007D9E3D /* iBeaconReceiveInteractor.swift */; };
+		C558B90E1EEACCD6007D9E3D /* iBeaconReceivePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B9031EEACCD6007D9E3D /* iBeaconReceivePresenter.swift */; };
+		C558B90F1EEACCD6007D9E3D /* iBeaconReceiveRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B9051EEACCD6007D9E3D /* iBeaconReceiveRouter.swift */; };
+		C558B9101EEACCD6007D9E3D /* iBeaconReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B9071EEACCD6007D9E3D /* iBeaconReceiveViewController.swift */; };
+		C558B9111EEACCD6007D9E3D /* iBeaconReceiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B9091EEACCD6007D9E3D /* iBeaconReceiveViewModel.swift */; };
+		C558B9121EEACCD6007D9E3D /* iBeaconReceiveWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B90B1EEACCD6007D9E3D /* iBeaconReceiveWorker.swift */; };
+		C558B9141EED942C007D9E3D /* iBeaconReceiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C558B9131EED942C007D9E3D /* iBeaconReceiveViewController.xib */; };
 		E608ABAA1EE008CA00FED38D /* ErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E608ABA91EE008CA00FED38D /* ErrorPresenter.swift */; };
 		E608ABAC1EE0090600FED38D /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E608ABAB1EE0090600FED38D /* ErrorViewModel.swift */; };
 		E608ABAE1EE00AAE00FED38D /* ArtistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E608ABAD1EE00AAD00FED38D /* ArtistsView.swift */; };
@@ -95,6 +103,14 @@
 		89069F81FADBE31BE71FB1D4 /* Pods_CleanStoreUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanStoreUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94171EB962D3E507DBCAAAC6 /* Pods-CleanStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanStore/Pods-CleanStore.release.xcconfig"; sourceTree = "<group>"; };
 		C2CE5346774C94920F7D5FC9 /* Pods-CleanStoreUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanStoreUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanStoreUITests/Pods-CleanStoreUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C558B8FF1EEACCD6007D9E3D /* iBeaconReceiveConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveConfigurator.swift; sourceTree = "<group>"; };
+		C558B9011EEACCD6007D9E3D /* iBeaconReceiveInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveInteractor.swift; sourceTree = "<group>"; };
+		C558B9031EEACCD6007D9E3D /* iBeaconReceivePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceivePresenter.swift; sourceTree = "<group>"; };
+		C558B9051EEACCD6007D9E3D /* iBeaconReceiveRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveRouter.swift; sourceTree = "<group>"; };
+		C558B9071EEACCD6007D9E3D /* iBeaconReceiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveViewController.swift; sourceTree = "<group>"; };
+		C558B9091EEACCD6007D9E3D /* iBeaconReceiveViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveViewModel.swift; sourceTree = "<group>"; };
+		C558B90B1EEACCD6007D9E3D /* iBeaconReceiveWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveWorker.swift; sourceTree = "<group>"; };
+		C558B9131EED942C007D9E3D /* iBeaconReceiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iBeaconReceiveViewController.xib; sourceTree = "<group>"; };
 		D37CFFEAF36AFC1A06C8E154 /* Pods-CleanStoreUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanStoreUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanStoreUITests/Pods-CleanStoreUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB2A25C20E5E1BC12DD1FDFF /* Pods-CleanStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanStoreTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanStoreTests/Pods-CleanStoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		E608ABA91EE008CA00FED38D /* ErrorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorPresenter.swift; sourceTree = "<group>"; };
@@ -212,6 +228,77 @@
 				C2CE5346774C94920F7D5FC9 /* Pods-CleanStoreUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C558B8FD1EEACCD6007D9E3D /* iBeaconReceive */ = {
+			isa = PBXGroup;
+			children = (
+				C558B8FE1EEACCD6007D9E3D /* Configurator */,
+				C558B9001EEACCD6007D9E3D /* Interactor */,
+				C558B9021EEACCD6007D9E3D /* Presenter */,
+				C558B9041EEACCD6007D9E3D /* Router */,
+				C558B9061EEACCD6007D9E3D /* View */,
+				C558B9081EEACCD6007D9E3D /* ViewModel */,
+				C558B90A1EEACCD6007D9E3D /* Worker */,
+			);
+			path = iBeaconReceive;
+			sourceTree = "<group>";
+		};
+		C558B8FE1EEACCD6007D9E3D /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				C558B8FF1EEACCD6007D9E3D /* iBeaconReceiveConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		C558B9001EEACCD6007D9E3D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C558B9011EEACCD6007D9E3D /* iBeaconReceiveInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C558B9021EEACCD6007D9E3D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C558B9031EEACCD6007D9E3D /* iBeaconReceivePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C558B9041EEACCD6007D9E3D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C558B9051EEACCD6007D9E3D /* iBeaconReceiveRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		C558B9061EEACCD6007D9E3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C558B9071EEACCD6007D9E3D /* iBeaconReceiveViewController.swift */,
+				C558B9131EED942C007D9E3D /* iBeaconReceiveViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C558B9081EEACCD6007D9E3D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C558B9091EEACCD6007D9E3D /* iBeaconReceiveViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C558B90A1EEACCD6007D9E3D /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				C558B90B1EEACCD6007D9E3D /* iBeaconReceiveWorker.swift */,
+			);
+			path = Worker;
 			sourceTree = "<group>";
 		};
 		E63363711EBC7A0F00F79277 /* Opencv */ = {
@@ -390,6 +477,7 @@
 		E65B19191EB9987D00237163 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				C558B8FD1EEACCD6007D9E3D /* iBeaconReceive */,
 				E63D7CD81EDD4AFC0033F7ED /* Me */,
 				E68D2DBD1EDBD6F10084F01C /* iBeacon */,
 				E65B193C1EB9D4EF00237163 /* Artists */,
@@ -695,6 +783,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C558B9141EED942C007D9E3D /* iBeaconReceiveViewController.xib in Resources */,
 				E65B19571EB9D71100237163 /* ArtistsViewController.xib in Resources */,
 				E65B18F31EB98F0000237163 /* LaunchScreen.storyboard in Resources */,
 				E63D7CF31EDD4C1E0033F7ED /* MeViewController.xib in Resources */,
@@ -866,6 +955,7 @@
 			files = (
 				E63D7CE81EDD4AFC0033F7ED /* MeInteractor.swift in Sources */,
 				E65B19611EB9E3FC00237163 /* User.swift in Sources */,
+				C558B90C1EEACCD6007D9E3D /* iBeaconReceiveConfigurator.swift in Sources */,
 				E63D7CF61EDD58820033F7ED /* MeTableViewCell.swift in Sources */,
 				E65B19561EB9D71100237163 /* ArtistsViewController.swift in Sources */,
 				E65B18EE1EB98F0000237163 /* CleanStore.xcdatamodeld in Sources */,
@@ -874,18 +964,21 @@
 				E68D2DCD1EDBD6F10084F01C /* iBeaconInteractor.swift in Sources */,
 				E608ABB21EE0115300FED38D /* ArtistItemView.swift in Sources */,
 				E65B19511EB9D4EF00237163 /* ArtistsWorker.swift in Sources */,
+				C558B9121EEACCD6007D9E3D /* iBeaconReceiveWorker.swift in Sources */,
 				E65B194D1EB9D4EF00237163 /* ArtistsPresenter.swift in Sources */,
 				E608ABAC1EE0090600FED38D /* ErrorViewModel.swift in Sources */,
 				E65B194E1EB9D4EF00237163 /* ArtistsRouter.swift in Sources */,
 				E65B18E61EB98F0000237163 /* AppDelegate.swift in Sources */,
 				E608ABAE1EE00AAE00FED38D /* ArtistsView.swift in Sources */,
 				E65DD6501EDEC3B70091CA3C /* Parsable.swift in Sources */,
+				C558B90D1EEACCD6007D9E3D /* iBeaconReceiveInteractor.swift in Sources */,
 				E68D2DCC1EDBD6F10084F01C /* iBeaconConfigurator.swift in Sources */,
 				E68D2DD11EDBD6F10084F01C /* iBeaconViewModel.swift in Sources */,
 				E608ABAA1EE008CA00FED38D /* ErrorPresenter.swift in Sources */,
 				E65DD65B1EDED8EB0091CA3C /* API.swift in Sources */,
 				E68D2DCE1EDBD6F10084F01C /* iBeaconPresenter.swift in Sources */,
 				E63D7CEA1EDD4AFC0033F7ED /* MeRouter.swift in Sources */,
+				C558B9101EEACCD6007D9E3D /* iBeaconReceiveViewController.swift in Sources */,
 				E65B194C1EB9D4EF00237163 /* ArtistsInteractor.swift in Sources */,
 				E65B19501EB9D4EF00237163 /* ArtistsViewModel.swift in Sources */,
 				E608ABB61EE0132300FED38D /* ImageMemoryStore.swift in Sources */,
@@ -898,6 +991,7 @@
 				E65B19591EB9DC6A00237163 /* Album.swift in Sources */,
 				E608ABB41EE012FC00FED38D /* ImageManager.swift in Sources */,
 				E608ABBA1EE013E600FED38D /* ImageNetworkStore.swift in Sources */,
+				C558B9111EEACCD6007D9E3D /* iBeaconReceiveViewModel.swift in Sources */,
 				E68D2DD21EDBD6F10084F01C /* iBeaconWorker.swift in Sources */,
 				E63D7CE71EDD4AFC0033F7ED /* MeConfigurator.swift in Sources */,
 				E65DD6461EDEB3560091CA3C /* NetworkClient.swift in Sources */,
@@ -906,10 +1000,12 @@
 				E65DD6571EDED3CC0091CA3C /* ArtistsAPIStore.swift in Sources */,
 				E63D7CF21EDD4C1E0033F7ED /* MeViewController.swift in Sources */,
 				E68D2DDA1EDC06030084F01C /* RegionMonitor.swift in Sources */,
+				C558B90F1EEACCD6007D9E3D /* iBeaconReceiveRouter.swift in Sources */,
 				E63D7CE91EDD4AFC0033F7ED /* MePresenter.swift in Sources */,
 				E63D7CED1EDD4AFC0033F7ED /* MeWorker.swift in Sources */,
 				E65DD6421EDEB0CF0091CA3C /* PromotionStoreProtocol.swift in Sources */,
 				E65DD64E1EDEC0D40091CA3C /* Data+JSON.swift in Sources */,
+				C558B90E1EEACCD6007D9E3D /* iBeaconReceivePresenter.swift in Sources */,
 				E63D7CEC1EDD4AFC0033F7ED /* MeViewModel.swift in Sources */,
 				E65B195D1EB9DD8000237163 /* Artist.swift in Sources */,
 				E65DD6591EDED63F0091CA3C /* ArtistsStoreProtocol.swift in Sources */,

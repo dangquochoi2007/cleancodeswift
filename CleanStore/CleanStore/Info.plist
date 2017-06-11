@@ -44,5 +44,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>Advertisement would like to use bluetooth.</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Need permission to spot iBeacons</string>
 </dict>
 </plist>
