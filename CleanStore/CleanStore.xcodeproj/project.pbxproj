@@ -14,10 +14,10 @@
 		C558B90D1EEACCD6007D9E3D /* iBeaconReceiveInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B9011EEACCD6007D9E3D /* iBeaconReceiveInteractor.swift */; };
 		C558B90E1EEACCD6007D9E3D /* iBeaconReceivePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B9031EEACCD6007D9E3D /* iBeaconReceivePresenter.swift */; };
 		C558B90F1EEACCD6007D9E3D /* iBeaconReceiveRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B9051EEACCD6007D9E3D /* iBeaconReceiveRouter.swift */; };
-		C558B9101EEACCD6007D9E3D /* iBeaconReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B9071EEACCD6007D9E3D /* iBeaconReceiveViewController.swift */; };
 		C558B9111EEACCD6007D9E3D /* iBeaconReceiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B9091EEACCD6007D9E3D /* iBeaconReceiveViewModel.swift */; };
 		C558B9121EEACCD6007D9E3D /* iBeaconReceiveWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B90B1EEACCD6007D9E3D /* iBeaconReceiveWorker.swift */; };
-		C558B9141EED942C007D9E3D /* iBeaconReceiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C558B9131EED942C007D9E3D /* iBeaconReceiveViewController.xib */; };
+		C558B9171EED95E0007D9E3D /* iBeaconReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B9151EED95E0007D9E3D /* iBeaconReceiveViewController.swift */; };
+		C558B9181EED95E0007D9E3D /* iBeaconReceiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C558B9161EED95E0007D9E3D /* iBeaconReceiveViewController.xib */; };
 		E608ABAA1EE008CA00FED38D /* ErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E608ABA91EE008CA00FED38D /* ErrorPresenter.swift */; };
 		E608ABAC1EE0090600FED38D /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E608ABAB1EE0090600FED38D /* ErrorViewModel.swift */; };
 		E608ABAE1EE00AAE00FED38D /* ArtistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E608ABAD1EE00AAD00FED38D /* ArtistsView.swift */; };
@@ -107,10 +107,10 @@
 		C558B9011EEACCD6007D9E3D /* iBeaconReceiveInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveInteractor.swift; sourceTree = "<group>"; };
 		C558B9031EEACCD6007D9E3D /* iBeaconReceivePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceivePresenter.swift; sourceTree = "<group>"; };
 		C558B9051EEACCD6007D9E3D /* iBeaconReceiveRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveRouter.swift; sourceTree = "<group>"; };
-		C558B9071EEACCD6007D9E3D /* iBeaconReceiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveViewController.swift; sourceTree = "<group>"; };
 		C558B9091EEACCD6007D9E3D /* iBeaconReceiveViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveViewModel.swift; sourceTree = "<group>"; };
 		C558B90B1EEACCD6007D9E3D /* iBeaconReceiveWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveWorker.swift; sourceTree = "<group>"; };
-		C558B9131EED942C007D9E3D /* iBeaconReceiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iBeaconReceiveViewController.xib; sourceTree = "<group>"; };
+		C558B9151EED95E0007D9E3D /* iBeaconReceiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveViewController.swift; sourceTree = "<group>"; };
+		C558B9161EED95E0007D9E3D /* iBeaconReceiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iBeaconReceiveViewController.xib; sourceTree = "<group>"; };
 		D37CFFEAF36AFC1A06C8E154 /* Pods-CleanStoreUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanStoreUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanStoreUITests/Pods-CleanStoreUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB2A25C20E5E1BC12DD1FDFF /* Pods-CleanStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanStoreTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanStoreTests/Pods-CleanStoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		E608ABA91EE008CA00FED38D /* ErrorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorPresenter.swift; sourceTree = "<group>"; };
@@ -279,8 +279,8 @@
 		C558B9061EEACCD6007D9E3D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C558B9071EEACCD6007D9E3D /* iBeaconReceiveViewController.swift */,
-				C558B9131EED942C007D9E3D /* iBeaconReceiveViewController.xib */,
+				C558B9151EED95E0007D9E3D /* iBeaconReceiveViewController.swift */,
+				C558B9161EED95E0007D9E3D /* iBeaconReceiveViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -783,7 +783,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C558B9141EED942C007D9E3D /* iBeaconReceiveViewController.xib in Resources */,
+				C558B9181EED95E0007D9E3D /* iBeaconReceiveViewController.xib in Resources */,
 				E65B19571EB9D71100237163 /* ArtistsViewController.xib in Resources */,
 				E65B18F31EB98F0000237163 /* LaunchScreen.storyboard in Resources */,
 				E63D7CF31EDD4C1E0033F7ED /* MeViewController.xib in Resources */,
@@ -977,8 +977,8 @@
 				E608ABAA1EE008CA00FED38D /* ErrorPresenter.swift in Sources */,
 				E65DD65B1EDED8EB0091CA3C /* API.swift in Sources */,
 				E68D2DCE1EDBD6F10084F01C /* iBeaconPresenter.swift in Sources */,
+				C558B9171EED95E0007D9E3D /* iBeaconReceiveViewController.swift in Sources */,
 				E63D7CEA1EDD4AFC0033F7ED /* MeRouter.swift in Sources */,
-				C558B9101EEACCD6007D9E3D /* iBeaconReceiveViewController.swift in Sources */,
 				E65B194C1EB9D4EF00237163 /* ArtistsInteractor.swift in Sources */,
 				E65B19501EB9D4EF00237163 /* ArtistsViewModel.swift in Sources */,
 				E608ABB61EE0132300FED38D /* ImageMemoryStore.swift in Sources */,
