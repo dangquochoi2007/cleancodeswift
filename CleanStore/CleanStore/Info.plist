@@ -46,7 +46,7 @@
 	</array>
     <key>NSBluetoothPeripheralUsageDescription</key>
     <string>Advertisement would like to use bluetooth.</string>
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>Need permission to spot iBeacons</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>We want to detect where you are in our store.</string>
 </dict>
 </plist>

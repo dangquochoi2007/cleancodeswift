@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,41 +19,72 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beacon Spot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRS-VN-OHx">
-                    <rect key="frame" x="138.5" y="50" width="98" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.98431372549999996" green="0.51764705879999995" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iBeacon Locator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMo-of-rwq">
-                    <rect key="frame" x="125.5" y="91" width="124" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beacon details: Not avaiable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svA-mS-gsC">
-                    <rect key="frame" x="79.5" y="177" width="216" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6h-Hl-gAo">
-                    <rect key="frame" x="164" y="256" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.98431372549999996" green="0.51764705879999995" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Button">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDd-X7-Msu">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h51-CF-rcR" userLabel="ContentView">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwo-lF-sNn">
+                                    <rect key="frame" x="147" y="496" width="80" height="80"/>
+                                    <color key="backgroundColor" red="0.98431372549999996" green="0.51764705879999995" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="80" id="8Vp-hS-Mco"/>
+                                        <constraint firstAttribute="width" constant="80" id="Xov-cL-de7"/>
+                                    </constraints>
+                                    <state key="normal" title="Spotting">
+                                        <color key="titleColor" red="0.96078431369999995" green="0.96470588239999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beacon Spot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ5-a0-HpI">
+                                    <rect key="frame" x="138.5" y="50" width="98" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.98431372549999996" green="0.51764705879999995" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iBeacon Locator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGi-S8-Yn0">
+                                    <rect key="frame" x="125.5" y="91" width="124" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beacon Details: Not Available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0R-0f-BrK">
+                                    <rect key="frame" x="76" y="152" width="223" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="LQ5-a0-HpI" firstAttribute="top" secondItem="h51-CF-rcR" secondAttribute="top" constant="50" id="3Tc-q4-mDB"/>
+                                <constraint firstItem="kwo-lF-sNn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Q0R-0f-BrK" secondAttribute="bottom" constant="20" id="43y-JK-Jlu"/>
+                                <constraint firstAttribute="bottom" secondItem="kwo-lF-sNn" secondAttribute="bottom" constant="91" id="54w-jB-AXH"/>
+                                <constraint firstItem="Q0R-0f-BrK" firstAttribute="top" secondItem="HGi-S8-Yn0" secondAttribute="bottom" constant="40" id="Bxc-bP-O40"/>
+                                <constraint firstItem="kwo-lF-sNn" firstAttribute="centerX" secondItem="h51-CF-rcR" secondAttribute="centerX" id="Fdq-Wf-Y3m"/>
+                                <constraint firstItem="HGi-S8-Yn0" firstAttribute="centerX" secondItem="LQ5-a0-HpI" secondAttribute="centerX" id="RvD-1O-wYc"/>
+                                <constraint firstItem="HGi-S8-Yn0" firstAttribute="top" secondItem="LQ5-a0-HpI" secondAttribute="bottom" constant="20" id="YPc-CF-YiY"/>
+                                <constraint firstItem="Q0R-0f-BrK" firstAttribute="centerX" secondItem="HGi-S8-Yn0" secondAttribute="centerX" id="ZmD-IJ-fjm"/>
+                                <constraint firstItem="LQ5-a0-HpI" firstAttribute="centerX" secondItem="h51-CF-rcR" secondAttribute="centerX" id="d1b-Ur-CMy"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="h51-CF-rcR" firstAttribute="top" secondItem="tDd-X7-Msu" secondAttribute="top" id="8Dr-pi-8Mt"/>
+                        <constraint firstAttribute="trailing" secondItem="h51-CF-rcR" secondAttribute="trailing" id="RvO-2v-JvW"/>
+                        <constraint firstAttribute="bottom" secondItem="h51-CF-rcR" secondAttribute="bottom" id="erV-kE-6Xl"/>
+                        <constraint firstItem="h51-CF-rcR" firstAttribute="leading" secondItem="tDd-X7-Msu" secondAttribute="leading" id="m2j-pb-sv7"/>
+                    </constraints>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="hRS-VN-OHx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="Nqs-nP-Geb"/>
-                <constraint firstItem="svA-mS-gsC" firstAttribute="centerX" secondItem="sMo-of-rwq" secondAttribute="centerX" id="XHb-Lq-fcz"/>
-                <constraint firstItem="sMo-of-rwq" firstAttribute="centerX" secondItem="hRS-VN-OHx" secondAttribute="centerX" id="Zv2-LZ-VuF"/>
-                <constraint firstItem="svA-mS-gsC" firstAttribute="top" secondItem="sMo-of-rwq" secondAttribute="bottom" constant="65" id="lKu-JZ-gjA"/>
-                <constraint firstItem="sMo-of-rwq" firstAttribute="top" secondItem="hRS-VN-OHx" secondAttribute="bottom" constant="20" id="pkI-m1-pHm"/>
-                <constraint firstItem="hRS-VN-OHx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xk5-jr-ze4"/>
+                <constraint firstItem="tDd-X7-Msu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4De-Cs-KEU"/>
+                <constraint firstItem="h51-CF-rcR" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" priority="250" id="6ZY-fN-KMB"/>
+                <constraint firstItem="h51-CF-rcR" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="Bm5-Gp-JOs"/>
+                <constraint firstItem="tDd-X7-Msu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Ygv-qN-2xB"/>
+                <constraint firstAttribute="bottom" secondItem="tDd-X7-Msu" secondAttribute="bottom" id="fPt-NG-T4z"/>
+                <constraint firstAttribute="trailing" secondItem="tDd-X7-Msu" secondAttribute="trailing" id="u5s-YB-B6C"/>
             </constraints>
             <point key="canvasLocation" x="25.5" y="52.5"/>
         </view>
