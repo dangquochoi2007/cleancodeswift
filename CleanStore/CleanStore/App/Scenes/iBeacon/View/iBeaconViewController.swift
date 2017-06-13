@@ -36,7 +36,8 @@ final class iBeaconViewController: UIViewController {
     @IBOutlet weak var minorTextField: UITextField!
     
     @IBOutlet weak var bluetoothStatusLabel: UILabel!
-    @IBOutlet weak var beaconStatusLabel: UILabel!
+    
+    var isBoardcasting: Bool = false
     
     
     
@@ -72,6 +73,7 @@ final class iBeaconViewController: UIViewController {
         
         super.viewDidLoad()
         
+        initLocalBeacon()
     }
     
     
@@ -90,7 +92,30 @@ final class iBeaconViewController: UIViewController {
     }
     
     @IBAction func startBeaconButtonPressed(_ sender: UIButton) {
-        initLocalBeacon()
+        
+        if !isBoardcasting {
+            if (beaconPeripheralManager.state == CBManagerState.poweredOn) {
+                uuidTextField.isEnabled = true
+                majorTextField.isEnabled = true
+                minorTextField.isEnabled = true
+                
+                sender.setTitle("Stop", for: UIControlState.normal)
+                
+                isBoardcasting = true
+            }
+            
+        } else {
+            
+            beaconPeripheralManager.stopAdvertising()
+            sender.setTitle("Boardcast", for: UIControlState.normal)
+            
+            uuidTextField.isEnabled = false
+            majorTextField.isEnabled = false
+            minorTextField.isEnabled = false
+            
+            isBoardcasting = false
+            
+        }
     }
     
     
@@ -130,32 +155,25 @@ extension iBeaconViewController: CBPeripheralManagerDelegate {
 
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
         
-        if (peripheral.state == .poweredOn) {
-        
-            peripheral.startAdvertising(beaconPeripheralData as! [String: AnyObject])
-            print("Powered On")
-        } else if (peripheral.state == .poweredOff) {
-            
-            peripheral.stopAdvertising()
-            print("Not Powered On, or some other error")
-        }
-        
+        var statusMessage = ""
         switch peripheral.state {
         case .poweredOn:
             peripheral.startAdvertising(beaconPeripheralData as! [String: AnyObject])
-            print("Powered On")
+            statusMessage = "Bluetooth Status: Turned On"
         case .poweredOff:
             peripheral.stopAdvertising()
-            print("Not Powered On, or some other error")
+            statusMessage = "Bluetooth Status: Turned Off"
         case .unauthorized:
-            print("Not allow")
+            statusMessage = "Bluetooth Status: Not Authorized"
         case .unsupported:
-            print("un support")
+            statusMessage = "Bluetooth Status: Not Supported"
         case .resetting:
-            print("resetting")
+            statusMessage = "Bluetooth Status: Resetting"
         case .unknown:
-            print("unknow")
+            statusMessage = "Bluetooth Status: Unknown"
         }
+        
+        bluetoothStatusLabel.text = statusMessage
     }
 }
 

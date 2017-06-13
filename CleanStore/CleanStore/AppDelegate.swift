@@ -197,5 +197,14 @@ extension AppDelegate: CLLocationManagerDelegate {
         
         
     }
+    
+    
+    func tet() {
+    
+        let view1 = UIView()
+        view1.alpha = 0.3
+        
+        
+    }
 }
 

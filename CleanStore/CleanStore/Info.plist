@@ -48,5 +48,7 @@
     <string>Advertisement would like to use bluetooth.</string>
     <key>NSLocationWhenInUseUsageDescription</key>
     <string>We want to detect where you are in our store.</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>We want to detect where you are in our store.</string>
 </dict>
 </plist>
