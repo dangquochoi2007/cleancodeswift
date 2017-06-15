@@ -76,6 +76,7 @@
 		E68D2DD71EDBDCA10084F01C /* iBeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DD51EDBDCA10084F01C /* iBeaconViewController.swift */; };
 		E68D2DD81EDBDCA10084F01C /* iBeaconViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E68D2DD61EDBDCA10084F01C /* iBeaconViewController.xib */; };
 		E68D2DDA1EDC06030084F01C /* RegionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DD91EDC06030084F01C /* RegionMonitor.swift */; };
+		E6ACAC961EF0EA230090716C /* KeyboardMovable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ACAC951EF0EA230090716C /* KeyboardMovable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +178,7 @@
 		E68D2DD51EDBDCA10084F01C /* iBeaconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconViewController.swift; sourceTree = "<group>"; };
 		E68D2DD61EDBDCA10084F01C /* iBeaconViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iBeaconViewController.xib; sourceTree = "<group>"; };
 		E68D2DD91EDC06030084F01C /* RegionMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionMonitor.swift; sourceTree = "<group>"; };
+		E6ACAC951EF0EA230090716C /* KeyboardMovable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardMovable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -493,6 +495,7 @@
 				E608ABB51EE0132300FED38D /* ImageMemoryStore.swift */,
 				E608ABB71EE0135400FED38D /* ImageStoreProtocol.swift */,
 				E608ABB91EE013E500FED38D /* ImageNetworkStore.swift */,
+				E6ACAC951EF0EA230090716C /* KeyboardMovable.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -978,6 +981,7 @@
 				E608ABAA1EE008CA00FED38D /* ErrorPresenter.swift in Sources */,
 				E65DD65B1EDED8EB0091CA3C /* API.swift in Sources */,
 				E68D2DCE1EDBD6F10084F01C /* iBeaconPresenter.swift in Sources */,
+				E6ACAC961EF0EA230090716C /* KeyboardMovable.swift in Sources */,
 				C558B9171EED95E0007D9E3D /* iBeaconReceiveViewController.swift in Sources */,
 				E63D7CEA1EDD4AFC0033F7ED /* MeRouter.swift in Sources */,
 				E65B194C1EB9D4EF00237163 /* ArtistsInteractor.swift in Sources */,

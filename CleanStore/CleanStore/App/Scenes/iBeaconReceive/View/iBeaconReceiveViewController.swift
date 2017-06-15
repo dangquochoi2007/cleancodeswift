@@ -10,6 +10,7 @@ import CoreLocation
 import Speech
 // https://developer.apple.com/library/content/samplecode/SpeakToMe/Listings/SpeakToMe_ViewController_swift.html
 // https://www.raywenderlich.com/136165/core-location-geofencing-tutorial
+// http://exploringlightswitch.blogspot.com/2014/08/working-with-ibeacons-in-swift.html
 
 protocol iBeaconReceiveViewControllerInput: iBeaconReceivePresenterOutput {
     
@@ -17,7 +18,7 @@ protocol iBeaconReceiveViewControllerInput: iBeaconReceivePresenterOutput {
 
 protocol iBeaconReceiveViewControllerOutput {
     
-    func doSomething()
+  
 }
 
 final class iBeaconReceiveViewController: UIViewController {
@@ -100,7 +101,7 @@ final class iBeaconReceiveViewController: UIViewController {
     func doSomethingOnLoad() {
         
         // TODO: Ask the Interactor to do some work
-        output.doSomething()
+     
     }
     
     
