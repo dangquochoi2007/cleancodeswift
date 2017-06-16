@@ -68,6 +68,8 @@
 		E65A66B81EF3BD4700A3FE16 /* ProfileSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66B01EF3BD4700A3FE16 /* ProfileSettingsViewModel.swift */; };
 		E65A66B91EF3BD4700A3FE16 /* ProfileSettingsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66B21EF3BD4700A3FE16 /* ProfileSettingsWorker.swift */; };
 		E65A66BB1EF3D04500A3FE16 /* FacebookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66BA1EF3D04500A3FE16 /* FacebookService.swift */; };
+		E65A66BD1EF3E50A00A3FE16 /* TwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66BC1EF3E50A00A3FE16 /* TwitterService.swift */; };
+		E65A66BF1EF3E53A00A3FE16 /* GooglePlusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66BE1EF3E53A00A3FE16 /* GooglePlusService.swift */; };
 		E65B18E61EB98F0000237163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B18E51EB98F0000237163 /* AppDelegate.swift */; };
 		E65B18EE1EB98F0000237163 /* CleanStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E65B18EC1EB98F0000237163 /* CleanStore.xcdatamodeld */; };
 		E65B18F01EB98F0000237163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E65B18EF1EB98F0000237163 /* Assets.xcassets */; };
@@ -195,6 +197,8 @@
 		E65A66B01EF3BD4700A3FE16 /* ProfileSettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingsViewModel.swift; sourceTree = "<group>"; };
 		E65A66B21EF3BD4700A3FE16 /* ProfileSettingsWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingsWorker.swift; sourceTree = "<group>"; };
 		E65A66BA1EF3D04500A3FE16 /* FacebookService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookService.swift; sourceTree = "<group>"; };
+		E65A66BC1EF3E50A00A3FE16 /* TwitterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterService.swift; sourceTree = "<group>"; };
+		E65A66BE1EF3E53A00A3FE16 /* GooglePlusService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlusService.swift; sourceTree = "<group>"; };
 		E65B18E21EB98F0000237163 /* CleanStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E65B18E51EB98F0000237163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E65B18ED1EB98F0000237163 /* CleanStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CleanStore.xcdatamodel; sourceTree = "<group>"; };
@@ -845,6 +849,8 @@
 				E608ABB91EE013E500FED38D /* ImageNetworkStore.swift */,
 				E6ACAC951EF0EA230090716C /* KeyboardMovable.swift */,
 				E65A66BA1EF3D04500A3FE16 /* FacebookService.swift */,
+				E65A66BC1EF3E50A00A3FE16 /* TwitterService.swift */,
+				E65A66BE1EF3E53A00A3FE16 /* GooglePlusService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1310,7 +1316,9 @@
 			files = (
 				E63D7CE81EDD4AFC0033F7ED /* MeInteractor.swift in Sources */,
 				E65A66A01EF3BD3F00A3FE16 /* FeedsRouter.swift in Sources */,
+				E65A66BD1EF3E50A00A3FE16 /* TwitterService.swift in Sources */,
 				E65B19611EB9E3FC00237163 /* User.swift in Sources */,
+				E65A66BF1EF3E53A00A3FE16 /* GooglePlusService.swift in Sources */,
 				E65A669F1EF3BD3F00A3FE16 /* FeedsPresenter.swift in Sources */,
 				C558B90C1EEACCD6007D9E3D /* iBeaconReceiveConfigurator.swift in Sources */,
 				E63D7CF61EDD58820033F7ED /* MeTableViewCell.swift in Sources */,
