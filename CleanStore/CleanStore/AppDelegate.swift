@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let screen = UIScreen.main
         self.window = UIWindow(frame: screen.bounds)
-        self.window?.rootViewController = iBeaconReceiveViewController()
+        self.window?.rootViewController = SignInViewController()
         self.window?.makeKeyAndVisible()
         
 //        let beaconUUID:UUID = UUID(uuidString: iBeaconViewModel.FetchPromotion.Request.uuid)!

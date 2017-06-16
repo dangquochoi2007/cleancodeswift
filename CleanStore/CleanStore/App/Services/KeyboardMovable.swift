@@ -64,6 +64,14 @@ extension KeyboardMovable where Self: UIViewController {
     
     
     func destroyKeyboardMover() {
+        
+        if let showObserver = keyboardShowObserver {
+            notificationCenter.removeObserver(showObserver)
+        }
+        
+        if let hideObserver = keyboardHideObserver {
+            notificationCenter.removeObserver(hideObserver)
+        }
     }
     
     func keyboardWillShow(_ notification: Notification) {

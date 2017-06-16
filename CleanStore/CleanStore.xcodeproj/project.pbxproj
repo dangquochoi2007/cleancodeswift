@@ -37,6 +37,37 @@
 		E63D7CF31EDD4C1E0033F7ED /* MeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63D7CF11EDD4C1E0033F7ED /* MeViewController.xib */; };
 		E63D7CF61EDD58820033F7ED /* MeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63D7CF41EDD58820033F7ED /* MeTableViewCell.swift */; };
 		E63D7CF71EDD58820033F7ED /* MeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63D7CF51EDD58820033F7ED /* MeTableViewCell.xib */; };
+		E65A66691EF397DC00A3FE16 /* SignUpConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A665C1EF397DC00A3FE16 /* SignUpConfigurator.swift */; };
+		E65A666A1EF397DC00A3FE16 /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A665E1EF397DC00A3FE16 /* SignUpInteractor.swift */; };
+		E65A666B1EF397DC00A3FE16 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66601EF397DC00A3FE16 /* SignUpPresenter.swift */; };
+		E65A666C1EF397DC00A3FE16 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66621EF397DC00A3FE16 /* SignUpRouter.swift */; };
+		E65A666D1EF397DC00A3FE16 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66641EF397DC00A3FE16 /* SignUpViewController.swift */; };
+		E65A666E1EF397DC00A3FE16 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66661EF397DC00A3FE16 /* SignUpViewModel.swift */; };
+		E65A666F1EF397DC00A3FE16 /* SignUpWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66681EF397DC00A3FE16 /* SignUpWorker.swift */; };
+		E65A667F1EF397E300A3FE16 /* SignInConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66721EF397E300A3FE16 /* SignInConfigurator.swift */; };
+		E65A66801EF397E300A3FE16 /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66741EF397E300A3FE16 /* SignInInteractor.swift */; };
+		E65A66811EF397E300A3FE16 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66761EF397E300A3FE16 /* SignInPresenter.swift */; };
+		E65A66821EF397E300A3FE16 /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66781EF397E300A3FE16 /* SignInRouter.swift */; };
+		E65A66831EF397E300A3FE16 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A667A1EF397E300A3FE16 /* SignInViewController.swift */; };
+		E65A66841EF397E300A3FE16 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A667C1EF397E300A3FE16 /* SignInViewModel.swift */; };
+		E65A66851EF397E300A3FE16 /* SignInWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A667E1EF397E300A3FE16 /* SignInWorker.swift */; };
+		E65A66871EF3980700A3FE16 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E65A66861EF3980700A3FE16 /* SignInViewController.xib */; };
+		E65A66891EF3B5A100A3FE16 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E65A66881EF3B5A100A3FE16 /* SignUpViewController.xib */; };
+		E65A669D1EF3BD3F00A3FE16 /* FeedsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66901EF3BD3F00A3FE16 /* FeedsConfigurator.swift */; };
+		E65A669E1EF3BD3F00A3FE16 /* FeedsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66921EF3BD3F00A3FE16 /* FeedsInteractor.swift */; };
+		E65A669F1EF3BD3F00A3FE16 /* FeedsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66941EF3BD3F00A3FE16 /* FeedsPresenter.swift */; };
+		E65A66A01EF3BD3F00A3FE16 /* FeedsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66961EF3BD3F00A3FE16 /* FeedsRouter.swift */; };
+		E65A66A11EF3BD3F00A3FE16 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66981EF3BD3F00A3FE16 /* FeedsViewController.swift */; };
+		E65A66A21EF3BD3F00A3FE16 /* FeedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A669A1EF3BD3F00A3FE16 /* FeedsViewModel.swift */; };
+		E65A66A31EF3BD3F00A3FE16 /* FeedsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A669C1EF3BD3F00A3FE16 /* FeedsWorker.swift */; };
+		E65A66B31EF3BD4700A3FE16 /* ProfileSettingsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66A61EF3BD4700A3FE16 /* ProfileSettingsConfigurator.swift */; };
+		E65A66B41EF3BD4700A3FE16 /* ProfileSettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66A81EF3BD4700A3FE16 /* ProfileSettingsInteractor.swift */; };
+		E65A66B51EF3BD4700A3FE16 /* ProfileSettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66AA1EF3BD4700A3FE16 /* ProfileSettingsPresenter.swift */; };
+		E65A66B61EF3BD4700A3FE16 /* ProfileSettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66AC1EF3BD4700A3FE16 /* ProfileSettingsRouter.swift */; };
+		E65A66B71EF3BD4700A3FE16 /* ProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66AE1EF3BD4700A3FE16 /* ProfileSettingsViewController.swift */; };
+		E65A66B81EF3BD4700A3FE16 /* ProfileSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66B01EF3BD4700A3FE16 /* ProfileSettingsViewModel.swift */; };
+		E65A66B91EF3BD4700A3FE16 /* ProfileSettingsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66B21EF3BD4700A3FE16 /* ProfileSettingsWorker.swift */; };
+		E65A66BB1EF3D04500A3FE16 /* FacebookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66BA1EF3D04500A3FE16 /* FacebookService.swift */; };
 		E65B18E61EB98F0000237163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B18E51EB98F0000237163 /* AppDelegate.swift */; };
 		E65B18EE1EB98F0000237163 /* CleanStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E65B18EC1EB98F0000237163 /* CleanStore.xcdatamodeld */; };
 		E65B18F01EB98F0000237163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E65B18EF1EB98F0000237163 /* Assets.xcassets */; };
@@ -133,6 +164,37 @@
 		E63D7CF11EDD4C1E0033F7ED /* MeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeViewController.xib; sourceTree = "<group>"; };
 		E63D7CF41EDD58820033F7ED /* MeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTableViewCell.swift; sourceTree = "<group>"; };
 		E63D7CF51EDD58820033F7ED /* MeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeTableViewCell.xib; sourceTree = "<group>"; };
+		E65A665C1EF397DC00A3FE16 /* SignUpConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpConfigurator.swift; sourceTree = "<group>"; };
+		E65A665E1EF397DC00A3FE16 /* SignUpInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
+		E65A66601EF397DC00A3FE16 /* SignUpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		E65A66621EF397DC00A3FE16 /* SignUpRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
+		E65A66641EF397DC00A3FE16 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E65A66661EF397DC00A3FE16 /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		E65A66681EF397DC00A3FE16 /* SignUpWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpWorker.swift; sourceTree = "<group>"; };
+		E65A66721EF397E300A3FE16 /* SignInConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInConfigurator.swift; sourceTree = "<group>"; };
+		E65A66741EF397E300A3FE16 /* SignInInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
+		E65A66761EF397E300A3FE16 /* SignInPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
+		E65A66781EF397E300A3FE16 /* SignInRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInRouter.swift; sourceTree = "<group>"; };
+		E65A667A1EF397E300A3FE16 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		E65A667C1EF397E300A3FE16 /* SignInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		E65A667E1EF397E300A3FE16 /* SignInWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInWorker.swift; sourceTree = "<group>"; };
+		E65A66861EF3980700A3FE16 /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		E65A66881EF3B5A100A3FE16 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		E65A66901EF3BD3F00A3FE16 /* FeedsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsConfigurator.swift; sourceTree = "<group>"; };
+		E65A66921EF3BD3F00A3FE16 /* FeedsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsInteractor.swift; sourceTree = "<group>"; };
+		E65A66941EF3BD3F00A3FE16 /* FeedsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsPresenter.swift; sourceTree = "<group>"; };
+		E65A66961EF3BD3F00A3FE16 /* FeedsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsRouter.swift; sourceTree = "<group>"; };
+		E65A66981EF3BD3F00A3FE16 /* FeedsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
+		E65A669A1EF3BD3F00A3FE16 /* FeedsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsViewModel.swift; sourceTree = "<group>"; };
+		E65A669C1EF3BD3F00A3FE16 /* FeedsWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsWorker.swift; sourceTree = "<group>"; };
+		E65A66A61EF3BD4700A3FE16 /* ProfileSettingsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingsConfigurator.swift; sourceTree = "<group>"; };
+		E65A66A81EF3BD4700A3FE16 /* ProfileSettingsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingsInteractor.swift; sourceTree = "<group>"; };
+		E65A66AA1EF3BD4700A3FE16 /* ProfileSettingsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingsPresenter.swift; sourceTree = "<group>"; };
+		E65A66AC1EF3BD4700A3FE16 /* ProfileSettingsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingsRouter.swift; sourceTree = "<group>"; };
+		E65A66AE1EF3BD4700A3FE16 /* ProfileSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingsViewController.swift; sourceTree = "<group>"; };
+		E65A66B01EF3BD4700A3FE16 /* ProfileSettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingsViewModel.swift; sourceTree = "<group>"; };
+		E65A66B21EF3BD4700A3FE16 /* ProfileSettingsWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingsWorker.swift; sourceTree = "<group>"; };
+		E65A66BA1EF3D04500A3FE16 /* FacebookService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookService.swift; sourceTree = "<group>"; };
 		E65B18E21EB98F0000237163 /* CleanStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E65B18E51EB98F0000237163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E65B18ED1EB98F0000237163 /* CleanStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CleanStore.xcdatamodel; sourceTree = "<group>"; };
@@ -384,6 +446,288 @@
 			path = Worker;
 			sourceTree = "<group>";
 		};
+		E65A665A1EF397DC00A3FE16 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				E65A665B1EF397DC00A3FE16 /* Configurator */,
+				E65A665D1EF397DC00A3FE16 /* Interactor */,
+				E65A665F1EF397DC00A3FE16 /* Presenter */,
+				E65A66611EF397DC00A3FE16 /* Router */,
+				E65A66631EF397DC00A3FE16 /* View */,
+				E65A66651EF397DC00A3FE16 /* ViewModel */,
+				E65A66671EF397DC00A3FE16 /* Worker */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		E65A665B1EF397DC00A3FE16 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				E65A665C1EF397DC00A3FE16 /* SignUpConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		E65A665D1EF397DC00A3FE16 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E65A665E1EF397DC00A3FE16 /* SignUpInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E65A665F1EF397DC00A3FE16 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66601EF397DC00A3FE16 /* SignUpPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E65A66611EF397DC00A3FE16 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66621EF397DC00A3FE16 /* SignUpRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E65A66631EF397DC00A3FE16 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66641EF397DC00A3FE16 /* SignUpViewController.swift */,
+				E65A66881EF3B5A100A3FE16 /* SignUpViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E65A66651EF397DC00A3FE16 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66661EF397DC00A3FE16 /* SignUpViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E65A66671EF397DC00A3FE16 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66681EF397DC00A3FE16 /* SignUpWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		E65A66701EF397E300A3FE16 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66711EF397E300A3FE16 /* Configurator */,
+				E65A66731EF397E300A3FE16 /* Interactor */,
+				E65A66751EF397E300A3FE16 /* Presenter */,
+				E65A66771EF397E300A3FE16 /* Router */,
+				E65A66791EF397E300A3FE16 /* View */,
+				E65A667B1EF397E300A3FE16 /* ViewModel */,
+				E65A667D1EF397E300A3FE16 /* Worker */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		E65A66711EF397E300A3FE16 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66721EF397E300A3FE16 /* SignInConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		E65A66731EF397E300A3FE16 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66741EF397E300A3FE16 /* SignInInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E65A66751EF397E300A3FE16 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66761EF397E300A3FE16 /* SignInPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E65A66771EF397E300A3FE16 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66781EF397E300A3FE16 /* SignInRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E65A66791EF397E300A3FE16 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E65A667A1EF397E300A3FE16 /* SignInViewController.swift */,
+				E65A66861EF3980700A3FE16 /* SignInViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E65A667B1EF397E300A3FE16 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E65A667C1EF397E300A3FE16 /* SignInViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E65A667D1EF397E300A3FE16 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				E65A667E1EF397E300A3FE16 /* SignInWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		E65A668E1EF3BD3F00A3FE16 /* Feeds */ = {
+			isa = PBXGroup;
+			children = (
+				E65A668F1EF3BD3F00A3FE16 /* Configurator */,
+				E65A66911EF3BD3F00A3FE16 /* Interactor */,
+				E65A66931EF3BD3F00A3FE16 /* Presenter */,
+				E65A66951EF3BD3F00A3FE16 /* Router */,
+				E65A66971EF3BD3F00A3FE16 /* View */,
+				E65A66991EF3BD3F00A3FE16 /* ViewModel */,
+				E65A669B1EF3BD3F00A3FE16 /* Worker */,
+			);
+			path = Feeds;
+			sourceTree = "<group>";
+		};
+		E65A668F1EF3BD3F00A3FE16 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66901EF3BD3F00A3FE16 /* FeedsConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		E65A66911EF3BD3F00A3FE16 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66921EF3BD3F00A3FE16 /* FeedsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E65A66931EF3BD3F00A3FE16 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66941EF3BD3F00A3FE16 /* FeedsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E65A66951EF3BD3F00A3FE16 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66961EF3BD3F00A3FE16 /* FeedsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E65A66971EF3BD3F00A3FE16 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66981EF3BD3F00A3FE16 /* FeedsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E65A66991EF3BD3F00A3FE16 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E65A669A1EF3BD3F00A3FE16 /* FeedsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E65A669B1EF3BD3F00A3FE16 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				E65A669C1EF3BD3F00A3FE16 /* FeedsWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		E65A66A41EF3BD4700A3FE16 /* ProfileSettings */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66A51EF3BD4700A3FE16 /* Configurator */,
+				E65A66A71EF3BD4700A3FE16 /* Interactor */,
+				E65A66A91EF3BD4700A3FE16 /* Presenter */,
+				E65A66AB1EF3BD4700A3FE16 /* Router */,
+				E65A66AD1EF3BD4700A3FE16 /* View */,
+				E65A66AF1EF3BD4700A3FE16 /* ViewModel */,
+				E65A66B11EF3BD4700A3FE16 /* Worker */,
+			);
+			path = ProfileSettings;
+			sourceTree = "<group>";
+		};
+		E65A66A51EF3BD4700A3FE16 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66A61EF3BD4700A3FE16 /* ProfileSettingsConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		E65A66A71EF3BD4700A3FE16 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66A81EF3BD4700A3FE16 /* ProfileSettingsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E65A66A91EF3BD4700A3FE16 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66AA1EF3BD4700A3FE16 /* ProfileSettingsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E65A66AB1EF3BD4700A3FE16 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66AC1EF3BD4700A3FE16 /* ProfileSettingsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E65A66AD1EF3BD4700A3FE16 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66AE1EF3BD4700A3FE16 /* ProfileSettingsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E65A66AF1EF3BD4700A3FE16 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66B01EF3BD4700A3FE16 /* ProfileSettingsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E65A66B11EF3BD4700A3FE16 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				E65A66B21EF3BD4700A3FE16 /* ProfileSettingsWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
 		E65B18D91EB98F0000237163 = {
 			isa = PBXGroup;
 			children = (
@@ -479,6 +823,10 @@
 		E65B19191EB9987D00237163 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E65A66A41EF3BD4700A3FE16 /* ProfileSettings */,
+				E65A668E1EF3BD3F00A3FE16 /* Feeds */,
+				E65A66701EF397E300A3FE16 /* SignIn */,
+				E65A665A1EF397DC00A3FE16 /* SignUp */,
 				C558B8FD1EEACCD6007D9E3D /* iBeaconReceive */,
 				E63D7CD81EDD4AFC0033F7ED /* Me */,
 				E68D2DBD1EDBD6F10084F01C /* iBeacon */,
@@ -496,6 +844,7 @@
 				E608ABB71EE0135400FED38D /* ImageStoreProtocol.swift */,
 				E608ABB91EE013E500FED38D /* ImageNetworkStore.swift */,
 				E6ACAC951EF0EA230090716C /* KeyboardMovable.swift */,
+				E65A66BA1EF3D04500A3FE16 /* FacebookService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -787,6 +1136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E65A66891EF3B5A100A3FE16 /* SignUpViewController.xib in Resources */,
 				C558B9181EED95E0007D9E3D /* iBeaconReceiveViewController.xib in Resources */,
 				E65B19571EB9D71100237163 /* ArtistsViewController.xib in Resources */,
 				E65B18F31EB98F0000237163 /* LaunchScreen.storyboard in Resources */,
@@ -794,6 +1144,7 @@
 				E68D2DD81EDBDCA10084F01C /* iBeaconViewController.xib in Resources */,
 				E65B18F01EB98F0000237163 /* Assets.xcassets in Resources */,
 				E63D7CF71EDD58820033F7ED /* MeTableViewCell.xib in Resources */,
+				E65A66871EF3980700A3FE16 /* SignInViewController.xib in Resources */,
 				E65DD6371EDE63CB0091CA3C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -958,41 +1309,64 @@
 			buildActionMask = 2147483647;
 			files = (
 				E63D7CE81EDD4AFC0033F7ED /* MeInteractor.swift in Sources */,
+				E65A66A01EF3BD3F00A3FE16 /* FeedsRouter.swift in Sources */,
 				E65B19611EB9E3FC00237163 /* User.swift in Sources */,
+				E65A669F1EF3BD3F00A3FE16 /* FeedsPresenter.swift in Sources */,
 				C558B90C1EEACCD6007D9E3D /* iBeaconReceiveConfigurator.swift in Sources */,
 				E63D7CF61EDD58820033F7ED /* MeTableViewCell.swift in Sources */,
 				E65B19561EB9D71100237163 /* ArtistsViewController.swift in Sources */,
 				E65B18EE1EB98F0000237163 /* CleanStore.xcdatamodeld in Sources */,
+				E65A66821EF397E300A3FE16 /* SignInRouter.swift in Sources */,
 				E65B194B1EB9D4EF00237163 /* ArtistsConfigurator.swift in Sources */,
+				E65A66B31EF3BD4700A3FE16 /* ProfileSettingsConfigurator.swift in Sources */,
 				E608ABB01EE00DB600FED38D /* ArtistTableViewCell.swift in Sources */,
+				E65A66B71EF3BD4700A3FE16 /* ProfileSettingsViewController.swift in Sources */,
 				E68D2DCD1EDBD6F10084F01C /* iBeaconInteractor.swift in Sources */,
 				E608ABB21EE0115300FED38D /* ArtistItemView.swift in Sources */,
+				E65A66A31EF3BD3F00A3FE16 /* FeedsWorker.swift in Sources */,
+				E65A66691EF397DC00A3FE16 /* SignUpConfigurator.swift in Sources */,
 				E65B19511EB9D4EF00237163 /* ArtistsWorker.swift in Sources */,
 				C558B9121EEACCD6007D9E3D /* iBeaconReceiveWorker.swift in Sources */,
+				E65A666E1EF397DC00A3FE16 /* SignUpViewModel.swift in Sources */,
 				E65B194D1EB9D4EF00237163 /* ArtistsPresenter.swift in Sources */,
 				E608ABAC1EE0090600FED38D /* ErrorViewModel.swift in Sources */,
 				E65B194E1EB9D4EF00237163 /* ArtistsRouter.swift in Sources */,
+				E65A666D1EF397DC00A3FE16 /* SignUpViewController.swift in Sources */,
+				E65A66B41EF3BD4700A3FE16 /* ProfileSettingsInteractor.swift in Sources */,
+				E65A669E1EF3BD3F00A3FE16 /* FeedsInteractor.swift in Sources */,
 				E65B18E61EB98F0000237163 /* AppDelegate.swift in Sources */,
 				E608ABAE1EE00AAE00FED38D /* ArtistsView.swift in Sources */,
+				E65A66801EF397E300A3FE16 /* SignInInteractor.swift in Sources */,
+				E65A666B1EF397DC00A3FE16 /* SignUpPresenter.swift in Sources */,
 				E65DD6501EDEC3B70091CA3C /* Parsable.swift in Sources */,
+				E65A66851EF397E300A3FE16 /* SignInWorker.swift in Sources */,
 				C558B90D1EEACCD6007D9E3D /* iBeaconReceiveInteractor.swift in Sources */,
 				E68D2DCC1EDBD6F10084F01C /* iBeaconConfigurator.swift in Sources */,
 				E68D2DD11EDBD6F10084F01C /* iBeaconViewModel.swift in Sources */,
 				E608ABAA1EE008CA00FED38D /* ErrorPresenter.swift in Sources */,
+				E65A66B91EF3BD4700A3FE16 /* ProfileSettingsWorker.swift in Sources */,
+				E65A66B61EF3BD4700A3FE16 /* ProfileSettingsRouter.swift in Sources */,
 				E65DD65B1EDED8EB0091CA3C /* API.swift in Sources */,
+				E65A666A1EF397DC00A3FE16 /* SignUpInteractor.swift in Sources */,
 				E68D2DCE1EDBD6F10084F01C /* iBeaconPresenter.swift in Sources */,
 				E6ACAC961EF0EA230090716C /* KeyboardMovable.swift in Sources */,
 				C558B9171EED95E0007D9E3D /* iBeaconReceiveViewController.swift in Sources */,
 				E63D7CEA1EDD4AFC0033F7ED /* MeRouter.swift in Sources */,
+				E65A66B81EF3BD4700A3FE16 /* ProfileSettingsViewModel.swift in Sources */,
 				E65B194C1EB9D4EF00237163 /* ArtistsInteractor.swift in Sources */,
+				E65A669D1EF3BD3F00A3FE16 /* FeedsConfigurator.swift in Sources */,
 				E65B19501EB9D4EF00237163 /* ArtistsViewModel.swift in Sources */,
 				E608ABB61EE0132300FED38D /* ImageMemoryStore.swift in Sources */,
 				E65DD63B1EDE66A80091CA3C /* Promotion.swift in Sources */,
 				E65DD6441EDEB1B00091CA3C /* PromotionWorker.swift in Sources */,
 				E65DD6401EDEB0710091CA3C /* PromotionAPIStore.swift in Sources */,
+				E65A666C1EF397DC00A3FE16 /* SignUpRouter.swift in Sources */,
 				E68D2DD71EDBDCA10084F01C /* iBeaconViewController.swift in Sources */,
 				E65DD64C1EDEBDC90091CA3C /* URLRequest+JSON.swift in Sources */,
 				E68D2DCF1EDBD6F10084F01C /* iBeaconRouter.swift in Sources */,
+				E65A66831EF397E300A3FE16 /* SignInViewController.swift in Sources */,
+				E65A66A21EF3BD3F00A3FE16 /* FeedsViewModel.swift in Sources */,
+				E65A66A11EF3BD3F00A3FE16 /* FeedsViewController.swift in Sources */,
 				E65B19591EB9DC6A00237163 /* Album.swift in Sources */,
 				E608ABB41EE012FC00FED38D /* ImageManager.swift in Sources */,
 				E608ABBA1EE013E600FED38D /* ImageNetworkStore.swift in Sources */,
@@ -1004,14 +1378,20 @@
 				E608ABB81EE0135400FED38D /* ImageStoreProtocol.swift in Sources */,
 				E65DD6571EDED3CC0091CA3C /* ArtistsAPIStore.swift in Sources */,
 				E63D7CF21EDD4C1E0033F7ED /* MeViewController.swift in Sources */,
+				E65A66B51EF3BD4700A3FE16 /* ProfileSettingsPresenter.swift in Sources */,
 				E68D2DDA1EDC06030084F01C /* RegionMonitor.swift in Sources */,
 				C558B90F1EEACCD6007D9E3D /* iBeaconReceiveRouter.swift in Sources */,
+				E65A66BB1EF3D04500A3FE16 /* FacebookService.swift in Sources */,
 				E63D7CE91EDD4AFC0033F7ED /* MePresenter.swift in Sources */,
 				E63D7CED1EDD4AFC0033F7ED /* MeWorker.swift in Sources */,
+				E65A667F1EF397E300A3FE16 /* SignInConfigurator.swift in Sources */,
 				E65DD6421EDEB0CF0091CA3C /* PromotionStoreProtocol.swift in Sources */,
 				E65DD64E1EDEC0D40091CA3C /* Data+JSON.swift in Sources */,
 				C558B90E1EEACCD6007D9E3D /* iBeaconReceivePresenter.swift in Sources */,
+				E65A66841EF397E300A3FE16 /* SignInViewModel.swift in Sources */,
 				E63D7CEC1EDD4AFC0033F7ED /* MeViewModel.swift in Sources */,
+				E65A666F1EF397DC00A3FE16 /* SignUpWorker.swift in Sources */,
+				E65A66811EF397E300A3FE16 /* SignInPresenter.swift in Sources */,
 				E65B195D1EB9DD8000237163 /* Artist.swift in Sources */,
 				E65DD6591EDED63F0091CA3C /* ArtistsStoreProtocol.swift in Sources */,
 			);

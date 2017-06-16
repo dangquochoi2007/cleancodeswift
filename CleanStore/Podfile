@@ -6,6 +6,9 @@ target 'CleanStore' do
   use_frameworks!
   pod 'BaseViewSwift'
   pod 'Firebase/Core'
+  pod 'FacebookCore', :git => 'https://github.com/facebook/facebook-sdk-swift'
+  pod 'FacebookLogin', :git => 'https://github.com/facebook/facebook-sdk-swift'
+  pod 'FacebookShare', :git => 'https://github.com/facebook/facebook-sdk-swift'
 
   # Pods for CleanStore
 
