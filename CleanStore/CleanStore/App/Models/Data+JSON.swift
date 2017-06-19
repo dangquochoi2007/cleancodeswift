@@ -17,9 +17,7 @@ extension Data {
         do {
             
             let json = try JSONSerialization.jsonObject(with: self, options: .allowFragments) as? [String: Any]
-            
             return json
-            
         } catch {
             
             return nil

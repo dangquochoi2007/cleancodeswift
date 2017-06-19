@@ -10,21 +10,21 @@ import Foundation
 import FBSDKLoginKit
 
 
-public typealias FacebookCompletion = (FacebookResult) -> Void
+public typealias FacebookCompletion = (SocialResult) -> Void
 
-public enum FacebookResult {
+public enum SocialResult {
     
-    case success(FacebookProfile)
+    case success(SocialProfile)
     case error(Error)
     case missingPermissions
     case unknownError
     case cancelled
 }
 
-public struct FacebookProfile {
+public struct SocialProfile {
     
-    public let facebookId: String
-    public let facebookToken: String
+    public let socialId: String
+    public let socialToken: String
     public let firstName: String
     public let lastName: String
     public let email: String
@@ -130,7 +130,7 @@ public class FacebookService {
             let facebookToken = loginResult.token.tokenString as String
             print("Facebook: Graph Request: Success")
             
-            let profile = FacebookProfile(facebookId: facebookId, facebookToken: facebookToken, firstName: firstName, lastName: lastName, email: email)
+            let profile = SocialProfile(socialId: facebookId, socialToken: facebookToken, firstName: firstName, lastName: lastName, email: email)
             completion(.success(profile))
         }
     }
