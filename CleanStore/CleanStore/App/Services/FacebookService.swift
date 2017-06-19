@@ -86,7 +86,7 @@ public class FacebookService {
     
     
     
-    func getUserInfo(loginResult: FBSDKLoginManagerLoginResult, completion: @escaping FacebookCompletion) {
+    public func getUserInfo(loginResult: FBSDKLoginManagerLoginResult, completion: @escaping FacebookCompletion) {
         
         guard FBSDKAccessToken.current() != nil else {
             print("Facebook: Not logged in: Abort")
@@ -133,6 +133,10 @@ public class FacebookService {
             let profile = SocialProfile(socialId: facebookId, socialToken: facebookToken, firstName: firstName, lastName: lastName, email: email)
             completion(.success(profile))
         }
+    }
+    
+    public func logout() {
+        loginManager.logOut()
     }
 }
 

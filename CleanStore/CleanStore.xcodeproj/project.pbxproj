@@ -37,6 +37,7 @@
 		E63D7CF31EDD4C1E0033F7ED /* MeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63D7CF11EDD4C1E0033F7ED /* MeViewController.xib */; };
 		E63D7CF61EDD58820033F7ED /* MeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63D7CF41EDD58820033F7ED /* MeTableViewCell.swift */; };
 		E63D7CF71EDD58820033F7ED /* MeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63D7CF51EDD58820033F7ED /* MeTableViewCell.xib */; };
+		E645E2A61EF7D06A001AA189 /* KBRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E645E2A51EF7D06A001AA189 /* KBRoundedButton.swift */; };
 		E65A66691EF397DC00A3FE16 /* SignUpConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A665C1EF397DC00A3FE16 /* SignUpConfigurator.swift */; };
 		E65A666A1EF397DC00A3FE16 /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A665E1EF397DC00A3FE16 /* SignUpInteractor.swift */; };
 		E65A666B1EF397DC00A3FE16 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A66601EF397DC00A3FE16 /* SignUpPresenter.swift */; };
@@ -166,6 +167,7 @@
 		E63D7CF11EDD4C1E0033F7ED /* MeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeViewController.xib; sourceTree = "<group>"; };
 		E63D7CF41EDD58820033F7ED /* MeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTableViewCell.swift; sourceTree = "<group>"; };
 		E63D7CF51EDD58820033F7ED /* MeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeTableViewCell.xib; sourceTree = "<group>"; };
+		E645E2A51EF7D06A001AA189 /* KBRoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBRoundedButton.swift; sourceTree = "<group>"; };
 		E65A665C1EF397DC00A3FE16 /* SignUpConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpConfigurator.swift; sourceTree = "<group>"; };
 		E65A665E1EF397DC00A3FE16 /* SignUpInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
 		E65A66601EF397DC00A3FE16 /* SignUpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
@@ -448,6 +450,14 @@
 				E63D7CE61EDD4AFC0033F7ED /* MeWorker.swift */,
 			);
 			path = Worker;
+			sourceTree = "<group>";
+		};
+		E645E2A21EF7ABC9001AA189 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E645E2A51EF7D06A001AA189 /* KBRoundedButton.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		E65A665A1EF397DC00A3FE16 /* SignUp */ = {
@@ -797,6 +807,7 @@
 		E65B19171EB9987D00237163 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				E645E2A21EF7ABC9001AA189 /* Common */,
 				E63363711EBC7A0F00F79277 /* Opencv */,
 				E65B19181EB9987D00237163 /* Models */,
 				E65B19191EB9987D00237163 /* Scenes */,
@@ -1351,6 +1362,7 @@
 				C558B90D1EEACCD6007D9E3D /* iBeaconReceiveInteractor.swift in Sources */,
 				E68D2DCC1EDBD6F10084F01C /* iBeaconConfigurator.swift in Sources */,
 				E68D2DD11EDBD6F10084F01C /* iBeaconViewModel.swift in Sources */,
+				E645E2A61EF7D06A001AA189 /* KBRoundedButton.swift in Sources */,
 				E608ABAA1EE008CA00FED38D /* ErrorPresenter.swift in Sources */,
 				E65A66B91EF3BD4700A3FE16 /* ProfileSettingsWorker.swift in Sources */,
 				E65A66B61EF3BD4700A3FE16 /* ProfileSettingsRouter.swift in Sources */,
