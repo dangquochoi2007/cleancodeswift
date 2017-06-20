@@ -96,7 +96,6 @@
 		E65DD6441EDEB1B00091CA3C /* PromotionWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD6431EDEB1B00091CA3C /* PromotionWorker.swift */; };
 		E65DD6461EDEB3560091CA3C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD6451EDEB3560091CA3C /* NetworkClient.swift */; };
 		E65DD64C1EDEBDC90091CA3C /* URLRequest+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD64B1EDEBDC90091CA3C /* URLRequest+JSON.swift */; };
-		E65DD64E1EDEC0D40091CA3C /* Data+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD64D1EDEC0D40091CA3C /* Data+JSON.swift */; };
 		E65DD6501EDEC3B70091CA3C /* Parsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD64F1EDEC3B70091CA3C /* Parsable.swift */; };
 		E65DD6571EDED3CC0091CA3C /* ArtistsAPIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD6561EDED3CC0091CA3C /* ArtistsAPIStore.swift */; };
 		E65DD6591EDED63F0091CA3C /* ArtistsStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD6581EDED63F0091CA3C /* ArtistsStoreProtocol.swift */; };
@@ -111,6 +110,7 @@
 		E68D2DD81EDBDCA10084F01C /* iBeaconViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E68D2DD61EDBDCA10084F01C /* iBeaconViewController.xib */; };
 		E68D2DDA1EDC06030084F01C /* RegionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DD91EDC06030084F01C /* RegionMonitor.swift */; };
 		E6ACAC961EF0EA230090716C /* KeyboardMovable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ACAC951EF0EA230090716C /* KeyboardMovable.swift */; };
+		E6D8C92E1EF8BAE000102FA3 /* Data+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D8C92D1EF8BAE000102FA3 /* Data+JSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -232,7 +232,6 @@
 		E65DD6431EDEB1B00091CA3C /* PromotionWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionWorker.swift; sourceTree = "<group>"; };
 		E65DD6451EDEB3560091CA3C /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		E65DD64B1EDEBDC90091CA3C /* URLRequest+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+JSON.swift"; sourceTree = "<group>"; };
-		E65DD64D1EDEC0D40091CA3C /* Data+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+JSON.swift"; sourceTree = "<group>"; };
 		E65DD64F1EDEC3B70091CA3C /* Parsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parsable.swift; sourceTree = "<group>"; };
 		E65DD6561EDED3CC0091CA3C /* ArtistsAPIStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistsAPIStore.swift; sourceTree = "<group>"; };
 		E65DD6581EDED63F0091CA3C /* ArtistsStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistsStoreProtocol.swift; sourceTree = "<group>"; };
@@ -247,6 +246,7 @@
 		E68D2DD61EDBDCA10084F01C /* iBeaconViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iBeaconViewController.xib; sourceTree = "<group>"; };
 		E68D2DD91EDC06030084F01C /* RegionMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionMonitor.swift; sourceTree = "<group>"; };
 		E6ACAC951EF0EA230090716C /* KeyboardMovable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardMovable.swift; sourceTree = "<group>"; };
+		E6D8C92D1EF8BAE000102FA3 /* Data+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+JSON.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -820,6 +820,7 @@
 		E65B19181EB9987D00237163 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E6D8C92D1EF8BAE000102FA3 /* Data+JSON.swift */,
 				E65B19581EB9DC6A00237163 /* Album.swift */,
 				E65B195C1EB9DD8000237163 /* Artist.swift */,
 				E65B195E1EB9DEBD00237163 /* Strings.swift */,
@@ -827,7 +828,6 @@
 				E68D2DD91EDC06030084F01C /* RegionMonitor.swift */,
 				E65DD63A1EDE66A80091CA3C /* Promotion.swift */,
 				E65DD64B1EDEBDC90091CA3C /* URLRequest+JSON.swift */,
-				E65DD64D1EDEC0D40091CA3C /* Data+JSON.swift */,
 				E65DD64F1EDEC3B70091CA3C /* Parsable.swift */,
 				E608ABA91EE008CA00FED38D /* ErrorPresenter.swift */,
 				E608ABAB1EE0090600FED38D /* ErrorViewModel.swift */,
@@ -1332,6 +1332,7 @@
 				E65A66BF1EF3E53A00A3FE16 /* GooglePlusService.swift in Sources */,
 				E65A669F1EF3BD3F00A3FE16 /* FeedsPresenter.swift in Sources */,
 				C558B90C1EEACCD6007D9E3D /* iBeaconReceiveConfigurator.swift in Sources */,
+				E6D8C92E1EF8BAE000102FA3 /* Data+JSON.swift in Sources */,
 				E63D7CF61EDD58820033F7ED /* MeTableViewCell.swift in Sources */,
 				E65B19561EB9D71100237163 /* ArtistsViewController.swift in Sources */,
 				E65B18EE1EB98F0000237163 /* CleanStore.xcdatamodeld in Sources */,
@@ -1406,7 +1407,6 @@
 				E63D7CED1EDD4AFC0033F7ED /* MeWorker.swift in Sources */,
 				E65A667F1EF397E300A3FE16 /* SignInConfigurator.swift in Sources */,
 				E65DD6421EDEB0CF0091CA3C /* PromotionStoreProtocol.swift in Sources */,
-				E65DD64E1EDEC0D40091CA3C /* Data+JSON.swift in Sources */,
 				C558B90E1EEACCD6007D9E3D /* iBeaconReceivePresenter.swift in Sources */,
 				E65A66841EF397E300A3FE16 /* SignInViewModel.swift in Sources */,
 				E63D7CEC1EDD4AFC0033F7ED /* MeViewModel.swift in Sources */,

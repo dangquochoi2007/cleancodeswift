@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SkyFloatingLabelTextField
 
 protocol SignUpViewControllerInput: SignUpPresenterOutput {
 
@@ -17,10 +18,24 @@ protocol SignUpViewControllerOutput {
     func doSomething()
 }
 
-final class SignUpViewController: UIViewController {
+final class SignUpViewController: UIViewController, KeyboardMovable {
 
     var output: SignUpViewControllerOutput!
     var router: SignUpRouterProtocol!
+    
+    
+    @IBOutlet weak var emailTextField: SkyFloatingLabelTextFieldWithIcon!
+    @IBOutlet weak var passwordTextField: SkyFloatingLabelTextFieldWithIcon!
+    
+    @IBOutlet weak var forgotPasswordButton: UIButton!
+    
+    @IBOutlet weak var signinButton: KBRoundedButton!
+    
+    
+    // MARK: Keyboard movable
+    
+    var selectedField: UITextField?
+    var offset: CGFloat = 20.0
 
 
     // MARK: - Initializers
@@ -54,6 +69,9 @@ final class SignUpViewController: UIViewController {
 
         super.viewDidLoad()
 
+        initKeyboardMover()
+        configureTextFieldFromSource()
+        
         doSomethingOnLoad()
     }
 
@@ -79,5 +97,35 @@ extension SignUpViewController: SignUpViewControllerInput {
     func displaySomething(viewModel: SignUpViewModel) {
 
         // TODO: Update UI
+    }
+}
+
+
+extension SignUpViewController: UITextFieldDelegate {
+    
+    func configureTextFieldFromSource() {
+        
+        self.emailTextField.delegate = self
+        self.passwordTextField.delegate = self
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        selectedField = textField
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        selectedField = nil
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let nextTag = textField.tag + 1
+        let nextResponder = view.viewWithTag(nextTag) as UIResponder!
+        
+        if nextResponder != nil {
+            nextResponder?.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return false
     }
 }
