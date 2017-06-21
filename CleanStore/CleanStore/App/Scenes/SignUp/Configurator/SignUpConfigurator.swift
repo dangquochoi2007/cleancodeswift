@@ -10,6 +10,19 @@ import UIKit
 
 final class SignUpConfigurator {
 
+    // MARK: Public Configuration
+    public var backgroundImage = UIImage()
+    public var mainLogoImage = UIImage()
+    public var secondaryLogoImage = UIImage()
+    
+    public var tintColor: UIColor = UIColor(red: 185.0/255.0, green: 177.0/255.0, blue: 216.0/255.0, alpha: 1)
+    public var errorTintColor: UIColor = UIColor(red: 241.0/255.0, green: 196.0/255.0, blue: 15.0/255.0, alpha: 1)
+    
+    public var signupButtonText = "Sign Up"
+    public var emailPlaceHolder = "Email"
+    public var passwordPlaceHolder = "Password"
+    public var repeatPasswordPlaceHolder = "Repeat Password"
+    public var namePlaceHolder = "Full Name"
 
     // MARK: - Singleton
 

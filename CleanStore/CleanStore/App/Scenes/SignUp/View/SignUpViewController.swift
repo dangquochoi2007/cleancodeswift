@@ -24,18 +24,24 @@ final class SignUpViewController: UIViewController, KeyboardMovable {
     var router: SignUpRouterProtocol!
     
     
-    @IBOutlet weak var emailTextField: SkyFloatingLabelTextFieldWithIcon!
-    @IBOutlet weak var passwordTextField: SkyFloatingLabelTextFieldWithIcon!
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var backgroundImageView: UIImageView!
     
-    @IBOutlet weak var forgotPasswordButton: UIButton!
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var repeatPasswordTextField: UITextField!
+    
+
     
     @IBOutlet weak var signinButton: KBRoundedButton!
     
     
     // MARK: Keyboard movable
-    
+    var scrollAbleView: UIScrollView?
     var selectedField: UITextField?
-    var offset: CGFloat = 20.0
+    var offset: CGFloat = 0.0
 
 
     // MARK: - Initializers
@@ -70,7 +76,7 @@ final class SignUpViewController: UIViewController, KeyboardMovable {
         super.viewDidLoad()
 
         initKeyboardMover()
-        configureTextFieldFromSource()
+        customizeAppearance()
         
         doSomethingOnLoad()
     }
@@ -83,6 +89,11 @@ final class SignUpViewController: UIViewController, KeyboardMovable {
         // TODO: Ask the Interactor to do some work
 
         output.doSomething()
+    }
+    
+    
+    func customizeAppearance() {
+        configureTextFieldFromSource()
     }
 }
 
@@ -104,9 +115,10 @@ extension SignUpViewController: SignUpViewControllerInput {
 extension SignUpViewController: UITextFieldDelegate {
     
     func configureTextFieldFromSource() {
-        
-        self.emailTextField.delegate = self
-        self.passwordTextField.delegate = self
+        emailTextField.delegate = self
+        nameTextField.delegate = self
+        passwordTextField.delegate = self
+        repeatPasswordTextField.delegate = self
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {

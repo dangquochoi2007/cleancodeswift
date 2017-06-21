@@ -16,8 +16,10 @@ struct KeyboardMovableKeys {
     static var keyboardHideObserver = "km_keyboardHideObserver"
 }
 
+
 protocol KeyboardMovable: class {
     
+    var scrollAbleView: UIScrollView? { get }
     var selectedField: UITextField? { get }
     var offset: CGFloat { get set }
 }
@@ -142,6 +144,7 @@ extension KeyboardMovable where Self: UIViewController {
                     }
                     
                     self.offset = offset
+                    self.view.frame = self.view.frame.offsetBy(dx: 0, dy: self.offset)
                 } else {
                     self.offset = 0.0
                 }
