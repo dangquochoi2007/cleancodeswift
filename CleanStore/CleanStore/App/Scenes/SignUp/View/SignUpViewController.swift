@@ -18,7 +18,7 @@ protocol SignUpViewControllerOutput {
     func doSomething()
 }
 
-final class SignUpViewController: UIViewController, KeyboardMovable {
+final class SignUpViewController: UIViewController, KeyboardMovable, ErrorPresenter {
 
     var output: SignUpViewControllerOutput!
     var router: SignUpRouterProtocol!
