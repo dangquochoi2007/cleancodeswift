@@ -23,8 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let screen = UIScreen.main
         self.window = UIWindow(frame: screen.bounds)
-        self.window?.rootViewController = SignUpViewController()
         self.window?.makeKeyAndVisible()
+        
+        self.window?.rootViewController = CustomTabbarController()
+        application.statusBarStyle = .lightContent
+        
+        UITabBar.appearance().tintColor = UIColor(red: 70.0/255.0, green: 146.0/255.0, blue: 250.0/255.0, alpha: 1)
+        UINavigationBar.appearance().barTintColor = UIColor(red: 51/255, green: 90/255, blue: 149/255, alpha: 1)
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
 //        let beaconUUID:UUID = UUID(uuidString: iBeaconViewModel.FetchPromotion.Request.uuid)!
 //        let beaconRegion:CLBeaconRegion = CLBeaconRegion(proximityUUID: beaconUUID, identifier: iBeaconViewModel.FetchPromotion.Request.beaconIdentifier)
