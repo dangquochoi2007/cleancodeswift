@@ -8,9 +8,6 @@
 
 import UIKit
 
-extension UIView {
-    
-}
 
 class LiveTVTableViewCell: UITableViewCell {
     

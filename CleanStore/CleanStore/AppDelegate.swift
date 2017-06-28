@@ -28,9 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = CustomTabbarController()
         application.statusBarStyle = .lightContent
         
-        UITabBar.appearance().tintColor = UIColor(red: 70.0/255.0, green: 146.0/255.0, blue: 250.0/255.0, alpha: 1)
-        UINavigationBar.appearance().barTintColor = UIColor(red: 51/255, green: 90/255, blue: 149/255, alpha: 1)
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+  
         
 //        let beaconUUID:UUID = UUID(uuidString: iBeaconViewModel.FetchPromotion.Request.uuid)!
 //        let beaconRegion:CLBeaconRegion = CLBeaconRegion(proximityUUID: beaconUUID, identifier: iBeaconViewModel.FetchPromotion.Request.beaconIdentifier)

@@ -25,7 +25,7 @@ final class TVShowsViewController: UIViewController {
     lazy var tvShowsTableView: UITableView = { [unowned self] in
         
         var tableView = UITableView()
-        tableView.register(TVShowsTableViewCell.self, forCellReuseIdentifier: "TVShowsTableViewCell")
+        tableView.register(TVShowsTableViewCell.nib, forCellReuseIdentifier: TVShowsTableViewCell.nibName)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 80
@@ -121,7 +121,7 @@ extension TVShowsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TVShowsTableViewCell", for: indexPath) as! TVShowsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TVShowsTableViewCell.nibName, for: indexPath) as! TVShowsTableViewCell
         return cell
     }
 }

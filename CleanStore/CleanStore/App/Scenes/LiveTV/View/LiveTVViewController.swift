@@ -22,9 +22,12 @@ final class LiveTVViewController: UIViewController {
     var output: LiveTVViewControllerOutput!
     var router: LiveTVRouterProtocol!
     
+    var liveTVBackgroundColor: UIColor = UIColor(red: 22.0/255.0, green: 23.0/255.0, blue: 27.0/255.0, alpha: 1)
+    var liveTVForegroundColor: UIColor = UIColor(red: 26.0/255.0, green: 206.0/255.0, blue: 239.0/255.0, alpha: 1)
+    
     lazy var liveTVTableView: UITableView = { [unowned self] in
         var tableView = UITableView(frame: CGRect.zero, style: UITableViewStyle.plain)
-        tableView.register(LiveTVTableViewCell.self, forCellReuseIdentifier: "LiveTVTableViewCell")
+        tableView.register(LiveTVTableViewCell.nib, forCellReuseIdentifier: LiveTVTableViewCell.nibName)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = false
@@ -32,7 +35,8 @@ final class LiveTVViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 80
-        tableView.backgroundColor = UIColor.red
+        tableView.backgroundColor = self.liveTVBackgroundColor
+        tableView.separatorStyle = .none
         return tableView
     }()
 
@@ -68,10 +72,19 @@ final class LiveTVViewController: UIViewController {
 
         super.viewDidLoad()
 
-        title = "LIVE TV"
         configureControllerWhenLoad()
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        configureControllerWhenAppear()
+    }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     // MARK: - Load data
 
@@ -85,6 +98,21 @@ final class LiveTVViewController: UIViewController {
     func configureControllerWhenLoad() {
         
         constraintsLayoutTableView()
+    }
+    
+    func configureControllerWhenAppear() {
+        navigationController?.navigationBar.barTintColor = liveTVBackgroundColor
+        navigationController?.navigationBar.tintColor = liveTVForegroundColor
+        navigationController?.navigationBar.isTranslucent = true
+        
+        tabBarController?.tabBar.barTintColor = liveTVBackgroundColor
+        tabBarController?.tabBar.tintColor = liveTVForegroundColor
+        
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSFontAttributeName:UIFont(name: "Helvetica-Bold-Oblique ", size: 15) ?? UIFont.boldSystemFont(ofSize: 15),
+            NSForegroundColorAttributeName: liveTVForegroundColor,
+        ]
+        navigationController?.title = "LIVE TV"
     }
 }
 
@@ -125,7 +153,7 @@ extension LiveTVViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LiveTVTableViewCell", for: indexPath) as! LiveTVTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: LiveTVTableViewCell.nibName, for: indexPath) as! LiveTVTableViewCell
         return cell
     }
     
