@@ -112,7 +112,7 @@ final class WatchListsViewController: UIViewController {
         tabBarController?.tabBar.barTintColor = watchListsBackgroundColor
         tabBarController?.tabBar.tintColor = watchListsForegroundColor
         
-        title = "MOVIES"
+        title = "WATCHLIST"
         
         guard let latoBoldFont = UIFont(name: "Lato-Bold", size: 22) else {
             return

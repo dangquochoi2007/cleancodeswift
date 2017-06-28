@@ -31,6 +31,7 @@ final class TVShowsViewController: UIViewController {
         tableView.register(TVShowsTableViewCell.nib, forCellReuseIdentifier: TVShowsTableViewCell.nibName)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         tableView.estimatedRowHeight = 80
         tableView.delegate = self
         tableView.dataSource = self
@@ -146,7 +147,7 @@ extension TVShowsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 20
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
