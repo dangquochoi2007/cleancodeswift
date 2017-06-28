@@ -22,6 +22,9 @@ final class WatchListsViewController: UIViewController {
     var output: WatchListsViewControllerOutput!
     var router: WatchListsRouterProtocol!
     
+    var watchListsBackgroundColor: UIColor = UIColor(red: 22.0/255.0, green: 23.0/255.0, blue: 27.0/255.0, alpha: 0.95)
+    var watchListsForegroundColor: UIColor = UIColor(red: 24.0/255.0, green: 235.0/255.0, blue: 188.0/255.0, alpha: 1)
+    
     lazy var watchListsCollectionView: UICollectionView = { [unowned self] in
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: self.collectionViewLayout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -80,6 +83,12 @@ final class WatchListsViewController: UIViewController {
         configureControllerWhenLoad()
     }
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        configureControllerWhenAppear()
+    }
 
     // MARK: - Load data
 
@@ -93,6 +102,25 @@ final class WatchListsViewController: UIViewController {
     func configureControllerWhenLoad() {
         
         constraintsLayoutCollectionView()
+    }
+    
+    func configureControllerWhenAppear() {
+        navigationController?.navigationBar.barTintColor = watchListsBackgroundColor
+        navigationController?.navigationBar.tintColor = watchListsForegroundColor
+        navigationController?.navigationBar.isTranslucent = false
+        
+        tabBarController?.tabBar.barTintColor = watchListsBackgroundColor
+        tabBarController?.tabBar.tintColor = watchListsForegroundColor
+        
+        title = "MOVIES"
+        
+        guard let latoBoldFont = UIFont(name: "Lato-Bold", size: 22) else {
+            return
+        }
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSFontAttributeName : latoBoldFont,
+            NSForegroundColorAttributeName: watchListsForegroundColor
+        ]
     }
 }
 

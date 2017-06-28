@@ -21,6 +21,9 @@ final class TVShowsViewController: UIViewController {
 
     var output: TVShowsViewControllerOutput!
     var router: TVShowsRouterProtocol!
+    
+    var tvShowsBackgrounColor: UIColor = UIColor(red: 22.0/255.0, green: 23.0/255.0, blue: 27.0/255.0, alpha: 0.95)
+    var tvShowsForegroundColor: UIColor = UIColor(red: 26.0/255.0, green: 206.0/255.0, blue: 239.0/255.0, alpha: 1)
 
     lazy var tvShowsTableView: UITableView = { [unowned self] in
         
@@ -68,6 +71,13 @@ final class TVShowsViewController: UIViewController {
         title = "TV SHOWS"
         configureControllerWhenLoad()
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        configureControllerWhenAppear()
+    }
 
 
     // MARK: - Load data
@@ -82,6 +92,25 @@ final class TVShowsViewController: UIViewController {
     func configureControllerWhenLoad() {
         
         constraintsLayoutTableView()
+    }
+    
+    func configureControllerWhenAppear() {
+        navigationController?.navigationBar.barTintColor = tvShowsBackgrounColor
+        navigationController?.navigationBar.tintColor = tvShowsForegroundColor
+        navigationController?.navigationBar.isTranslucent = false
+        
+        tabBarController?.tabBar.barTintColor = tvShowsBackgrounColor
+        tabBarController?.tabBar.tintColor = tvShowsForegroundColor
+        
+        title = "TV SHOWS"
+        
+        guard let latoBoldFont = UIFont(name: "Lato-Bold", size: 22) else {
+            return
+        }
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSFontAttributeName : latoBoldFont,
+            NSForegroundColorAttributeName: tvShowsForegroundColor
+        ]
     }
 }
 

@@ -23,7 +23,7 @@ final class LiveTVViewController: UIViewController {
     var router: LiveTVRouterProtocol!
     
     var liveTVBackgroundColor: UIColor = UIColor(red: 22.0/255.0, green: 23.0/255.0, blue: 27.0/255.0, alpha: 1)
-    var liveTVForegroundColor: UIColor = UIColor(red: 26.0/255.0, green: 206.0/255.0, blue: 239.0/255.0, alpha: 1)
+    var liveTVForegroundColor: UIColor = UIColor(red: 233.0/255.0, green: 205.0/255.0, blue: 38.0/255.0, alpha: 1)
     
     lazy var liveTVTableView: UITableView = { [unowned self] in
         var tableView = UITableView(frame: CGRect.zero, style: UITableViewStyle.plain)
@@ -36,7 +36,7 @@ final class LiveTVViewController: UIViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 80
         tableView.backgroundColor = self.liveTVBackgroundColor
-        tableView.separatorStyle = .none
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         return tableView
     }()
 
@@ -103,16 +103,20 @@ final class LiveTVViewController: UIViewController {
     func configureControllerWhenAppear() {
         navigationController?.navigationBar.barTintColor = liveTVBackgroundColor
         navigationController?.navigationBar.tintColor = liveTVForegroundColor
-        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.isTranslucent = false
         
         tabBarController?.tabBar.barTintColor = liveTVBackgroundColor
         tabBarController?.tabBar.tintColor = liveTVForegroundColor
+  
+        title = "LIVE TV"
         
+        guard let latoBoldFont = UIFont(name: "Lato-Bold", size: 22) else {
+            return
+        }
         navigationController?.navigationBar.titleTextAttributes = [
-            NSFontAttributeName:UIFont(name: "Helvetica-Bold-Oblique ", size: 15) ?? UIFont.boldSystemFont(ofSize: 15),
-            NSForegroundColorAttributeName: liveTVForegroundColor,
+            NSFontAttributeName : latoBoldFont,
+            NSForegroundColorAttributeName: liveTVForegroundColor
         ]
-        navigationController?.title = "LIVE TV"
     }
 }
 

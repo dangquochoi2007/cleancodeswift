@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class CustomTabbarController: UITabBarController {
+class CustomTabbarController: UITabBarController, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,11 +36,5 @@ class CustomTabbarController: UITabBarController {
         watchListNavigationController.tabBarItem.image = UIImage(named: "globe_icon")
         
         viewControllers = [navigationController ,secondNavigationController, tvShowsNavigationController, watchListNavigationController]
-        tabBar.isTranslucent = false
-        let topBorder = CALayer()
-        topBorder.frame = CGRect(x: 0, y: 0, width: 1000, height: 0.5)
-        topBorder.backgroundColor = UIColor(red: 229.0/255.0, green: 231.0/255.0, blue: 235.0/255.0, alpha: 1).cgColor
-        tabBar.layer.addSublayer(topBorder)
-        tabBar.clipsToBounds = true
     }
 }

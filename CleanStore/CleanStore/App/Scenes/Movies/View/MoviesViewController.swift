@@ -23,6 +23,9 @@ final class MoviesViewController: UIViewController {
 
     var output: MoviesViewControllerOutput!
     var router: MoviesRouterProtocol!
+    
+    var moviesBackgrounColor: UIColor = UIColor(red: 22.0/255.0, green: 23.0/255.0, blue: 27.0/255.0, alpha: 0.95)
+    var moviesForegroundColor: UIColor = UIColor(red: 239.0/255.0, green: 26.0/255.0, blue: 81.0/255.0, alpha: 1)
 
     lazy var moviesCollectionView: UICollectionView =  { [unowned self] in
         
@@ -84,9 +87,7 @@ final class MoviesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        navigationController?.navigationBar.barTintColor = UIColor.white
-        navigationController?.navigationBar.tintColor = UIColor.blue
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blue]
+        configureControllerWhenAppear()
     }
 
 
@@ -104,8 +105,24 @@ final class MoviesViewController: UIViewController {
         constraintsLayoutCollectionView()
     }
     
+    
     func configureControllerWhenAppear() {
+        navigationController?.navigationBar.barTintColor = moviesBackgrounColor
+        navigationController?.navigationBar.tintColor = moviesForegroundColor
+        navigationController?.navigationBar.isTranslucent = false
         
+        tabBarController?.tabBar.barTintColor = moviesBackgrounColor
+        tabBarController?.tabBar.tintColor = moviesForegroundColor
+        
+        title = "MOVIES"
+        
+        guard let latoBoldFont = UIFont(name: "Lato-Bold", size: 22) else {
+            return
+        }
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSFontAttributeName : latoBoldFont,
+            NSForegroundColorAttributeName: moviesForegroundColor
+        ]
     }
 
 }
