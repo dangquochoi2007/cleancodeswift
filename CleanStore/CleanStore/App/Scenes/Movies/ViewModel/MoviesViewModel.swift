@@ -9,5 +9,20 @@
 import UIKit
 
 struct MoviesViewModel {
-
+    struct FetchMovies {
+        
+        struct Request {
+            
+        }
+        
+        struct Response {
+            
+        }
+    }
+    
+    struct ViewModel {
+        struct DisplayedMovies {
+            
+        }
+    }
 }

@@ -148,6 +148,15 @@
 		E68D2DDA1EDC06030084F01C /* RegionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DD91EDC06030084F01C /* RegionMonitor.swift */; };
 		E6ACAC961EF0EA230090716C /* KeyboardMovable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ACAC951EF0EA230090716C /* KeyboardMovable.swift */; };
 		E6D8C92E1EF8BAE000102FA3 /* Data+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D8C92D1EF8BAE000102FA3 /* Data+JSON.swift */; };
+		E6F6BD571F033EA600E43C3D /* MoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6BD551F033EA600E43C3D /* MoviesCollectionViewCell.swift */; };
+		E6F6BD5C1F035F2E00E43C3D /* LiveTVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6BD5A1F035F2E00E43C3D /* LiveTVTableViewCell.swift */; };
+		E6F6BD5D1F035F2E00E43C3D /* LiveTVTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6F6BD5B1F035F2E00E43C3D /* LiveTVTableViewCell.xib */; };
+		E6F6BD611F03638E00E43C3D /* TVShowsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6BD5F1F03638E00E43C3D /* TVShowsTableViewCell.swift */; };
+		E6F6BD621F03638E00E43C3D /* TVShowsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6F6BD601F03638E00E43C3D /* TVShowsTableViewCell.xib */; };
+		E6F6BD661F0369F200E43C3D /* WatchListMoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6BD641F0369F200E43C3D /* WatchListMoviesCollectionViewCell.swift */; };
+		E6F6BD671F0369F200E43C3D /* WatchListMoviesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6F6BD651F0369F200E43C3D /* WatchListMoviesCollectionViewCell.xib */; };
+		E6F6BD6A1F036A1100E43C3D /* WatchListTVShowsCollectionViewCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6BD681F036A1100E43C3D /* WatchListTVShowsCollectionViewCellCollectionViewCell.swift */; };
+		E6F6BD6B1F036A1100E43C3D /* WatchListTVShowsCollectionViewCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6F6BD691F036A1100E43C3D /* WatchListTVShowsCollectionViewCellCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -321,6 +330,15 @@
 		E68D2DD91EDC06030084F01C /* RegionMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionMonitor.swift; sourceTree = "<group>"; };
 		E6ACAC951EF0EA230090716C /* KeyboardMovable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardMovable.swift; sourceTree = "<group>"; };
 		E6D8C92D1EF8BAE000102FA3 /* Data+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+JSON.swift"; sourceTree = "<group>"; };
+		E6F6BD551F033EA600E43C3D /* MoviesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewCell.swift; sourceTree = "<group>"; };
+		E6F6BD5A1F035F2E00E43C3D /* LiveTVTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTVTableViewCell.swift; sourceTree = "<group>"; };
+		E6F6BD5B1F035F2E00E43C3D /* LiveTVTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveTVTableViewCell.xib; sourceTree = "<group>"; };
+		E6F6BD5F1F03638E00E43C3D /* TVShowsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowsTableViewCell.swift; sourceTree = "<group>"; };
+		E6F6BD601F03638E00E43C3D /* TVShowsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TVShowsTableViewCell.xib; sourceTree = "<group>"; };
+		E6F6BD641F0369F200E43C3D /* WatchListMoviesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchListMoviesCollectionViewCell.swift; sourceTree = "<group>"; };
+		E6F6BD651F0369F200E43C3D /* WatchListMoviesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WatchListMoviesCollectionViewCell.xib; sourceTree = "<group>"; };
+		E6F6BD681F036A1100E43C3D /* WatchListTVShowsCollectionViewCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchListTVShowsCollectionViewCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		E6F6BD691F036A1100E43C3D /* WatchListTVShowsCollectionViewCellCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WatchListTVShowsCollectionViewCellCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -564,6 +582,7 @@
 		E60BA7F41F026B7900215DA6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E6F6BD591F035F0F00E43C3D /* UIView */,
 				E60BA7F51F026B7900215DA6 /* LiveTVViewController.swift */,
 				E60BA8431F026C0400215DA6 /* CustomTabbarController.swift */,
 			);
@@ -635,6 +654,7 @@
 		E60BA80A1F026B9000215DA6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E6F6BD5E1F03637E00E43C3D /* UIView */,
 				E60BA80B1F026B9000215DA6 /* TVShowsViewController.swift */,
 			);
 			path = View;
@@ -705,6 +725,7 @@
 		E60BA8201F026B9C00215DA6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E6F6BD541F033E9000E43C3D /* UIView */,
 				E60BA8211F026B9C00215DA6 /* MoviesViewController.swift */,
 			);
 			path = View;
@@ -775,6 +796,7 @@
 		E60BA8361F026BA900215DA6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E6F6BD631F0369B200E43C3D /* UIView */,
 				E60BA8371F026BA900215DA6 /* WatchListsViewController.swift */,
 			);
 			path = View;
@@ -1462,6 +1484,43 @@
 			path = Worker;
 			sourceTree = "<group>";
 		};
+		E6F6BD541F033E9000E43C3D /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				E6F6BD551F033EA600E43C3D /* MoviesCollectionViewCell.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		E6F6BD591F035F0F00E43C3D /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				E6F6BD5A1F035F2E00E43C3D /* LiveTVTableViewCell.swift */,
+				E6F6BD5B1F035F2E00E43C3D /* LiveTVTableViewCell.xib */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		E6F6BD5E1F03637E00E43C3D /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				E6F6BD5F1F03638E00E43C3D /* TVShowsTableViewCell.swift */,
+				E6F6BD601F03638E00E43C3D /* TVShowsTableViewCell.xib */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		E6F6BD631F0369B200E43C3D /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				E6F6BD641F0369F200E43C3D /* WatchListMoviesCollectionViewCell.swift */,
+				E6F6BD651F0369F200E43C3D /* WatchListMoviesCollectionViewCell.xib */,
+				E6F6BD681F036A1100E43C3D /* WatchListTVShowsCollectionViewCellCollectionViewCell.swift */,
+				E6F6BD691F036A1100E43C3D /* WatchListTVShowsCollectionViewCellCollectionViewCell.xib */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1584,13 +1643,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6F6BD671F0369F200E43C3D /* WatchListMoviesCollectionViewCell.xib in Resources */,
 				E65A66891EF3B5A100A3FE16 /* SignUpViewController.xib in Resources */,
 				C558B9181EED95E0007D9E3D /* iBeaconReceiveViewController.xib in Resources */,
+				E6F6BD621F03638E00E43C3D /* TVShowsTableViewCell.xib in Resources */,
 				E65B19571EB9D71100237163 /* ArtistsViewController.xib in Resources */,
 				E65B18F31EB98F0000237163 /* LaunchScreen.storyboard in Resources */,
 				E63D7CF31EDD4C1E0033F7ED /* MeViewController.xib in Resources */,
+				E6F6BD5D1F035F2E00E43C3D /* LiveTVTableViewCell.xib in Resources */,
 				E68D2DD81EDBDCA10084F01C /* iBeaconViewController.xib in Resources */,
 				E65B18F01EB98F0000237163 /* Assets.xcassets in Resources */,
+				E6F6BD6B1F036A1100E43C3D /* WatchListTVShowsCollectionViewCellCollectionViewCell.xib in Resources */,
 				E63D7CF71EDD58820033F7ED /* MeTableViewCell.xib in Resources */,
 				E65A66871EF3980700A3FE16 /* SignInViewController.xib in Resources */,
 				E65DD6371EDE63CB0091CA3C /* GoogleService-Info.plist in Resources */,
@@ -1779,6 +1842,7 @@
 				E65A66B31EF3BD4700A3FE16 /* ProfileSettingsConfigurator.swift in Sources */,
 				E608ABB01EE00DB600FED38D /* ArtistTableViewCell.swift in Sources */,
 				E65A66B71EF3BD4700A3FE16 /* ProfileSettingsViewController.swift in Sources */,
+				E6F6BD611F03638E00E43C3D /* TVShowsTableViewCell.swift in Sources */,
 				E68D2DCD1EDBD6F10084F01C /* iBeaconInteractor.swift in Sources */,
 				E608ABB21EE0115300FED38D /* ArtistItemView.swift in Sources */,
 				E65A66A31EF3BD3F00A3FE16 /* FeedsWorker.swift in Sources */,
@@ -1789,6 +1853,7 @@
 				E60BA8151F026B9000215DA6 /* TVShowsViewModel.swift in Sources */,
 				E65B194D1EB9D4EF00237163 /* ArtistsPresenter.swift in Sources */,
 				E60BA7CA1F02603100215DA6 /* Menu.swift in Sources */,
+				E6F6BD6A1F036A1100E43C3D /* WatchListTVShowsCollectionViewCellCollectionViewCell.swift in Sources */,
 				E608ABAC1EE0090600FED38D /* ErrorViewModel.swift in Sources */,
 				E65B194E1EB9D4EF00237163 /* ArtistsRouter.swift in Sources */,
 				E60BA83F1F026BA900215DA6 /* WatchListsRouter.swift in Sources */,
@@ -1805,6 +1870,7 @@
 				E60BA8101F026B9000215DA6 /* TVShowsConfigurator.swift in Sources */,
 				E60BA8131F026B9000215DA6 /* TVShowsRouter.swift in Sources */,
 				C558B90D1EEACCD6007D9E3D /* iBeaconReceiveInteractor.swift in Sources */,
+				E6F6BD5C1F035F2E00E43C3D /* LiveTVTableViewCell.swift in Sources */,
 				E68D2DCC1EDBD6F10084F01C /* iBeaconConfigurator.swift in Sources */,
 				E60BA7E41F026B6A00215DA6 /* SupportConfigurator.swift in Sources */,
 				E68D2DD11EDBD6F10084F01C /* iBeaconViewModel.swift in Sources */,
@@ -1815,6 +1881,7 @@
 				E60BA8401F026BA900215DA6 /* WatchListsViewController.swift in Sources */,
 				E65DD65B1EDED8EB0091CA3C /* API.swift in Sources */,
 				E65A666A1EF397DC00A3FE16 /* SignUpInteractor.swift in Sources */,
+				E6F6BD661F0369F200E43C3D /* WatchListMoviesCollectionViewCell.swift in Sources */,
 				E60BA82A1F026B9C00215DA6 /* MoviesViewController.swift in Sources */,
 				E68D2DCE1EDBD6F10084F01C /* iBeaconPresenter.swift in Sources */,
 				E60BA8291F026B9C00215DA6 /* MoviesRouter.swift in Sources */,
@@ -1843,6 +1910,7 @@
 				E65A66A21EF3BD3F00A3FE16 /* FeedsViewModel.swift in Sources */,
 				E65A66A11EF3BD3F00A3FE16 /* FeedsViewController.swift in Sources */,
 				E65B19591EB9DC6A00237163 /* Album.swift in Sources */,
+				E6F6BD571F033EA600E43C3D /* MoviesCollectionViewCell.swift in Sources */,
 				E608ABB41EE012FC00FED38D /* ImageManager.swift in Sources */,
 				E60BA8441F026C0400215DA6 /* CustomTabbarController.swift in Sources */,
 				E608ABBA1EE013E600FED38D /* ImageNetworkStore.swift in Sources */,

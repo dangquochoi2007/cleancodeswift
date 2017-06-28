@@ -21,6 +21,20 @@ final class LiveTVViewController: UIViewController {
 
     var output: LiveTVViewControllerOutput!
     var router: LiveTVRouterProtocol!
+    
+    lazy var liveTVTableView: UITableView = { [unowned self] in
+        var tableView = UITableView(frame: CGRect.zero, style: UITableViewStyle.plain)
+        tableView.register(LiveTVTableViewCell.self, forCellReuseIdentifier: "LiveTVTableViewCell")
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 80
+        tableView.backgroundColor = UIColor.red
+        return tableView
+    }()
 
 
     // MARK: - Initializers
@@ -54,7 +68,8 @@ final class LiveTVViewController: UIViewController {
 
         super.viewDidLoad()
 
-        doSomethingOnLoad()
+        title = "LIVE TV"
+        configureControllerWhenLoad()
     }
 
 
@@ -65,6 +80,11 @@ final class LiveTVViewController: UIViewController {
         // TODO: Ask the Interactor to do some work
 
         output.doSomething()
+    }
+    
+    func configureControllerWhenLoad() {
+        
+        constraintsLayoutTableView()
     }
 }
 
@@ -80,4 +100,33 @@ extension LiveTVViewController: LiveTVViewControllerInput {
 
         // TODO: Update UI
     }
+}
+
+
+extension LiveTVViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func constraintsLayoutTableView() {
+        [liveTVTableView].forEach {
+            self.view.addSubview($0)
+        }
+        
+        let attributes:[NSLayoutAttribute] = [.top, .left, .bottom, .right]
+        for attribute in attributes {
+            view.addConstraint(NSLayoutConstraint(item: self.liveTVTableView, attribute: attribute, relatedBy: .equal, toItem: view, attribute: attribute, multiplier: 1, constant: 0))
+        }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LiveTVTableViewCell", for: indexPath) as! LiveTVTableViewCell
+        return cell
+    }
+    
 }

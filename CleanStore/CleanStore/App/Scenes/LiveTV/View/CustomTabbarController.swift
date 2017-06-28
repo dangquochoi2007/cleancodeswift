@@ -35,9 +35,6 @@ class CustomTabbarController: UITabBarController {
         watchListNavigationController.title = "WATCHLIST"
         watchListNavigationController.tabBarItem.image = UIImage(named: "globe_icon")
         
-        
-        
-        
         viewControllers = [navigationController ,secondNavigationController, tvShowsNavigationController, watchListNavigationController]
         tabBar.isTranslucent = false
         let topBorder = CALayer()
