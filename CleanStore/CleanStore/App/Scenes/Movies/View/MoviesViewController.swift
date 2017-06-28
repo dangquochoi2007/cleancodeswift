@@ -24,7 +24,7 @@ final class MoviesViewController: UIViewController {
     var output: MoviesViewControllerOutput!
     var router: MoviesRouterProtocol!
     
-    var moviesBackgrounColor: UIColor = UIColor(red: 22.0/255.0, green: 23.0/255.0, blue: 27.0/255.0, alpha: 0.95)
+    var moviesBackgroundColor: UIColor = UIColor(red: 22.0/255.0, green: 23.0/255.0, blue: 27.0/255.0, alpha: 0.95)
     var moviesForegroundColor: UIColor = UIColor(red: 239.0/255.0, green: 26.0/255.0, blue: 81.0/255.0, alpha: 1)
 
     lazy var moviesCollectionView: UICollectionView =  { [unowned self] in
@@ -35,7 +35,7 @@ final class MoviesViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(MoviesCollectionViewCell.self, forCellWithReuseIdentifier: "MoviesCollectionViewCell")
-        collectionView.backgroundColor = UIColor.red
+        collectionView.backgroundColor = self.moviesBackgroundColor
         return collectionView
     }()
     
@@ -107,11 +107,11 @@ final class MoviesViewController: UIViewController {
     
     
     func configureControllerWhenAppear() {
-        navigationController?.navigationBar.barTintColor = moviesBackgrounColor
+        navigationController?.navigationBar.barTintColor = moviesBackgroundColor
         navigationController?.navigationBar.tintColor = moviesForegroundColor
         navigationController?.navigationBar.isTranslucent = false
         
-        tabBarController?.tabBar.barTintColor = moviesBackgrounColor
+        tabBarController?.tabBar.barTintColor = moviesBackgroundColor
         tabBarController?.tabBar.tintColor = moviesForegroundColor
         
         title = "MOVIES"
@@ -162,7 +162,7 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 20
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

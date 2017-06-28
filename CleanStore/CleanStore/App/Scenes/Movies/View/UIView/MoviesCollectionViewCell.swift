@@ -11,7 +11,7 @@ import UIKit
 class MoviesCollectionViewCell: UICollectionViewCell {
     
     
-    lazy var moviesImageView:UIImageView = UIImageView()
+    lazy var moviesImageView:UIImageView = UIImageView(image: UIImage(named: "film"))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
