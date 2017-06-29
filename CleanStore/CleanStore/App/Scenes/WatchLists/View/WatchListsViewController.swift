@@ -47,6 +47,31 @@ final class WatchListsViewController: UIViewController {
     }()
     
     
+    lazy var segmentControl: TZSegmentedControl = {
+        let titleCont = TZSegmentedControl(sectionTitles: ["TRENDING","EDITOR'S PICKS", "FOR YOU", "VIDEOS", "LANGUAGE" ])
+        titleCont.frame = CGRect(x: 0, y: 50, width: self.view.frame.width, height: 50)
+        titleCont.indicatorWidthPercent = 0.8
+        let whitishColor = UIColor(white: 0.75, alpha: 1.0)
+        titleCont.backgroundColor = UIColor.white
+        titleCont.borderType = .none
+        titleCont.borderColor = whitishColor
+        titleCont.borderWidth = 0.5
+        titleCont.segmentWidthStyle = .dynamic
+        titleCont.verticalDividerEnabled = false
+        titleCont.verticalDividerWidth = 0.5
+        titleCont.verticalDividerColor = whitishColor
+        titleCont.selectionStyle = .fullWidth
+        titleCont.selectionIndicatorLocation = .down
+        titleCont.selectionIndicatorColor = UIColor.blue
+        titleCont.selectionIndicatorHeight = 2.0
+        titleCont.edgeInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        titleCont.selectedTitleTextAttributes = [NSForegroundColorAttributeName:UIColor.blue]
+        titleCont.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.darkGray,
+                                         NSFontAttributeName:UIFont(name: "Lato", size: 10.0) ?? UIFont.systemFont(ofSize: 13)]
+        return titleCont
+    }()
+    
+    
 
     // MARK: - Initializers
 
@@ -111,6 +136,7 @@ final class WatchListsViewController: UIViewController {
         
         tabBarController?.tabBar.barTintColor = watchListsBackgroundColor
         tabBarController?.tabBar.tintColor = watchListsForegroundColor
+        tabBarItem.badgeValue = "8"
         
         title = "WATCHLIST"
         

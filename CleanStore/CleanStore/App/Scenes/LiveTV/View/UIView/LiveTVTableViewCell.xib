@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -50,7 +50,7 @@
                                     <constraint firstAttribute="height" constant="22" id="QEe-CI-rEj"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live Now: TEST NOW Live Next: TEST NEXT" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TY7-DV-Qdu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live Now: TEST NOW Live Next: TEST NEXT" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="TY7-DV-Qdu">
                                 <rect key="frame" x="22" y="66.5" width="154" height="31.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="13"/>
                                 <color key="textColor" red="0.40392156862745099" green="0.41176470588235292" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
@@ -61,7 +61,6 @@
                         <constraints>
                             <constraint firstItem="TY7-DV-Qdu" firstAttribute="leading" secondItem="B3l-TW-rUy" secondAttribute="leading" id="7IE-Az-rFR"/>
                             <constraint firstItem="jJG-N2-3WZ" firstAttribute="leading" secondItem="B3l-TW-rUy" secondAttribute="leading" id="HJI-ti-Nl0"/>
-                            <constraint firstAttribute="bottom" secondItem="TY7-DV-Qdu" secondAttribute="bottom" constant="8" id="SwX-cL-QaC"/>
                             <constraint firstItem="TY7-DV-Qdu" firstAttribute="top" secondItem="jJG-N2-3WZ" secondAttribute="bottom" constant="7.5" id="dlh-ut-Cdj"/>
                             <constraint firstAttribute="trailing" secondItem="B3l-TW-rUy" secondAttribute="trailing" constant="12" id="eqD-re-q2j"/>
                             <constraint firstItem="TY7-DV-Qdu" firstAttribute="trailing" secondItem="B3l-TW-rUy" secondAttribute="trailing" id="f8S-fQ-xrl"/>
@@ -75,6 +74,7 @@
                     <constraint firstItem="zYc-8A-Yjm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3Kq-2C-vz7"/>
                     <constraint firstAttribute="bottom" secondItem="zYc-8A-Yjm" secondAttribute="bottom" id="5MK-hA-lEy"/>
                     <constraint firstItem="zYc-8A-Yjm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ao1-Wx-XXs"/>
+                    <constraint firstItem="cPo-x8-RCw" firstAttribute="height" secondItem="zYc-8A-Yjm" secondAttribute="height" id="C02-Gr-IW2"/>
                     <constraint firstItem="cPo-x8-RCw" firstAttribute="leading" secondItem="zYc-8A-Yjm" secondAttribute="trailing" id="Rqd-LE-XkZ"/>
                     <constraint firstAttribute="bottom" secondItem="cPo-x8-RCw" secondAttribute="bottom" id="dLQ-F0-hvV"/>
                     <constraint firstItem="cPo-x8-RCw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="epv-ia-WE6"/>

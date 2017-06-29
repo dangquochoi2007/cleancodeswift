@@ -46,6 +46,7 @@ final class MoviesViewController: UIViewController {
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         layout.sectionInset = UIEdgeInsets.zero
+        layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
         return layout
     }()
 
@@ -175,4 +176,10 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
         return CGSize(width: 160, height: 200)
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize()
+    }
 }

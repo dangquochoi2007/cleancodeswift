@@ -37,8 +37,35 @@ final class LiveTVViewController: UIViewController {
         tableView.estimatedRowHeight = 80
         tableView.backgroundColor = self.liveTVBackgroundColor
         tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        tableView.tableHeaderView = self.segmentControl
         return tableView
     }()
+    
+    
+    lazy var segmentControl: TZSegmentedControl = { [unowned self] in
+        let titleCont = TZSegmentedControl(sectionTitles: ["FOR YOU", "TRENDING","EDITOR'S PICKS", "VIDEOS", "LANGUAGE" , "ENGLISH", "VIDEO EPIC"])
+        titleCont.frame = CGRect(x: 0, y: 50, width: self.view.frame.width, height: 50)
+        titleCont.indicatorWidthPercent = 0.8
+        titleCont.backgroundColor = self.liveTVBackgroundColor
+        titleCont.borderType = .none
+        titleCont.borderColor = self.liveTVBackgroundColor
+        titleCont.borderWidth = 0.5
+        titleCont.segmentWidthStyle = .dynamic
+        titleCont.verticalDividerEnabled = false
+        titleCont.verticalDividerWidth = 0.5
+        titleCont.verticalDividerColor = self.liveTVBackgroundColor
+        titleCont.selectionStyle = .fullWidth
+        titleCont.selectionIndicatorLocation = .down
+        titleCont.selectionIndicatorColor = self.liveTVForegroundColor
+        titleCont.selectionIndicatorHeight = 2.0
+        titleCont.edgeInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        titleCont.selectedTitleTextAttributes = [NSForegroundColorAttributeName: self.liveTVForegroundColor]
+        titleCont.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.darkGray,
+                                         NSFontAttributeName:UIFont(name: "Lato-Bold", size: 12.0) ?? UIFont.systemFont(ofSize: 13)]
+        return titleCont
+    }()
+    
+    
 
 
     // MARK: - Initializers
@@ -85,6 +112,11 @@ final class LiveTVViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
 
     // MARK: - Load data
 
@@ -98,6 +130,7 @@ final class LiveTVViewController: UIViewController {
     func configureControllerWhenLoad() {
         
         constraintsLayoutTableView()
+
     }
     
     func configureControllerWhenAppear() {
@@ -118,6 +151,9 @@ final class LiveTVViewController: UIViewController {
             NSForegroundColorAttributeName: liveTVForegroundColor
         ]
     }
+    
+    
+    
 }
 
 
@@ -146,7 +182,13 @@ extension LiveTVViewController: UITableViewDelegate, UITableViewDataSource {
         for attribute in attributes {
             view.addConstraint(NSLayoutConstraint(item: self.liveTVTableView, attribute: attribute, relatedBy: .equal, toItem: view, attribute: attribute, multiplier: 1, constant: 0))
         }
+        
+        self.segmentControl.indexChangeBlock = { (index) in
+            debugPrint("Segmented \(self.segmentControl.sectionTitles[index]) is visible now")
+        }
     }
+    
+  
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

@@ -35,6 +35,9 @@ final class TVShowsViewController: UIViewController {
         tableView.estimatedRowHeight = 80
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.showsHorizontalScrollIndicator = false
+        tableView.showsVerticalScrollIndicator = false
+        tableView.backgroundColor = self.tvShowsBackgrounColor
         
         return tableView
     }()
@@ -140,6 +143,7 @@ extension TVShowsViewController: UITableViewDelegate, UITableViewDataSource {
         for attribute in attributes {
             view.addConstraint(NSLayoutConstraint(item: self.tvShowsTableView, attribute: attribute, relatedBy: .equal, toItem: view, attribute: attribute, multiplier: 1, constant: 0))
         }
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

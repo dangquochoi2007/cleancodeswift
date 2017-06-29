@@ -157,6 +157,7 @@
 		E65DD6571EDED3CC0091CA3C /* ArtistsAPIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD6561EDED3CC0091CA3C /* ArtistsAPIStore.swift */; };
 		E65DD6591EDED63F0091CA3C /* ArtistsStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD6581EDED63F0091CA3C /* ArtistsStoreProtocol.swift */; };
 		E65DD65B1EDED8EB0091CA3C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD65A1EDED8EB0091CA3C /* API.swift */; };
+		E661C0911F04AEC8009CAFB0 /* LeftSideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E661C0901F04AEC8009CAFB0 /* LeftSideMenuViewController.swift */; };
 		E68D2DCC1EDBD6F10084F01C /* iBeaconConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DBF1EDBD6F10084F01C /* iBeaconConfigurator.swift */; };
 		E68D2DCD1EDBD6F10084F01C /* iBeaconInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DC11EDBD6F10084F01C /* iBeaconInteractor.swift */; };
 		E68D2DCE1EDBD6F10084F01C /* iBeaconPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DC31EDBD6F10084F01C /* iBeaconPresenter.swift */; };
@@ -361,6 +362,7 @@
 		E65DD6561EDED3CC0091CA3C /* ArtistsAPIStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistsAPIStore.swift; sourceTree = "<group>"; };
 		E65DD6581EDED63F0091CA3C /* ArtistsStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistsStoreProtocol.swift; sourceTree = "<group>"; };
 		E65DD65A1EDED8EB0091CA3C /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		E661C0901F04AEC8009CAFB0 /* LeftSideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSideMenuViewController.swift; sourceTree = "<group>"; };
 		E68D2DBF1EDBD6F10084F01C /* iBeaconConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconConfigurator.swift; sourceTree = "<group>"; };
 		E68D2DC11EDBD6F10084F01C /* iBeaconInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconInteractor.swift; sourceTree = "<group>"; };
 		E68D2DC31EDBD6F10084F01C /* iBeaconPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconPresenter.swift; sourceTree = "<group>"; };
@@ -976,6 +978,7 @@
 				E645E2A51EF7D06A001AA189 /* KBRoundedButton.swift */,
 				E6F6BD6C1F037E1100E43C3D /* UIView+Extension.swift */,
 				E6F6BD6E1F03AAC700E43C3D /* TZSegmentedControl.swift */,
+				E661C0901F04AEC8009CAFB0 /* LeftSideMenuViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1981,6 +1984,7 @@
 				E60BA8291F026B9C00215DA6 /* MoviesRouter.swift in Sources */,
 				E6F6BD6D1F037E1100E43C3D /* UIView+Extension.swift in Sources */,
 				E6F6BD6F1F03AAC700E43C3D /* TZSegmentedControl.swift in Sources */,
+				E661C0911F04AEC8009CAFB0 /* LeftSideMenuViewController.swift in Sources */,
 				E6ACAC961EF0EA230090716C /* KeyboardMovable.swift in Sources */,
 				C558B9171EED95E0007D9E3D /* iBeaconReceiveViewController.swift in Sources */,
 				E60BA8261F026B9C00215DA6 /* MoviesConfigurator.swift in Sources */,
