@@ -26,7 +26,7 @@ final class WatchListsViewController: UIViewController {
     var watchListsForegroundColor: UIColor = UIColor(red: 24.0/255.0, green: 235.0/255.0, blue: 188.0/255.0, alpha: 1)
     
     lazy var watchListsCollectionView: UICollectionView = { [unowned self] in
-        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: self.collectionViewLayout)
+        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: self.movieCollectionViewLayout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
@@ -34,11 +34,13 @@ final class WatchListsViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.register(WatchListMoviesCollectionViewCell.self, forCellWithReuseIdentifier: "WatchListMoviesCollectionViewCell")
         collectionView.register(WatchListTVShowsCollectionViewCellCollectionViewCell.nib, forCellWithReuseIdentifier: WatchListTVShowsCollectionViewCellCollectionViewCell.nibName)
+        collectionView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
+        collectionView.addSubview(self.segmentControl)
         return collectionView
     }()
     
     
-    lazy var collectionViewLayout: UICollectionViewLayout = { [unowned self] in
+    lazy var movieCollectionViewLayout: UICollectionViewLayout = { [unowned self] in
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 0
@@ -47,6 +49,40 @@ final class WatchListsViewController: UIViewController {
         
         return layout
     }()
+    
+    lazy var tvShowCollectionViewLayout: UICollectionViewLayout = { [unowned self] in
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        layout.sectionInset = UIEdgeInsets.zero
+        
+        return layout
+    }()
+    
+    lazy var segmentControl: TZSegmentedControl = { [unowned self] in
+        let titleCont = TZSegmentedControl(sectionTitles: ["MOVIES", "TV SHOWS"])
+        titleCont.frame = CGRect(x: (self.view.frame.width/2 - 50), y: -50, width: self.view.frame.width, height: 50)
+//        titleCont.type = TZSegmentedControlType.textImages
+        titleCont.indicatorWidthPercent = 1.5
+        titleCont.backgroundColor = self.watchListsBackgroundColor
+        titleCont.borderType = .none
+        titleCont.borderColor = self.watchListsBackgroundColor
+        titleCont.borderWidth = 2.0
+        titleCont.segmentWidthStyle = .dynamic
+        titleCont.verticalDividerEnabled = false
+        titleCont.verticalDividerWidth = 0
+        titleCont.verticalDividerColor = self.watchListsBackgroundColor
+        titleCont.selectionStyle = .fullWidth
+        titleCont.selectionIndicatorLocation = .down
+        titleCont.selectionIndicatorColor = self.watchListsForegroundColor
+        titleCont.selectionIndicatorHeight = 4.0
+        titleCont.edgeInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+        titleCont.selectedTitleTextAttributes = [NSForegroundColorAttributeName: self.watchListsForegroundColor]
+        titleCont.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white,
+                                         NSFontAttributeName:UIFont(name: "Lato-Bold", size: 11.0) ?? UIFont.systemFont(ofSize: 11)]
+        return titleCont
+        }()
     
     
     
