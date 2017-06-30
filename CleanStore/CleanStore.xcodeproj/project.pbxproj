@@ -84,9 +84,11 @@
 		E60BA8411F026BA900215DA6 /* WatchListsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60BA8391F026BA900215DA6 /* WatchListsViewModel.swift */; };
 		E60BA8421F026BA900215DA6 /* WatchListsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60BA83B1F026BA900215DA6 /* WatchListsWorker.swift */; };
 		E60BA8441F026C0400215DA6 /* CustomTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60BA8431F026C0400215DA6 /* CustomTabbarController.swift */; };
-		E62B31801F05F32500F42EDE /* SVSlidingPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62B317F1F05F32400F42EDE /* SVSlidingPanelViewController.swift */; };
 		E62B31821F05F38400F42EDE /* SVMenuOptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62B31811F05F38400F42EDE /* SVMenuOptionManager.swift */; };
 		E62B31841F05F3C500F42EDE /* SVMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62B31831F05F3C500F42EDE /* SVMenuViewController.swift */; };
+		E62B31881F06110600F42EDE /* SideMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62B31851F06110600F42EDE /* SideMenuManager.swift */; };
+		E62B31891F06110600F42EDE /* SideMenuTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62B31861F06110600F42EDE /* SideMenuTransition.swift */; };
+		E62B318A1F06110600F42EDE /* UISideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62B31871F06110600F42EDE /* UISideMenuNavigationController.swift */; };
 		E63D7CE71EDD4AFC0033F7ED /* MeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63D7CDA1EDD4AFC0033F7ED /* MeConfigurator.swift */; };
 		E63D7CE81EDD4AFC0033F7ED /* MeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63D7CDC1EDD4AFC0033F7ED /* MeInteractor.swift */; };
 		E63D7CE91EDD4AFC0033F7ED /* MePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63D7CDE1EDD4AFC0033F7ED /* MePresenter.swift */; };
@@ -300,9 +302,11 @@
 		E60BA8391F026BA900215DA6 /* WatchListsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchListsViewModel.swift; sourceTree = "<group>"; };
 		E60BA83B1F026BA900215DA6 /* WatchListsWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchListsWorker.swift; sourceTree = "<group>"; };
 		E60BA8431F026C0400215DA6 /* CustomTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabbarController.swift; sourceTree = "<group>"; };
-		E62B317F1F05F32400F42EDE /* SVSlidingPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVSlidingPanelViewController.swift; sourceTree = "<group>"; };
 		E62B31811F05F38400F42EDE /* SVMenuOptionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVMenuOptionManager.swift; sourceTree = "<group>"; };
 		E62B31831F05F3C500F42EDE /* SVMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVMenuViewController.swift; sourceTree = "<group>"; };
+		E62B31851F06110600F42EDE /* SideMenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuManager.swift; sourceTree = "<group>"; };
+		E62B31861F06110600F42EDE /* SideMenuTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTransition.swift; sourceTree = "<group>"; };
+		E62B31871F06110600F42EDE /* UISideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISideMenuNavigationController.swift; sourceTree = "<group>"; };
 		E63D7CDA1EDD4AFC0033F7ED /* MeConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeConfigurator.swift; sourceTree = "<group>"; };
 		E63D7CDC1EDD4AFC0033F7ED /* MeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeInteractor.swift; sourceTree = "<group>"; };
 		E63D7CDE1EDD4AFC0033F7ED /* MePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MePresenter.swift; sourceTree = "<group>"; };
@@ -1013,9 +1017,11 @@
 				E6F6BD6C1F037E1100E43C3D /* UIView+Extension.swift */,
 				E6F6BD6E1F03AAC700E43C3D /* TZSegmentedControl.swift */,
 				E661C0901F04AEC8009CAFB0 /* LeftSideMenuViewController.swift */,
-				E62B317F1F05F32400F42EDE /* SVSlidingPanelViewController.swift */,
 				E62B31811F05F38400F42EDE /* SVMenuOptionManager.swift */,
 				E62B31831F05F3C500F42EDE /* SVMenuViewController.swift */,
+				E62B31851F06110600F42EDE /* SideMenuManager.swift */,
+				E62B31861F06110600F42EDE /* SideMenuTransition.swift */,
+				E62B31871F06110600F42EDE /* UISideMenuNavigationController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -2101,6 +2107,7 @@
 				E65A66A01EF3BD3F00A3FE16 /* FeedsRouter.swift in Sources */,
 				E65A66BD1EF3E50A00A3FE16 /* TwitterService.swift in Sources */,
 				E65B19611EB9E3FC00237163 /* User.swift in Sources */,
+				E62B318A1F06110600F42EDE /* UISideMenuNavigationController.swift in Sources */,
 				E60BA7E71F026B6A00215DA6 /* SupportRouter.swift in Sources */,
 				E65A66BF1EF3E53A00A3FE16 /* GooglePlusService.swift in Sources */,
 				E60BA7FC1F026B7900215DA6 /* LiveTVPresenter.swift in Sources */,
@@ -2115,6 +2122,7 @@
 				E65B19561EB9D71100237163 /* ArtistsViewController.swift in Sources */,
 				E65B18EE1EB98F0000237163 /* CleanStore.xcdatamodeld in Sources */,
 				E65A66821EF397E300A3FE16 /* SignInRouter.swift in Sources */,
+				E62B31881F06110600F42EDE /* SideMenuManager.swift in Sources */,
 				E60BA8281F026B9C00215DA6 /* MoviesPresenter.swift in Sources */,
 				E65B194B1EB9D4EF00237163 /* ArtistsConfigurator.swift in Sources */,
 				E65A66B31EF3BD4700A3FE16 /* ProfileSettingsConfigurator.swift in Sources */,
@@ -2130,7 +2138,6 @@
 				C558B9121EEACCD6007D9E3D /* iBeaconReceiveWorker.swift in Sources */,
 				E65A666E1EF397DC00A3FE16 /* SignUpViewModel.swift in Sources */,
 				E60BA8151F026B9000215DA6 /* TVShowsViewModel.swift in Sources */,
-				E62B31801F05F32500F42EDE /* SVSlidingPanelViewController.swift in Sources */,
 				E65B194D1EB9D4EF00237163 /* ArtistsPresenter.swift in Sources */,
 				E60BA7CA1F02603100215DA6 /* Menu.swift in Sources */,
 				E6F6BD6A1F036A1100E43C3D /* WatchListTVShowsCollectionViewCellCollectionViewCell.swift in Sources */,
@@ -2159,6 +2166,7 @@
 				E68D2DD11EDBD6F10084F01C /* iBeaconViewModel.swift in Sources */,
 				E645E2A61EF7D06A001AA189 /* KBRoundedButton.swift in Sources */,
 				E608ABAA1EE008CA00FED38D /* ErrorPresenter.swift in Sources */,
+				E62B31891F06110600F42EDE /* SideMenuTransition.swift in Sources */,
 				E65A66B91EF3BD4700A3FE16 /* ProfileSettingsWorker.swift in Sources */,
 				E65A66B61EF3BD4700A3FE16 /* ProfileSettingsRouter.swift in Sources */,
 				E661C0BD1F050C4C009CAFB0 /* TouchMoviePresenter.swift in Sources */,

@@ -17,34 +17,42 @@ class CustomTabbarController: UITabBarController, UITabBarControllerDelegate {
         
         let liveTVController = LiveTVViewController()
         let navigationController = UINavigationController(rootViewController: liveTVController)
-        navigationController.title = "LIVE TV"
-        navigationController.tabBarItem.image = UIImage(named: "news_feed_icon")
-        
-        SVMenuOptionManager.sharedInstance.slidingPanel.centerPanel = navigationController
+        navigationController.title = SVMenuOptions.LIVETV.menuTitle
+        navigationController.tabBarItem.image = UIImage(named: SVMenuOptions.LIVETV.menuIcon)
+
         
         let moviesController = MoviesViewController()
         let secondNavigationController = UINavigationController(rootViewController: moviesController)
-        secondNavigationController.title = "MOVIES"
-        secondNavigationController.tabBarItem.image = UIImage(named: "requests_icon")
+        secondNavigationController.title = SVMenuOptions.MOVIES.menuTitle
+        secondNavigationController.tabBarItem.image = UIImage(named: SVMenuOptions.MOVIES.menuIcon)
         
         let tvShowsController = TVShowsViewController()
         let tvShowsNavigationController = UINavigationController(rootViewController: tvShowsController)
-        tvShowsNavigationController.title = "TV SHOWS"
-        tvShowsNavigationController.tabBarItem.image = UIImage(named: "messenger_icon")
+        tvShowsNavigationController.title = SVMenuOptions.TVSHOWS.menuTitle
+        tvShowsNavigationController.tabBarItem.image = UIImage(named: SVMenuOptions.TVSHOWS.menuIcon)
         
         let watchListsController = WatchListsViewController()
         let watchListNavigationController = UINavigationController(rootViewController: watchListsController)
-        watchListNavigationController.title = "WATCHLIST"
-        watchListNavigationController.tabBarItem.image = UIImage(named: "globe_icon")
+        watchListNavigationController.title = SVMenuOptions.WATCHLISTS.menuTitle
+        watchListNavigationController.tabBarItem.image = UIImage(named: SVMenuOptions.WATCHLISTS.menuIcon)
         
         viewControllers = [navigationController ,secondNavigationController, tvShowsNavigationController, watchListNavigationController]
-        
-
-
+       
      
+        self.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        print("tabBarController")
     }
 }

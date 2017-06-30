@@ -10,57 +10,37 @@ import Foundation
 import UIKit
 
 enum SVMenuOptions {
-    case Audi
-    case BMW
-    case Honda
-    case Tata
-    case Toyota
-    case Suzuki
-    case Nissan
-    case Volkswagen
-    case Volvo
-    case Jaguar
-    case Fiat
-    case Ford
+    
+    case LIVETV
+    case MOVIES
+    case TVSHOWS
+    case WATCHLISTS
     
     var menuTitle: String {
         
-        return String(describing: self)
-    }
-    
-}
-
-class SVMenuOptionManager: NSObject {
-    
-    static let sharedInstance = SVMenuOptionManager()
-    
-    let slidingPanel: SVSlidingPanelViewController
-    
-    
-    override init() {
-        
-        self.slidingPanel = SVSlidingPanelViewController()
-        
-        super.init()
-   
-    
-       
-        let  lefthamburgerMenuController = SVMenuViewController()
-        
-        
-        self.slidingPanel.leftPanel = lefthamburgerMenuController
-    
-        
-        
-        lefthamburgerMenuController.menuSelectionClosure = {[weak self](selectedMenuOption: SVMenuOptions, animated:Bool) in
-            
-            self?.showScreenForMenuOption(menuOntion: selectedMenuOption, animation: animated)
+        switch self {
+        case .LIVETV:
+            return "LIVE TV"
+        case .MOVIES:
+            return "MOVIES"
+        case .TVSHOWS:
+            return "TV SHOWS"
+        case .WATCHLISTS:
+            return "WATCHLIST"
         }
-        
     }
     
-    func showScreenForMenuOption(menuOntion: SVMenuOptions, animation animated: Bool) {
-        self.slidingPanel.showCenterPanel(animated: animated)
-        
+    var menuIcon: String {
+        switch self {
+        case .LIVETV:
+            return "airplay_ico"
+        case .MOVIES:
+            return "movie_ico"
+        case .TVSHOWS:
+            return "tvshow_ico"
+        case .WATCHLISTS:
+            return "watchlist_ico"
+        }
     }
+    
 }

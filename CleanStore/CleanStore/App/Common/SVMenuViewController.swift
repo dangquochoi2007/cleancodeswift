@@ -24,6 +24,7 @@ import UIKit
 
 class SVMenuViewController: UIViewController {
     
+    
     lazy var contentTableView: UITableView = { [weak self] in
         var tableView = UITableView()
         tableView.delegate = self
@@ -31,10 +32,14 @@ class SVMenuViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = UIColor.clear
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
         return tableView
     }()
 
-    let menuItems = [SVMenuOptions.Audi, SVMenuOptions.BMW, SVMenuOptions.Honda, SVMenuOptions.Tata, SVMenuOptions.Toyota, SVMenuOptions.Suzuki,SVMenuOptions.Nissan, SVMenuOptions.Volkswagen, SVMenuOptions.Volvo, SVMenuOptions.Jaguar, SVMenuOptions.Fiat, SVMenuOptions.Ford]
+    let menuItems = [SVMenuOptions.LIVETV, SVMenuOptions.MOVIES, SVMenuOptions.TVSHOWS, SVMenuOptions.WATCHLISTS]
     
     var menuSelectionClosure: ((SVMenuOptions, Bool)-> Void)!
     
@@ -47,8 +52,19 @@ class SVMenuViewController: UIViewController {
         configureControllerWhenLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        configureControllerWhenAppear()
+    }
+    
     func configureControllerWhenLoad() {
         constraintsTableView()
+    }
+    
+    func configureControllerWhenAppear() {
+        navigationController?.navigationBar.barTintColor =  UIColor.clear
+        navigationController?.navigationBar.isTranslucent = false
     }
 }
 
@@ -72,8 +88,7 @@ extension SVMenuViewController:UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        let menuItem = self.menuItems[indexPath.row]
-        self.menuSelectionClosure(menuItem, true)
+
     }
     
 }

@@ -104,8 +104,8 @@ final class WatchListsViewController: UIViewController {
 
         super.viewDidLoad()
 
-        title = "WATCHLIST"
         configureControllerWhenLoad()
+        configureRightMenuBarButton()
     }
 
     
@@ -140,13 +140,26 @@ final class WatchListsViewController: UIViewController {
         
         title = "WATCHLIST"
         
-        guard let latoBoldFont = UIFont(name: "Lato-Bold", size: 22) else {
+        guard let latoBoldFont = UIFont(name: "Lato-Bold", size: 15) else {
             return
         }
         navigationController?.navigationBar.titleTextAttributes = [
             NSFontAttributeName : latoBoldFont,
             NSForegroundColorAttributeName: watchListsForegroundColor
         ]
+    }
+    
+    func configureRightMenuBarButton() {
+        let mainMenuImage = UIImage(named: "artboard_ico")
+        let mainMenuBarButton = UIBarButtonItem(image: mainMenuImage, style: .plain, target: self, action: #selector(MainMenuTapped))
+        
+        //optionButton.action = something (put your action here)
+        self.navigationItem.leftBarButtonItem = mainMenuBarButton
+    }
+    
+    
+    func MainMenuTapped(sender: UIButton) {
+        
     }
 }
 

@@ -11,7 +11,7 @@ import UIKit
 class MoviesCollectionViewCell: UICollectionViewCell {
     
     
-    lazy var moviesImageView:UIImageView = UIImageView(image: UIImage(named: "film"))
+    lazy var moviesImageView:UIImageView = UIImageView(image: UIImage(named: "Movie_31"))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,7 +30,7 @@ class MoviesCollectionViewCell: UICollectionViewCell {
     }
     
     func configureViewWhenLoad() {
-        self.backgroundColor = UIColor.black
+        self.backgroundColor = UIColor.red
         
         for view in [moviesImageView] {
             view.contentMode = .scaleAspectFill

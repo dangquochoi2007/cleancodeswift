@@ -9,6 +9,8 @@
 import UIKit
 
 //#https://www.raywenderlich.com/107439/uicollectionview-custom-layout-tutorial-pinterest
+//#http://blog.rinatkhanov.me/ios/transitions.html
+//#https://github.com/John-Lluch/SWRevealViewController/issues/289
 
 protocol MoviesViewControllerInput: MoviesPresenterOutput {
 
@@ -46,7 +48,7 @@ final class MoviesViewController: UIViewController {
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         layout.sectionInset = UIEdgeInsets.zero
-        layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
+
         return layout
     }()
 
@@ -104,6 +106,7 @@ final class MoviesViewController: UIViewController {
     func configureControllerWhenLoad() {
         
         constraintsLayoutCollectionView()
+        configureRightMenuBarButton()
     }
     
     
@@ -117,13 +120,26 @@ final class MoviesViewController: UIViewController {
         
         title = "MOVIES"
         
-        guard let latoBoldFont = UIFont(name: "Lato-Bold", size: 22) else {
+        guard let latoBoldFont = UIFont(name: "Lato-Bold", size: 15) else {
             return
         }
         navigationController?.navigationBar.titleTextAttributes = [
             NSFontAttributeName : latoBoldFont,
             NSForegroundColorAttributeName: moviesForegroundColor
         ]
+    }
+    
+    func configureRightMenuBarButton() {
+        let mainMenuImage = UIImage(named: "artboard_ico")
+        let mainMenuBarButton = UIBarButtonItem(image: mainMenuImage, style: .plain, target: self, action: #selector(MainMenuTapped))
+        
+        //optionButton.action = something (put your action here)
+        self.navigationItem.leftBarButtonItem = mainMenuBarButton
+    }
+    
+    
+    func MainMenuTapped(sender: UIButton) {
+        
     }
 
 }
@@ -173,13 +189,20 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 160, height: 200)
+        
+        //265 × 376
+        let totalwidth = collectionView.bounds.size.width;
+        let numberOfCellsPerRow: Int = Int(totalwidth/160.0)
+        let width: CGFloat = CGFloat(Int(totalwidth)/numberOfCellsPerRow)
+        let height: CGFloat = CGFloat(width)*376.0/256.0
+        
+        return CGSize(width: width, height: height)
     }
     
     
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize()
-    }
+//    func collectionView(_ collectionView: UICollectionView,
+//                        layout collectionViewLayout: UICollectionViewLayout,
+//                        referenceSizeForHeaderInSection section: Int) -> CGSize {
+//        return CGSize()
+//    }
 }

@@ -130,6 +130,7 @@ final class LiveTVViewController: UIViewController {
     func configureControllerWhenLoad() {
         
         constraintsLayoutTableView()
+        configureRightMenuBarButton()
 
     }
     
@@ -143,7 +144,7 @@ final class LiveTVViewController: UIViewController {
   
         title = "LIVE TV"
         
-        guard let latoBoldFont = UIFont(name: "Lato-Bold", size: 22) else {
+        guard let latoBoldFont = UIFont(name: "Lato-Bold", size: 15) else {
             return
         }
         navigationController?.navigationBar.titleTextAttributes = [
@@ -152,6 +153,19 @@ final class LiveTVViewController: UIViewController {
         ]
     }
     
+    
+    func configureRightMenuBarButton() {
+        let mainMenuImage = UIImage(named: "artboard_ico")
+        let mainMenuBarButton = UIBarButtonItem(image: mainMenuImage, style: .plain, target: self, action: #selector(MainMenuTapped))
+
+        //optionButton.action = something (put your action here)
+        self.navigationItem.leftBarButtonItem = mainMenuBarButton
+    }
+    
+    
+    func MainMenuTapped(sender: UIButton) {
+
+    }
     
     
 }
