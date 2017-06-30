@@ -40,8 +40,13 @@ enum MainMenuRootOption {
 
 class LeftSideMenuTableViewCell: UITableViewCell {
     
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    }
+    
     required init?(coder aDecoder: NSCoder) {
-        fatalError("")
+        //fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
     }
     
 }
@@ -111,6 +116,10 @@ extension LeftSideMenuViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Select at index \(indexPath.row)")
     }
 }
 

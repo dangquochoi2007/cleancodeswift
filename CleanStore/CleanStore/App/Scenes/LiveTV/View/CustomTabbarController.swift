@@ -20,6 +20,8 @@ class CustomTabbarController: UITabBarController, UITabBarControllerDelegate {
         navigationController.title = "LIVE TV"
         navigationController.tabBarItem.image = UIImage(named: "news_feed_icon")
         
+        SVMenuOptionManager.sharedInstance.slidingPanel.centerPanel = navigationController
+        
         let moviesController = MoviesViewController()
         let secondNavigationController = UINavigationController(rootViewController: moviesController)
         secondNavigationController.title = "MOVIES"
@@ -36,5 +38,13 @@ class CustomTabbarController: UITabBarController, UITabBarControllerDelegate {
         watchListNavigationController.tabBarItem.image = UIImage(named: "globe_icon")
         
         viewControllers = [navigationController ,secondNavigationController, tvShowsNavigationController, watchListNavigationController]
+        
+
+
+     
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
 }

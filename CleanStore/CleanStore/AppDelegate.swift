@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: screen.bounds)
         self.window?.makeKeyAndVisible()
         
+
+        
         self.window?.rootViewController = CustomTabbarController()
         application.statusBarStyle = .lightContent
         
