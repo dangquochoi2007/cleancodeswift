@@ -92,6 +92,14 @@ final class MoviesViewController: UIViewController {
         
         configureControllerWhenAppear()
     }
+    
+    override func viewWillLayoutSubviews()
+    {
+        super.viewWillLayoutSubviews()
+        
+        //recalculate the collection view layout when the view layout changes
+        moviesCollectionView.collectionViewLayout.invalidateLayout()
+    }
 
 
     // MARK: - Load data
@@ -179,7 +187,7 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return 21
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -189,7 +197,6 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         //265 × 376
         let totalwidth = collectionView.bounds.size.width;
         let numberOfCellsPerRow: Int = Int(totalwidth/160.0)
@@ -198,11 +205,4 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
         
         return CGSize(width: width, height: height)
     }
-    
-    
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        referenceSizeForHeaderInSection section: Int) -> CGSize {
-//        return CGSize()
-//    }
 }

@@ -18,6 +18,7 @@
 		C558B9121EEACCD6007D9E3D /* iBeaconReceiveWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B90B1EEACCD6007D9E3D /* iBeaconReceiveWorker.swift */; };
 		C558B9171EED95E0007D9E3D /* iBeaconReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B9151EED95E0007D9E3D /* iBeaconReceiveViewController.swift */; };
 		C558B9181EED95E0007D9E3D /* iBeaconReceiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C558B9161EED95E0007D9E3D /* iBeaconReceiveViewController.xib */; };
+		C5857B711F068792007B4DA9 /* MoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5857B6F1F068792007B4DA9 /* MoviesCollectionViewCell.swift */; };
 		C5E4003D1F0416A100876F86 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5E400291F0416A100876F86 /* Lato-Black.ttf */; };
 		C5E4003E1F0416A100876F86 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5E4002A1F0416A100876F86 /* Lato-BlackItalic.ttf */; };
 		C5E4003F1F0416A100876F86 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5E4002B1F0416A100876F86 /* Lato-Bold.ttf */; };
@@ -188,7 +189,6 @@
 		E68D2DDA1EDC06030084F01C /* RegionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68D2DD91EDC06030084F01C /* RegionMonitor.swift */; };
 		E6ACAC961EF0EA230090716C /* KeyboardMovable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ACAC951EF0EA230090716C /* KeyboardMovable.swift */; };
 		E6D8C92E1EF8BAE000102FA3 /* Data+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D8C92D1EF8BAE000102FA3 /* Data+JSON.swift */; };
-		E6F6BD571F033EA600E43C3D /* MoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6BD551F033EA600E43C3D /* MoviesCollectionViewCell.swift */; };
 		E6F6BD5C1F035F2E00E43C3D /* LiveTVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6BD5A1F035F2E00E43C3D /* LiveTVTableViewCell.swift */; };
 		E6F6BD5D1F035F2E00E43C3D /* LiveTVTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6F6BD5B1F035F2E00E43C3D /* LiveTVTableViewCell.xib */; };
 		E6F6BD611F03638E00E43C3D /* TVShowsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6BD5F1F03638E00E43C3D /* TVShowsTableViewCell.swift */; };
@@ -234,6 +234,7 @@
 		C558B90B1EEACCD6007D9E3D /* iBeaconReceiveWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveWorker.swift; sourceTree = "<group>"; };
 		C558B9151EED95E0007D9E3D /* iBeaconReceiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveViewController.swift; sourceTree = "<group>"; };
 		C558B9161EED95E0007D9E3D /* iBeaconReceiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iBeaconReceiveViewController.xib; sourceTree = "<group>"; };
+		C5857B6F1F068792007B4DA9 /* MoviesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewCell.swift; sourceTree = "<group>"; };
 		C5E400291F0416A100876F86 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 		C5E4002A1F0416A100876F86 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
 		C5E4002B1F0416A100876F86 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
@@ -412,7 +413,6 @@
 		E68D2DD91EDC06030084F01C /* RegionMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionMonitor.swift; sourceTree = "<group>"; };
 		E6ACAC951EF0EA230090716C /* KeyboardMovable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardMovable.swift; sourceTree = "<group>"; };
 		E6D8C92D1EF8BAE000102FA3 /* Data+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+JSON.swift"; sourceTree = "<group>"; };
-		E6F6BD551F033EA600E43C3D /* MoviesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewCell.swift; sourceTree = "<group>"; };
 		E6F6BD5A1F035F2E00E43C3D /* LiveTVTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTVTableViewCell.swift; sourceTree = "<group>"; };
 		E6F6BD5B1F035F2E00E43C3D /* LiveTVTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveTVTableViewCell.xib; sourceTree = "<group>"; };
 		E6F6BD5F1F03638E00E43C3D /* TVShowsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowsTableViewCell.swift; sourceTree = "<group>"; };
@@ -1749,7 +1749,7 @@
 		E6F6BD541F033E9000E43C3D /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				E6F6BD551F033EA600E43C3D /* MoviesCollectionViewCell.swift */,
+				C5857B6F1F068792007B4DA9 /* MoviesCollectionViewCell.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -2211,7 +2211,6 @@
 				E65A66A11EF3BD3F00A3FE16 /* FeedsViewController.swift in Sources */,
 				E661C0AB1F050C44009CAFB0 /* MoviesDetailsWorker.swift in Sources */,
 				E65B19591EB9DC6A00237163 /* Album.swift in Sources */,
-				E6F6BD571F033EA600E43C3D /* MoviesCollectionViewCell.swift in Sources */,
 				E608ABB41EE012FC00FED38D /* ImageManager.swift in Sources */,
 				E60BA8441F026C0400215DA6 /* CustomTabbarController.swift in Sources */,
 				E608ABBA1EE013E600FED38D /* ImageNetworkStore.swift in Sources */,
@@ -2219,6 +2218,7 @@
 				E60BA82B1F026B9C00215DA6 /* MoviesViewModel.swift in Sources */,
 				C558B9111EEACCD6007D9E3D /* iBeaconReceiveViewModel.swift in Sources */,
 				E68D2DD21EDBD6F10084F01C /* iBeaconWorker.swift in Sources */,
+				C5857B711F068792007B4DA9 /* MoviesCollectionViewCell.swift in Sources */,
 				E63D7CE71EDD4AFC0033F7ED /* MeConfigurator.swift in Sources */,
 				E65DD6461EDEB3560091CA3C /* NetworkClient.swift in Sources */,
 				E65B195F1EB9DEBD00237163 /* Strings.swift in Sources */,

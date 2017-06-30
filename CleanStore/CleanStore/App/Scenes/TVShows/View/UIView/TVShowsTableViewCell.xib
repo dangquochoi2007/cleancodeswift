@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="Lato-Bold.ttf">
             <string>Lato-Bold</string>
-        </array>
-        <array key="Lato-Regular.ttf">
-            <string>Lato-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -37,18 +34,39 @@
                         <rect key="frame" x="187" y="0.0" width="188" height="105.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RAY DONOVAN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="c3A-pB-jb3">
-                                <rect key="frame" x="8" y="8" width="172" height="19"/>
-                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                                <rect key="frame" x="8" y="8" width="172" height="17"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="bVJ-pE-lnC">
-                                <rect key="frame" x="8" y="52" width="172" height="43.5"/>
-                                <string key="text">2008 - 3 SAISONs - 8.3
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="bVJ-pE-lnC">
+                                <rect key="frame" x="8" y="32" width="172" height="43.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="2008 - 3 SAISONs - ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.4039215686" green="0.41176470590000003" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="Lato-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="8.3">
+                                        <attributes>
+                                            <color key="NSColor" red="0.10196078431372549" green="0.80784313725490198" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="Lato-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
 Last: 27 Sep. 2015
 Next: 2016</string>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
-                                <color key="textColor" red="0.4039215686" green="0.41176470590000003" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                        <attributes>
+                                            <color key="NSColor" red="0.4039215686" green="0.41176470590000003" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="Lato-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -56,9 +74,9 @@ Next: 2016</string>
                         <constraints>
                             <constraint firstItem="c3A-pB-jb3" firstAttribute="leading" secondItem="7fm-YB-XmE" secondAttribute="leading" constant="8" id="Fa8-Gm-5rS"/>
                             <constraint firstItem="bVJ-pE-lnC" firstAttribute="leading" secondItem="c3A-pB-jb3" secondAttribute="leading" id="Rz8-du-QSQ"/>
-                            <constraint firstAttribute="bottom" secondItem="bVJ-pE-lnC" secondAttribute="bottom" constant="10" id="Vcg-ss-naU"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bVJ-pE-lnC" secondAttribute="bottom" constant="10" id="Vcg-ss-naU"/>
                             <constraint firstItem="bVJ-pE-lnC" firstAttribute="trailing" secondItem="c3A-pB-jb3" secondAttribute="trailing" id="gGg-Jn-Bek"/>
-                            <constraint firstItem="bVJ-pE-lnC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="c3A-pB-jb3" secondAttribute="bottom" constant="7" id="hHg-9W-Qep"/>
+                            <constraint firstItem="bVJ-pE-lnC" firstAttribute="top" secondItem="c3A-pB-jb3" secondAttribute="bottom" constant="7" id="hHg-9W-Qep"/>
                             <constraint firstItem="c3A-pB-jb3" firstAttribute="top" secondItem="7fm-YB-XmE" secondAttribute="top" constant="8" id="sH7-4F-eLi"/>
                             <constraint firstAttribute="trailing" secondItem="c3A-pB-jb3" secondAttribute="trailing" constant="8" id="wso-Wr-Hwf"/>
                         </constraints>

@@ -43,25 +43,25 @@ final class LiveTVViewController: UIViewController {
     
     
     lazy var segmentControl: TZSegmentedControl = { [unowned self] in
-        let titleCont = TZSegmentedControl(sectionTitles: ["FOR YOU", "TRENDING","EDITOR'S PICKS", "VIDEOS", "LANGUAGE" , "ENGLISH", "VIDEO EPIC"])
+        let titleCont = TZSegmentedControl(sectionTitles: ["", "FOR YOU", "TOP","ACTION", "COMEDY", "FAMILY" , "ENGLISH", "VIDEO EPIC"])
         titleCont.frame = CGRect(x: 0, y: 50, width: self.view.frame.width, height: 50)
-        titleCont.indicatorWidthPercent = 0.8
+        titleCont.indicatorWidthPercent = 1.5
         titleCont.backgroundColor = self.liveTVBackgroundColor
         titleCont.borderType = .none
         titleCont.borderColor = self.liveTVBackgroundColor
-        titleCont.borderWidth = 0.5
+        titleCont.borderWidth = 2.0
         titleCont.segmentWidthStyle = .dynamic
         titleCont.verticalDividerEnabled = false
-        titleCont.verticalDividerWidth = 0.5
+        titleCont.verticalDividerWidth = 0
         titleCont.verticalDividerColor = self.liveTVBackgroundColor
         titleCont.selectionStyle = .fullWidth
         titleCont.selectionIndicatorLocation = .down
         titleCont.selectionIndicatorColor = self.liveTVForegroundColor
-        titleCont.selectionIndicatorHeight = 2.0
-        titleCont.edgeInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        titleCont.selectionIndicatorHeight = 4.0
+        titleCont.edgeInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
         titleCont.selectedTitleTextAttributes = [NSForegroundColorAttributeName: self.liveTVForegroundColor]
-        titleCont.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.darkGray,
-                                         NSFontAttributeName:UIFont(name: "Lato-Bold", size: 12.0) ?? UIFont.systemFont(ofSize: 13)]
+        titleCont.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white,
+                                         NSFontAttributeName:UIFont(name: "Lato-Bold", size: 11.0) ?? UIFont.systemFont(ofSize: 11)]
         return titleCont
     }()
     
@@ -116,6 +116,8 @@ final class LiveTVViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
+      
     }
 
     // MARK: - Load data
@@ -167,6 +169,8 @@ final class LiveTVViewController: UIViewController {
 
     }
     
+  
+    
     
 }
 
@@ -200,6 +204,10 @@ extension LiveTVViewController: UITableViewDelegate, UITableViewDataSource {
         self.segmentControl.indexChangeBlock = { (index) in
             debugPrint("Segmented \(self.segmentControl.sectionTitles[index]) is visible now")
         }
+        
+        for attribute:NSLayoutAttribute in [ NSLayoutAttribute.right ] {
+            liveTVTableView.tableHeaderView?.addConstraint(NSLayoutConstraint(item: self.segmentControl, attribute: attribute, relatedBy: .equal, toItem: liveTVTableView.tableHeaderView, attribute: attribute, multiplier: 1, constant: 50))
+        }
     }
     
   
@@ -209,7 +217,7 @@ extension LiveTVViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return 21
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

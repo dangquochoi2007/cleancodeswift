@@ -38,9 +38,34 @@ final class TVShowsViewController: UIViewController {
         tableView.showsHorizontalScrollIndicator = false
         tableView.showsVerticalScrollIndicator = false
         tableView.backgroundColor = self.tvShowsBackgrounColor
+        tableView.tableHeaderView = self.segmentControl
         
         return tableView
     }()
+    
+    
+    lazy var segmentControl: TZSegmentedControl = { [unowned self] in
+        let titleCont = TZSegmentedControl(sectionTitles: ["", "FOR YOU", "TOP","ACTION", "COMEDY", "FAMILY" , "ENGLISH", "VIDEO EPIC"])
+        titleCont.frame = CGRect(x: 0, y: 50, width: self.view.frame.width, height: 50)
+        titleCont.indicatorWidthPercent = 1.5
+        titleCont.backgroundColor = self.tvShowsBackgrounColor
+        titleCont.borderType = .none
+        titleCont.borderColor = self.tvShowsBackgrounColor
+        titleCont.borderWidth = 2.0
+        titleCont.segmentWidthStyle = .dynamic
+        titleCont.verticalDividerEnabled = false
+        titleCont.verticalDividerWidth = 0
+        titleCont.verticalDividerColor = self.tvShowsBackgrounColor
+        titleCont.selectionStyle = .fullWidth
+        titleCont.selectionIndicatorLocation = .down
+        titleCont.selectionIndicatorColor = self.tvShowsForegroundColor
+        titleCont.selectionIndicatorHeight = 4.0
+        titleCont.edgeInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+        titleCont.selectedTitleTextAttributes = [NSForegroundColorAttributeName: self.tvShowsForegroundColor]
+        titleCont.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white,
+                                         NSFontAttributeName:UIFont(name: "Lato-Bold", size: 11.0) ?? UIFont.systemFont(ofSize: 11)]
+        return titleCont
+        }()
     // MARK: - Initializers
 
     init(configurator: TVShowsConfigurator = TVShowsConfigurator.sharedInstance) {

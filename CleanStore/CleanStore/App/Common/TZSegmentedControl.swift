@@ -622,7 +622,7 @@ open class TZSegmentedControl: UIControl {
     public var indicatorWidthPercent : Double = 1.0 {
         didSet {
             if !(indicatorWidthPercent <= 1.0 && indicatorWidthPercent >= 0.0){
-                indicatorWidthPercent = max(0.0, min(indicatorWidthPercent, 1.0))
+                indicatorWidthPercent = max(0.0, min(indicatorWidthPercent, 1.5))
             }
         }
     }
