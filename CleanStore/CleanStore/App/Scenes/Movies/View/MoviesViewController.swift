@@ -34,10 +34,13 @@ final class MoviesViewController: UIViewController {
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: self.collectionViewLayout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.showsHorizontalScrollIndicator = false
+        collectionView.showsVerticalScrollIndicator = false
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(MoviesCollectionViewCell.self, forCellWithReuseIdentifier: "MoviesCollectionViewCell")
         collectionView.backgroundColor = self.moviesBackgroundColor
+        collectionView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
+        collectionView.addSubview(self.segmentControl)
         return collectionView
     }()
     
@@ -51,6 +54,29 @@ final class MoviesViewController: UIViewController {
 
         return layout
     }()
+    
+    lazy var segmentControl: TZSegmentedControl = { [unowned self] in
+        let titleCont = TZSegmentedControl(sectionTitles: ["", "FOR YOU", "TOP","ACTION", "COMEDY", "FAMILY" , "ENGLISH", "VIDEO EPIC"])
+        titleCont.frame = CGRect(x: 0, y: -50, width: self.view.frame.width, height: 50)
+        titleCont.indicatorWidthPercent = 1.5
+        titleCont.backgroundColor = self.moviesBackgroundColor
+        titleCont.borderType = .none
+        titleCont.borderColor = self.moviesBackgroundColor
+        titleCont.borderWidth = 2.0
+        titleCont.segmentWidthStyle = .dynamic
+        titleCont.verticalDividerEnabled = false
+        titleCont.verticalDividerWidth = 0
+        titleCont.verticalDividerColor = self.moviesBackgroundColor
+        titleCont.selectionStyle = .fullWidth
+        titleCont.selectionIndicatorLocation = .down
+        titleCont.selectionIndicatorColor = self.moviesForegroundColor
+        titleCont.selectionIndicatorHeight = 4.0
+        titleCont.edgeInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+        titleCont.selectedTitleTextAttributes = [NSForegroundColorAttributeName: self.moviesForegroundColor]
+        titleCont.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white,
+                                         NSFontAttributeName:UIFont(name: "Lato-Bold", size: 11.0) ?? UIFont.systemFont(ofSize: 11)]
+        return titleCont
+        }()
 
     // MARK: - Initializers
 

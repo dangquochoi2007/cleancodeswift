@@ -29,13 +29,14 @@ final class WatchListsViewController: UIViewController {
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: self.collectionViewLayout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.showsHorizontalScrollIndicator = false
+        collectionView.showsVerticalScrollIndicator = false
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(WatchListMoviesCollectionViewCell.self, forCellWithReuseIdentifier: "WatchListMoviesCollectionViewCell")
-        collectionView.register(WatchListTVShowsCollectionViewCellCollectionViewCell.self, forCellWithReuseIdentifier: "WatchListTVShowsCollectionViewCellCollectionViewCell")
-        collectionView.backgroundColor = UIColor.red
+        collectionView.register(WatchListTVShowsCollectionViewCellCollectionViewCell.nib, forCellWithReuseIdentifier: WatchListTVShowsCollectionViewCellCollectionViewCell.nibName)
         return collectionView
     }()
+    
     
     lazy var collectionViewLayout: UICollectionViewLayout = { [unowned self] in
         let layout = UICollectionViewFlowLayout()
@@ -43,33 +44,10 @@ final class WatchListsViewController: UIViewController {
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         layout.sectionInset = UIEdgeInsets.zero
+        
         return layout
     }()
     
-    
-    lazy var segmentControl: TZSegmentedControl = {
-        let titleCont = TZSegmentedControl(sectionTitles: ["TRENDING","EDITOR'S PICKS", "FOR YOU", "VIDEOS", "LANGUAGE" ])
-        titleCont.frame = CGRect(x: 0, y: 50, width: self.view.frame.width, height: 50)
-        titleCont.indicatorWidthPercent = 0.8
-        let whitishColor = UIColor(white: 0.75, alpha: 1.0)
-        titleCont.backgroundColor = UIColor.white
-        titleCont.borderType = .none
-        titleCont.borderColor = whitishColor
-        titleCont.borderWidth = 0.5
-        titleCont.segmentWidthStyle = .dynamic
-        titleCont.verticalDividerEnabled = false
-        titleCont.verticalDividerWidth = 0.5
-        titleCont.verticalDividerColor = whitishColor
-        titleCont.selectionStyle = .fullWidth
-        titleCont.selectionIndicatorLocation = .down
-        titleCont.selectionIndicatorColor = UIColor.blue
-        titleCont.selectionIndicatorHeight = 2.0
-        titleCont.edgeInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-        titleCont.selectedTitleTextAttributes = [NSForegroundColorAttributeName:UIColor.blue]
-        titleCont.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.darkGray,
-                                         NSFontAttributeName:UIFont(name: "Lato", size: 10.0) ?? UIFont.systemFont(ofSize: 13)]
-        return titleCont
-    }()
     
     
 
@@ -114,6 +92,14 @@ final class WatchListsViewController: UIViewController {
         
         configureControllerWhenAppear()
     }
+    
+    override func viewWillLayoutSubviews()
+    {
+        super.viewWillLayoutSubviews()
+        
+        //recalculate the collection view layout when the view layout changes
+        watchListsCollectionView.collectionViewLayout.invalidateLayout()
+    }
 
     // MARK: - Load data
 
@@ -136,15 +122,11 @@ final class WatchListsViewController: UIViewController {
         
         tabBarController?.tabBar.barTintColor = watchListsBackgroundColor
         tabBarController?.tabBar.tintColor = watchListsForegroundColor
-        tabBarItem.badgeValue = "8"
         
         title = "WATCHLIST"
         
-        guard let latoBoldFont = UIFont(name: "Lato-Bold", size: 15) else {
-            return
-        }
         navigationController?.navigationBar.titleTextAttributes = [
-            NSFontAttributeName : latoBoldFont,
+            NSFontAttributeName : UIFont(name: "Lato-Bold", size: 15) ?? UIFont.systemFont(ofSize: 15),
             NSForegroundColorAttributeName: watchListsForegroundColor
         ]
     }
@@ -197,7 +179,7 @@ extension WatchListsViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 21
     }
     
     
@@ -205,5 +187,15 @@ extension WatchListsViewController: UICollectionViewDelegate, UICollectionViewDa
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WatchListMoviesCollectionViewCell", for: indexPath) as! WatchListMoviesCollectionViewCell
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        //265 × 376
+        let totalwidth = collectionView.bounds.size.width;
+        let numberOfCellsPerRow: Int = Int(totalwidth/160.0)
+        let width: CGFloat = CGFloat(Int(totalwidth)/numberOfCellsPerRow)
+        let height: CGFloat = CGFloat(width)*376.0/256.0
+        
+        return CGSize(width: width, height: height)
     }
 }

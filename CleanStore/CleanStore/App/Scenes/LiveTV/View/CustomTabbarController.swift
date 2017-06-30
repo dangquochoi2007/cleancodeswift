@@ -35,6 +35,12 @@ class CustomTabbarController: UITabBarController, UITabBarControllerDelegate {
         let watchListNavigationController = UINavigationController(rootViewController: watchListsController)
         watchListNavigationController.title = SVMenuOptions.WATCHLISTS.menuTitle
         watchListNavigationController.tabBarItem.image = UIImage(named: SVMenuOptions.WATCHLISTS.menuIcon)
+        watchListNavigationController.tabBarItem.badgeValue = "2"
+        watchListNavigationController.tabBarItem.badgeColor = UIColor.white
+        watchListNavigationController.tabBarItem.setBadgeTextAttributes([
+            NSForegroundColorAttributeName: UIColor(red: 21.0/255.0, green: 22.0/255.0, blue: 26.0/255.0, alpha: 1),
+            NSFontAttributeName:UIFont(name: "Lato-Bold", size: 16.0) ?? UIFont.systemFont(ofSize: 16)], for: UIControlState.normal)
+        
         
         viewControllers = [navigationController ,secondNavigationController, tvShowsNavigationController, watchListNavigationController]
        

@@ -11,7 +11,7 @@ import UIKit
 class WatchListMoviesCollectionViewCell: UICollectionViewCell {
 
     
-    lazy var moviesImageView:UIImageView = UIImageView()
+    lazy var moviesImageView:UIImageView = UIImageView(image: UIImage(named: "film"))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,13 +31,12 @@ class WatchListMoviesCollectionViewCell: UICollectionViewCell {
     
     
     func configureViewWhenLoad() {
-        self.backgroundColor = UIColor.black
         
-        for view in [moviesImageView] {
-            view.contentMode = .scaleAspectFill
-            view.translatesAutoresizingMaskIntoConstraints = false
-            view.clipsToBounds = true
-            contentView.addSubview(view)
+        [moviesImageView].forEach {
+            $0.contentMode = .scaleAspectFill
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.clipsToBounds = true
+            contentView.addSubview($0)
         }
         
         let attributes: [NSLayoutAttribute] = [.top, .left, .bottom, .right]
