@@ -13,6 +13,7 @@ protocol WatchListsRouterProtocol {
     weak var viewController: WatchListsViewController? { get }
 
     func navigateToSomewhere()
+    func navigateTouchMovieViewController()
 }
 
 final class WatchListsRouter {
@@ -38,5 +39,10 @@ extension WatchListsRouter: WatchListsRouterProtocol {
 
     func navigateToSomewhere() {
 
+    }
+    
+    func navigateTouchMovieViewController() {
+        let movieViewController = TouchMovieViewController()
+        viewController?.present(movieViewController, animated: true, completion: nil)
     }
 }

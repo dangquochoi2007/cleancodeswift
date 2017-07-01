@@ -234,4 +234,10 @@ extension WatchListsViewController: UICollectionViewDelegate, UICollectionViewDa
         
         return CGSize(width: width, height: height)
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        router.navigateTouchMovieViewController()
+    }
 }
