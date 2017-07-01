@@ -13,6 +13,8 @@ protocol MoviesRouterProtocol {
     weak var viewController: MoviesViewController? { get }
 
     func navigateToSomewhere()
+    
+    func navigateTouchMovieViewController()
 }
 
 final class MoviesRouter {
@@ -38,5 +40,10 @@ extension MoviesRouter: MoviesRouterProtocol {
 
     func navigateToSomewhere() {
 
+    }
+    
+    func navigateTouchMovieViewController() {
+        let tochViewController = TouchMovieViewController()
+        self.viewController?.present(tochViewController, animated: true, completion: nil)
     }
 }

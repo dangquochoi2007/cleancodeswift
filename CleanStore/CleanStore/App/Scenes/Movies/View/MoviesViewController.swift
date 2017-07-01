@@ -222,6 +222,11 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        router.navigateTouchMovieViewController()
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         //265 × 376
         let totalwidth = collectionView.bounds.size.width;

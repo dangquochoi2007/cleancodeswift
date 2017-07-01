@@ -35,4 +35,33 @@ extension UIView {
             return nil
         }
     }
+    
+    class func fromNib(nibName: String? = nil) -> Self {
+        return fromNib(nibName: nibName, type: self)
+    }
+    
+    class func fromNib<T: UIView>(nibName: String? = nil, type: T.Type) -> T {
+        return fromNib(nibName: nibName, type: T.self)!
+    }
+
+    class func fromNib<T: UIView>(nibName: String? = nil, type: T.Type) -> T? {
+        var view: T?
+        let name: String
+        
+        if let nibName = nibName {
+            name = nibName
+        } else {
+            name = self.nibName
+        }
+        
+        if let nibViews = Bundle.main.loadNibNamed(name, owner: nil, options: nil) {
+            for nibView in nibViews {
+                if let tog = nibView as? T {
+                    view = tog
+                }
+            }
+        }
+        
+        return view
+    }
 }

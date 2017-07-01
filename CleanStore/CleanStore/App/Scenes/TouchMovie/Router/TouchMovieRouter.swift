@@ -13,6 +13,7 @@ protocol TouchMovieRouterProtocol {
     weak var viewController: TouchMovieViewController? { get }
 
     func navigateToSomewhere()
+    func dismissViewController()
 }
 
 final class TouchMovieRouter {
@@ -38,5 +39,9 @@ extension TouchMovieRouter: TouchMovieRouterProtocol {
 
     func navigateToSomewhere() {
 
+    }
+    
+    func dismissViewController() {
+        self.viewController?.dismiss(animated: true, completion: nil)
     }
 }

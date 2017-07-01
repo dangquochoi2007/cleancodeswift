@@ -21,7 +21,11 @@ final class TouchMovieViewController: UIViewController {
 
     var output: TouchMovieViewControllerOutput!
     var router: TouchMovieRouterProtocol!
+    
+    var touchActionList:[TouchMovieAction] = [TouchMovieAction.AddtoWatchList, TouchMovieAction.PlayLastTrailer, TouchMovieAction.ShowAllDetails]
 
+    @IBOutlet weak var touchTableView: UITableView!
+    
 
     // MARK: - Initializers
 
@@ -54,7 +58,7 @@ final class TouchMovieViewController: UIViewController {
 
         super.viewDidLoad()
 
-        doSomethingOnLoad()
+        configureControllerWhenLoad()
     }
 
 
@@ -65,6 +69,28 @@ final class TouchMovieViewController: UIViewController {
         // TODO: Ask the Interactor to do some work
 
         output.doSomething()
+    }
+    
+    
+    func configureControllerWhenLoad() {
+        self.touchTableView.delegate = self
+        self.touchTableView.dataSource = self
+        self.touchTableView.register(TouchMovieTableViewCell.nib, forCellReuseIdentifier: TouchMovieTableViewCell.nibName)
+        self.touchTableView.rowHeight = UITableViewAutomaticDimension
+        self.touchTableView.estimatedRowHeight = 60
+        self.touchTableView.showsVerticalScrollIndicator = false
+        self.touchTableView.showsHorizontalScrollIndicator = false
+        self.touchTableView.tableHeaderView = TouchMoviesHeaderView.fromNib()
+        
+        let footerView = TouchMoviesFooterView.fromNib()
+        footerView.closeTouchMoviesButton.addTarget(self, action: #selector(TouchMovieViewController.closeButtonPressed), for: UIControlEvents.touchUpInside)
+        self.touchTableView.tableFooterView = footerView
+        
+        
+    }
+    
+    func closeButtonPressed(sender: UIButton) {
+        router.dismissViewController()
     }
 }
 
@@ -79,5 +105,27 @@ extension TouchMovieViewController: TouchMovieViewControllerInput {
     func displaySomething(viewModel: TouchMovieViewModel) {
 
         // TODO: Update UI
+    }
+}
+
+
+extension TouchMovieViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return touchActionList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: TouchMovieTableViewCell.nibName, for: indexPath) as! TouchMovieTableViewCell
+        cell.touchAction = touchActionList[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }
