@@ -28,6 +28,7 @@
 		C5B6D69A1F074C7F002E5A96 /* TouchMoviesFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6D6991F074C7F002E5A96 /* TouchMoviesFooterView.swift */; };
 		C5B6D69D1F074FF9002E5A96 /* MoviesDetailsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6D69C1F074FF9002E5A96 /* MoviesDetailsHeaderView.swift */; };
 		C5B6D69F1F07500B002E5A96 /* MoviesDetailsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5B6D69E1F07500B002E5A96 /* MoviesDetailsHeaderView.xib */; };
+		C5B6D6A11F075E90002E5A96 /* ActionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6D6A01F075E90002E5A96 /* ActionRequest.swift */; };
 		C5E4003D1F0416A100876F86 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5E400291F0416A100876F86 /* Lato-Black.ttf */; };
 		C5E4003E1F0416A100876F86 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5E4002A1F0416A100876F86 /* Lato-BlackItalic.ttf */; };
 		C5E4003F1F0416A100876F86 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5E4002B1F0416A100876F86 /* Lato-Bold.ttf */; };
@@ -253,6 +254,7 @@
 		C5B6D6991F074C7F002E5A96 /* TouchMoviesFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchMoviesFooterView.swift; sourceTree = "<group>"; };
 		C5B6D69C1F074FF9002E5A96 /* MoviesDetailsHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesDetailsHeaderView.swift; sourceTree = "<group>"; };
 		C5B6D69E1F07500B002E5A96 /* MoviesDetailsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoviesDetailsHeaderView.xib; sourceTree = "<group>"; };
+		C5B6D6A01F075E90002E5A96 /* ActionRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionRequest.swift; sourceTree = "<group>"; };
 		C5E400291F0416A100876F86 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 		C5E4002A1F0416A100876F86 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
 		C5E4002B1F0416A100876F86 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
@@ -1439,6 +1441,7 @@
 				E608ABA91EE008CA00FED38D /* ErrorPresenter.swift */,
 				E608ABAB1EE0090600FED38D /* ErrorViewModel.swift */,
 				E60BA7C91F02603100215DA6 /* Menu.swift */,
+				C5B6D6A01F075E90002E5A96 /* ActionRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2280,6 +2283,7 @@
 				E65DD6571EDED3CC0091CA3C /* ArtistsAPIStore.swift in Sources */,
 				E63D7CF21EDD4C1E0033F7ED /* MeViewController.swift in Sources */,
 				E65A66B51EF3BD4700A3FE16 /* ProfileSettingsPresenter.swift in Sources */,
+				C5B6D6A11F075E90002E5A96 /* ActionRequest.swift in Sources */,
 				E68D2DDA1EDC06030084F01C /* RegionMonitor.swift in Sources */,
 				E60BA7FA1F026B7900215DA6 /* LiveTVConfigurator.swift in Sources */,
 				C5B6D6911F07251A002E5A96 /* TouchMovieTableViewCell.swift in Sources */,
