@@ -22,6 +22,8 @@ final class MoviesDetailsViewController: UIViewController {
     var output: MoviesDetailsViewControllerOutput!
     var router: MoviesDetailsRouterProtocol!
 
+    
+    @IBOutlet weak var movieDetailTable: UITableView!
 
     // MARK: - Initializers
 
@@ -66,6 +68,13 @@ final class MoviesDetailsViewController: UIViewController {
 
         output.doSomething()
     }
+    
+    
+    func configureControllerWhenLoad() {
+        movieDetailTable.delegate = self
+        movieDetailTable.dataSource = self
+        movieDetailTable.register(SYNOPSISTableViewCell.nib, forCellReuseIdentifier: SYNOPSISTableViewCell.nibName)
+    }
 }
 
 
@@ -79,5 +88,22 @@ extension MoviesDetailsViewController: MoviesDetailsViewControllerInput {
     func displaySomething(viewModel: MoviesDetailsViewModel) {
 
         // TODO: Update UI
+    }
+}
+
+extension MoviesDetailsViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: SYNOPSISTableViewCell.nibName, for: indexPath) as! SYNOPSISTableViewCell
+        
+        return cell
     }
 }

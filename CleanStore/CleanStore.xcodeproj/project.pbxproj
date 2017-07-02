@@ -32,6 +32,10 @@
 		C51430451F08871400A401DC /* TouchTVShowHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51430441F08871400A401DC /* TouchTVShowHeaderView.xib */; };
 		C51430471F088FD100A401DC /* TouchTVShowFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51430461F088FD100A401DC /* TouchTVShowFooterView.swift */; };
 		C51430491F088FDF00A401DC /* TouchTVShowFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51430481F088FDF00A401DC /* TouchTVShowFooterView.xib */; };
+		C514304C1F08A86500A401DC /* MoviesDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514304A1F08A86500A401DC /* MoviesDetailsTableViewCell.swift */; };
+		C514304D1F08A86500A401DC /* MoviesDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514304B1F08A86500A401DC /* MoviesDetailsTableViewCell.xib */; };
+		C51430501F08A94B00A401DC /* SYNOPSISTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514304E1F08A94B00A401DC /* SYNOPSISTableViewCell.swift */; };
+		C51430511F08A94B00A401DC /* SYNOPSISTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514304F1F08A94B00A401DC /* SYNOPSISTableViewCell.xib */; };
 		C558B90C1EEACCD6007D9E3D /* iBeaconReceiveConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B8FF1EEACCD6007D9E3D /* iBeaconReceiveConfigurator.swift */; };
 		C558B90D1EEACCD6007D9E3D /* iBeaconReceiveInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B9011EEACCD6007D9E3D /* iBeaconReceiveInteractor.swift */; };
 		C558B90E1EEACCD6007D9E3D /* iBeaconReceivePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B9031EEACCD6007D9E3D /* iBeaconReceivePresenter.swift */; };
@@ -280,6 +284,10 @@
 		C51430441F08871400A401DC /* TouchTVShowHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouchTVShowHeaderView.xib; sourceTree = "<group>"; };
 		C51430461F088FD100A401DC /* TouchTVShowFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchTVShowFooterView.swift; sourceTree = "<group>"; };
 		C51430481F088FDF00A401DC /* TouchTVShowFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouchTVShowFooterView.xib; sourceTree = "<group>"; };
+		C514304A1F08A86500A401DC /* MoviesDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		C514304B1F08A86500A401DC /* MoviesDetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoviesDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		C514304E1F08A94B00A401DC /* SYNOPSISTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYNOPSISTableViewCell.swift; sourceTree = "<group>"; };
+		C514304F1F08A94B00A401DC /* SYNOPSISTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYNOPSISTableViewCell.xib; sourceTree = "<group>"; };
 		C558B8FF1EEACCD6007D9E3D /* iBeaconReceiveConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveConfigurator.swift; sourceTree = "<group>"; };
 		C558B9011EEACCD6007D9E3D /* iBeaconReceiveInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveInteractor.swift; sourceTree = "<group>"; };
 		C558B9031EEACCD6007D9E3D /* iBeaconReceivePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceivePresenter.swift; sourceTree = "<group>"; };
@@ -784,6 +792,10 @@
 			children = (
 				C5B6D69C1F074FF9002E5A96 /* MoviesDetailsHeaderView.swift */,
 				C5B6D69E1F07500B002E5A96 /* MoviesDetailsHeaderView.xib */,
+				C514304A1F08A86500A401DC /* MoviesDetailsTableViewCell.swift */,
+				C514304B1F08A86500A401DC /* MoviesDetailsTableViewCell.xib */,
+				C514304E1F08A94B00A401DC /* SYNOPSISTableViewCell.swift */,
+				C514304F1F08A94B00A401DC /* SYNOPSISTableViewCell.xib */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -2154,6 +2166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C51430451F08871400A401DC /* TouchTVShowHeaderView.xib in Resources */,
+				C51430511F08A94B00A401DC /* SYNOPSISTableViewCell.xib in Resources */,
 				C5E400431F0416A100876F86 /* Lato-Heavy.ttf in Resources */,
 				C5E400481F0416A100876F86 /* Lato-Medium.ttf in Resources */,
 				C5E4003E1F0416A100876F86 /* Lato-BlackItalic.ttf in Resources */,
@@ -2192,6 +2205,7 @@
 				C5E4004D1F0416A100876F86 /* Lato-Thin.ttf in Resources */,
 				C5E400441F0416A100876F86 /* Lato-HeavyItalic.ttf in Resources */,
 				C51430491F088FDF00A401DC /* TouchTVShowFooterView.xib in Resources */,
+				C514304D1F08A86500A401DC /* MoviesDetailsTableViewCell.xib in Resources */,
 				E6F6BD6B1F036A1100E43C3D /* WatchListTVShowsCollectionViewCellCollectionViewCell.xib in Resources */,
 				E63D7CF71EDD58820033F7ED /* MeTableViewCell.xib in Resources */,
 				E65A66871EF3980700A3FE16 /* SignInViewController.xib in Resources */,
@@ -2405,6 +2419,7 @@
 				C558B9121EEACCD6007D9E3D /* iBeaconReceiveWorker.swift in Sources */,
 				E65A666E1EF397DC00A3FE16 /* SignUpViewModel.swift in Sources */,
 				E60BA8151F026B9000215DA6 /* TVShowsViewModel.swift in Sources */,
+				C51430501F08A94B00A401DC /* SYNOPSISTableViewCell.swift in Sources */,
 				E65B194D1EB9D4EF00237163 /* ArtistsPresenter.swift in Sources */,
 				C51430431F08870900A401DC /* TouchTVShowHeaderView.swift in Sources */,
 				E60BA7CA1F02603100215DA6 /* Menu.swift in Sources */,
@@ -2485,6 +2500,7 @@
 				E65A66A21EF3BD3F00A3FE16 /* FeedsViewModel.swift in Sources */,
 				E65A66A11EF3BD3F00A3FE16 /* FeedsViewController.swift in Sources */,
 				E661C0AB1F050C44009CAFB0 /* MoviesDetailsWorker.swift in Sources */,
+				C514304C1F08A86500A401DC /* MoviesDetailsTableViewCell.swift in Sources */,
 				E65B19591EB9DC6A00237163 /* Album.swift in Sources */,
 				E608ABB41EE012FC00FED38D /* ImageManager.swift in Sources */,
 				E60BA8441F026C0400215DA6 /* CustomTabbarController.swift in Sources */,
