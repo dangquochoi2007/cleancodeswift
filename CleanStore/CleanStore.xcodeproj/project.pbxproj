@@ -10,6 +10,28 @@
 		469BB0E036E90F8D37F9104A /* Pods_CleanStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9892EA30C9D73B5C95FAD4 /* Pods_CleanStoreTests.framework */; };
 		8107C8CC77D828635F9D89AA /* Pods_CleanStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62BCFA0D3257683AE02D5434 /* Pods_CleanStore.framework */; };
 		B4611D3378C389D889A3321B /* Pods_CleanStoreUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89069F81FADBE31BE71FB1D4 /* Pods_CleanStoreUITests.framework */; };
+		C514300A1F0875CD00A401DC /* MoviesDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51430091F0875CD00A401DC /* MoviesDetailsViewController.xib */; };
+		C514301C1F087AB800A401DC /* TouchTVShowsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514300F1F087AB800A401DC /* TouchTVShowsConfigurator.swift */; };
+		C514301D1F087AB800A401DC /* TouchTVShowsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51430111F087AB800A401DC /* TouchTVShowsInteractor.swift */; };
+		C514301E1F087AB800A401DC /* TouchTVShowsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51430131F087AB800A401DC /* TouchTVShowsPresenter.swift */; };
+		C514301F1F087AB800A401DC /* TouchTVShowsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51430151F087AB800A401DC /* TouchTVShowsRouter.swift */; };
+		C51430201F087AB800A401DC /* TouchTVShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51430171F087AB800A401DC /* TouchTVShowsViewController.swift */; };
+		C51430211F087AB800A401DC /* TouchTVShowsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51430191F087AB800A401DC /* TouchTVShowsViewModel.swift */; };
+		C51430221F087AB800A401DC /* TouchTVShowsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514301B1F087AB800A401DC /* TouchTVShowsWorker.swift */; };
+		C51430341F087AF500A401DC /* TVShowDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51430271F087AF500A401DC /* TVShowDetailsConfigurator.swift */; };
+		C51430351F087AF500A401DC /* TVShowDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51430291F087AF500A401DC /* TVShowDetailsInteractor.swift */; };
+		C51430361F087AF500A401DC /* TVShowDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514302B1F087AF500A401DC /* TVShowDetailsPresenter.swift */; };
+		C51430371F087AF500A401DC /* TVShowDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514302D1F087AF500A401DC /* TVShowDetailsRouter.swift */; };
+		C51430381F087AF500A401DC /* TVShowDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514302F1F087AF500A401DC /* TVShowDetailsViewController.swift */; };
+		C51430391F087AF500A401DC /* TVShowDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51430311F087AF500A401DC /* TVShowDetailsViewModel.swift */; };
+		C514303A1F087AF500A401DC /* TVShowDetailsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51430331F087AF500A401DC /* TVShowDetailsWorker.swift */; };
+		C514303C1F087B2800A401DC /* TouchTVShowsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514303B1F087B2800A401DC /* TouchTVShowsViewController.xib */; };
+		C51430401F087B6D00A401DC /* TouchTVShowsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514303E1F087B6D00A401DC /* TouchTVShowsTableViewCell.swift */; };
+		C51430411F087B6D00A401DC /* TouchTVShowsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514303F1F087B6D00A401DC /* TouchTVShowsTableViewCell.xib */; };
+		C51430431F08870900A401DC /* TouchTVShowHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51430421F08870900A401DC /* TouchTVShowHeaderView.swift */; };
+		C51430451F08871400A401DC /* TouchTVShowHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51430441F08871400A401DC /* TouchTVShowHeaderView.xib */; };
+		C51430471F088FD100A401DC /* TouchTVShowFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51430461F088FD100A401DC /* TouchTVShowFooterView.swift */; };
+		C51430491F088FDF00A401DC /* TouchTVShowFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51430481F088FDF00A401DC /* TouchTVShowFooterView.xib */; };
 		C558B90C1EEACCD6007D9E3D /* iBeaconReceiveConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B8FF1EEACCD6007D9E3D /* iBeaconReceiveConfigurator.swift */; };
 		C558B90D1EEACCD6007D9E3D /* iBeaconReceiveInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B9011EEACCD6007D9E3D /* iBeaconReceiveInteractor.swift */; };
 		C558B90E1EEACCD6007D9E3D /* iBeaconReceivePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B9031EEACCD6007D9E3D /* iBeaconReceivePresenter.swift */; };
@@ -236,6 +258,28 @@
 		89069F81FADBE31BE71FB1D4 /* Pods_CleanStoreUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanStoreUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94171EB962D3E507DBCAAAC6 /* Pods-CleanStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanStore/Pods-CleanStore.release.xcconfig"; sourceTree = "<group>"; };
 		C2CE5346774C94920F7D5FC9 /* Pods-CleanStoreUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanStoreUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanStoreUITests/Pods-CleanStoreUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C51430091F0875CD00A401DC /* MoviesDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoviesDetailsViewController.xib; sourceTree = "<group>"; };
+		C514300F1F087AB800A401DC /* TouchTVShowsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchTVShowsConfigurator.swift; sourceTree = "<group>"; };
+		C51430111F087AB800A401DC /* TouchTVShowsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchTVShowsInteractor.swift; sourceTree = "<group>"; };
+		C51430131F087AB800A401DC /* TouchTVShowsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchTVShowsPresenter.swift; sourceTree = "<group>"; };
+		C51430151F087AB800A401DC /* TouchTVShowsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchTVShowsRouter.swift; sourceTree = "<group>"; };
+		C51430171F087AB800A401DC /* TouchTVShowsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchTVShowsViewController.swift; sourceTree = "<group>"; };
+		C51430191F087AB800A401DC /* TouchTVShowsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchTVShowsViewModel.swift; sourceTree = "<group>"; };
+		C514301B1F087AB800A401DC /* TouchTVShowsWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchTVShowsWorker.swift; sourceTree = "<group>"; };
+		C51430271F087AF500A401DC /* TVShowDetailsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowDetailsConfigurator.swift; sourceTree = "<group>"; };
+		C51430291F087AF500A401DC /* TVShowDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowDetailsInteractor.swift; sourceTree = "<group>"; };
+		C514302B1F087AF500A401DC /* TVShowDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowDetailsPresenter.swift; sourceTree = "<group>"; };
+		C514302D1F087AF500A401DC /* TVShowDetailsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowDetailsRouter.swift; sourceTree = "<group>"; };
+		C514302F1F087AF500A401DC /* TVShowDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowDetailsViewController.swift; sourceTree = "<group>"; };
+		C51430311F087AF500A401DC /* TVShowDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowDetailsViewModel.swift; sourceTree = "<group>"; };
+		C51430331F087AF500A401DC /* TVShowDetailsWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowDetailsWorker.swift; sourceTree = "<group>"; };
+		C514303B1F087B2800A401DC /* TouchTVShowsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouchTVShowsViewController.xib; sourceTree = "<group>"; };
+		C514303E1F087B6D00A401DC /* TouchTVShowsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchTVShowsTableViewCell.swift; sourceTree = "<group>"; };
+		C514303F1F087B6D00A401DC /* TouchTVShowsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouchTVShowsTableViewCell.xib; sourceTree = "<group>"; };
+		C51430421F08870900A401DC /* TouchTVShowHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchTVShowHeaderView.swift; sourceTree = "<group>"; };
+		C51430441F08871400A401DC /* TouchTVShowHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouchTVShowHeaderView.xib; sourceTree = "<group>"; };
+		C51430461F088FD100A401DC /* TouchTVShowFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchTVShowFooterView.swift; sourceTree = "<group>"; };
+		C51430481F088FDF00A401DC /* TouchTVShowFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouchTVShowFooterView.xib; sourceTree = "<group>"; };
 		C558B8FF1EEACCD6007D9E3D /* iBeaconReceiveConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveConfigurator.swift; sourceTree = "<group>"; };
 		C558B9011EEACCD6007D9E3D /* iBeaconReceiveInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveInteractor.swift; sourceTree = "<group>"; };
 		C558B9031EEACCD6007D9E3D /* iBeaconReceivePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceivePresenter.swift; sourceTree = "<group>"; };
@@ -494,6 +538,161 @@
 				C2CE5346774C94920F7D5FC9 /* Pods-CleanStoreUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C514300D1F087AB800A401DC /* TouchTVShows */ = {
+			isa = PBXGroup;
+			children = (
+				C514300E1F087AB800A401DC /* Configurator */,
+				C51430101F087AB800A401DC /* Interactor */,
+				C51430121F087AB800A401DC /* Presenter */,
+				C51430141F087AB800A401DC /* Router */,
+				C51430161F087AB800A401DC /* View */,
+				C51430181F087AB800A401DC /* ViewModel */,
+				C514301A1F087AB800A401DC /* Worker */,
+			);
+			path = TouchTVShows;
+			sourceTree = "<group>";
+		};
+		C514300E1F087AB800A401DC /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				C514300F1F087AB800A401DC /* TouchTVShowsConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		C51430101F087AB800A401DC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C51430111F087AB800A401DC /* TouchTVShowsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C51430121F087AB800A401DC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C51430131F087AB800A401DC /* TouchTVShowsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C51430141F087AB800A401DC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C51430151F087AB800A401DC /* TouchTVShowsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		C51430161F087AB800A401DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C514303D1F087B5600A401DC /* UIView */,
+				C51430171F087AB800A401DC /* TouchTVShowsViewController.swift */,
+				C514303B1F087B2800A401DC /* TouchTVShowsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C51430181F087AB800A401DC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C51430191F087AB800A401DC /* TouchTVShowsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C514301A1F087AB800A401DC /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				C514301B1F087AB800A401DC /* TouchTVShowsWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		C51430251F087AF500A401DC /* TVShowDetails */ = {
+			isa = PBXGroup;
+			children = (
+				C51430261F087AF500A401DC /* Configurator */,
+				C51430281F087AF500A401DC /* Interactor */,
+				C514302A1F087AF500A401DC /* Presenter */,
+				C514302C1F087AF500A401DC /* Router */,
+				C514302E1F087AF500A401DC /* View */,
+				C51430301F087AF500A401DC /* ViewModel */,
+				C51430321F087AF500A401DC /* Worker */,
+			);
+			path = TVShowDetails;
+			sourceTree = "<group>";
+		};
+		C51430261F087AF500A401DC /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				C51430271F087AF500A401DC /* TVShowDetailsConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		C51430281F087AF500A401DC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C51430291F087AF500A401DC /* TVShowDetailsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C514302A1F087AF500A401DC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C514302B1F087AF500A401DC /* TVShowDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C514302C1F087AF500A401DC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C514302D1F087AF500A401DC /* TVShowDetailsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		C514302E1F087AF500A401DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C514302F1F087AF500A401DC /* TVShowDetailsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C51430301F087AF500A401DC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C51430311F087AF500A401DC /* TVShowDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C51430321F087AF500A401DC /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				C51430331F087AF500A401DC /* TVShowDetailsWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		C514303D1F087B5600A401DC /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				C514303E1F087B6D00A401DC /* TouchTVShowsTableViewCell.swift */,
+				C514303F1F087B6D00A401DC /* TouchTVShowsTableViewCell.xib */,
+				C51430421F08870900A401DC /* TouchTVShowHeaderView.swift */,
+				C51430441F08871400A401DC /* TouchTVShowHeaderView.xib */,
+				C51430461F088FD100A401DC /* TouchTVShowFooterView.swift */,
+				C51430481F088FDF00A401DC /* TouchTVShowFooterView.xib */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 		C558B8FD1EEACCD6007D9E3D /* iBeaconReceive */ = {
@@ -1449,6 +1648,8 @@
 		E65B19191EB9987D00237163 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				C51430251F087AF500A401DC /* TVShowDetails */,
+				C514300D1F087AB800A401DC /* TouchTVShows */,
 				E661C0AC1F050C4C009CAFB0 /* TouchMovie */,
 				E661C0961F050C44009CAFB0 /* MoviesDetails */,
 				E60BA82D1F026BA900215DA6 /* WatchLists */,
@@ -1629,6 +1830,7 @@
 			children = (
 				C5B6D69B1F074F67002E5A96 /* UIView */,
 				E661C0A01F050C44009CAFB0 /* MoviesDetailsViewController.swift */,
+				C51430091F0875CD00A401DC /* MoviesDetailsViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1951,10 +2153,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C51430451F08871400A401DC /* TouchTVShowHeaderView.xib in Resources */,
 				C5E400431F0416A100876F86 /* Lato-Heavy.ttf in Resources */,
 				C5E400481F0416A100876F86 /* Lato-Medium.ttf in Resources */,
 				C5E4003E1F0416A100876F86 /* Lato-BlackItalic.ttf in Resources */,
 				C5E400411F0416A100876F86 /* Lato-Hairline.ttf in Resources */,
+				C51430411F087B6D00A401DC /* TouchTVShowsTableViewCell.xib in Resources */,
 				C5E400421F0416A100876F86 /* Lato-HairlineItalic.ttf in Resources */,
 				C5B6D69F1F07500B002E5A96 /* MoviesDetailsHeaderView.xib in Resources */,
 				C5E4004C1F0416A100876F86 /* Lato-SemiboldItalic.ttf in Resources */,
@@ -1979,12 +2183,15 @@
 				E68D2DD81EDBDCA10084F01C /* iBeaconViewController.xib in Resources */,
 				C5E400461F0416A100876F86 /* Lato-Light.ttf in Resources */,
 				C5E400471F0416A100876F86 /* Lato-LightItalic.ttf in Resources */,
+				C514303C1F087B2800A401DC /* TouchTVShowsViewController.xib in Resources */,
 				C5E4004E1F0416A100876F86 /* Lato-ThinItalic.ttf in Resources */,
 				C5E400491F0416A100876F86 /* Lato-MediumItalic.ttf in Resources */,
 				E65B18F01EB98F0000237163 /* Assets.xcassets in Resources */,
 				C5E4003F1F0416A100876F86 /* Lato-Bold.ttf in Resources */,
+				C514300A1F0875CD00A401DC /* MoviesDetailsViewController.xib in Resources */,
 				C5E4004D1F0416A100876F86 /* Lato-Thin.ttf in Resources */,
 				C5E400441F0416A100876F86 /* Lato-HeavyItalic.ttf in Resources */,
+				C51430491F088FDF00A401DC /* TouchTVShowFooterView.xib in Resources */,
 				E6F6BD6B1F036A1100E43C3D /* WatchListTVShowsCollectionViewCellCollectionViewCell.xib in Resources */,
 				E63D7CF71EDD58820033F7ED /* MeTableViewCell.xib in Resources */,
 				E65A66871EF3980700A3FE16 /* SignInViewController.xib in Resources */,
@@ -2166,22 +2373,29 @@
 				E60BA8411F026BA900215DA6 /* WatchListsViewModel.swift in Sources */,
 				E60BA7EA1F026B6A00215DA6 /* SupportWorker.swift in Sources */,
 				E661C0A81F050C44009CAFB0 /* MoviesDetailsRouter.swift in Sources */,
+				C51430471F088FD100A401DC /* TouchTVShowFooterView.swift in Sources */,
 				E661C0A61F050C44009CAFB0 /* MoviesDetailsInteractor.swift in Sources */,
 				C558B90C1EEACCD6007D9E3D /* iBeaconReceiveConfigurator.swift in Sources */,
+				C51430361F087AF500A401DC /* TVShowDetailsPresenter.swift in Sources */,
 				E6D8C92E1EF8BAE000102FA3 /* Data+JSON.swift in Sources */,
 				E63D7CF61EDD58820033F7ED /* MeTableViewCell.swift in Sources */,
 				C5B6D6941F07257C002E5A96 /* TouchMoviesHeaderView.swift in Sources */,
+				C514301D1F087AB800A401DC /* TouchTVShowsInteractor.swift in Sources */,
 				E65B19561EB9D71100237163 /* ArtistsViewController.swift in Sources */,
 				E65B18EE1EB98F0000237163 /* CleanStore.xcdatamodeld in Sources */,
 				E65A66821EF397E300A3FE16 /* SignInRouter.swift in Sources */,
 				E62B31881F06110600F42EDE /* SideMenuManager.swift in Sources */,
 				E60BA8281F026B9C00215DA6 /* MoviesPresenter.swift in Sources */,
 				E65B194B1EB9D4EF00237163 /* ArtistsConfigurator.swift in Sources */,
+				C51430201F087AB800A401DC /* TouchTVShowsViewController.swift in Sources */,
+				C51430381F087AF500A401DC /* TVShowDetailsViewController.swift in Sources */,
 				E65A66B31EF3BD4700A3FE16 /* ProfileSettingsConfigurator.swift in Sources */,
+				C51430221F087AB800A401DC /* TouchTVShowsWorker.swift in Sources */,
 				C5B6D69A1F074C7F002E5A96 /* TouchMoviesFooterView.swift in Sources */,
 				E608ABB01EE00DB600FED38D /* ArtistTableViewCell.swift in Sources */,
 				E65A66B71EF3BD4700A3FE16 /* ProfileSettingsViewController.swift in Sources */,
 				E6F6BD611F03638E00E43C3D /* TVShowsTableViewCell.swift in Sources */,
+				C514301F1F087AB800A401DC /* TouchTVShowsRouter.swift in Sources */,
 				E62B31821F05F38400F42EDE /* SVMenuOptionManager.swift in Sources */,
 				E68D2DCD1EDBD6F10084F01C /* iBeaconInteractor.swift in Sources */,
 				E608ABB21EE0115300FED38D /* ArtistItemView.swift in Sources */,
@@ -2192,6 +2406,7 @@
 				E65A666E1EF397DC00A3FE16 /* SignUpViewModel.swift in Sources */,
 				E60BA8151F026B9000215DA6 /* TVShowsViewModel.swift in Sources */,
 				E65B194D1EB9D4EF00237163 /* ArtistsPresenter.swift in Sources */,
+				C51430431F08870900A401DC /* TouchTVShowHeaderView.swift in Sources */,
 				E60BA7CA1F02603100215DA6 /* Menu.swift in Sources */,
 				E6F6BD6A1F036A1100E43C3D /* WatchListTVShowsCollectionViewCellCollectionViewCell.swift in Sources */,
 				E608ABAC1EE0090600FED38D /* ErrorViewModel.swift in Sources */,
@@ -2208,6 +2423,7 @@
 				E608ABAE1EE00AAE00FED38D /* ArtistsView.swift in Sources */,
 				E65A66801EF397E300A3FE16 /* SignInInteractor.swift in Sources */,
 				E65A666B1EF397DC00A3FE16 /* SignUpPresenter.swift in Sources */,
+				C51430341F087AF500A401DC /* TVShowDetailsConfigurator.swift in Sources */,
 				E65DD6501EDEC3B70091CA3C /* Parsable.swift in Sources */,
 				E65A66851EF397E300A3FE16 /* SignInWorker.swift in Sources */,
 				E60BA8101F026B9000215DA6 /* TVShowsConfigurator.swift in Sources */,
@@ -2215,21 +2431,25 @@
 				C558B90D1EEACCD6007D9E3D /* iBeaconReceiveInteractor.swift in Sources */,
 				E6F6BD5C1F035F2E00E43C3D /* LiveTVTableViewCell.swift in Sources */,
 				E68D2DCC1EDBD6F10084F01C /* iBeaconConfigurator.swift in Sources */,
+				C51430351F087AF500A401DC /* TVShowDetailsInteractor.swift in Sources */,
 				E60BA7E41F026B6A00215DA6 /* SupportConfigurator.swift in Sources */,
 				E68D2DD11EDBD6F10084F01C /* iBeaconViewModel.swift in Sources */,
 				E645E2A61EF7D06A001AA189 /* KBRoundedButton.swift in Sources */,
 				E608ABAA1EE008CA00FED38D /* ErrorPresenter.swift in Sources */,
 				E62B31891F06110600F42EDE /* SideMenuTransition.swift in Sources */,
 				E65A66B91EF3BD4700A3FE16 /* ProfileSettingsWorker.swift in Sources */,
+				C514301E1F087AB800A401DC /* TouchTVShowsPresenter.swift in Sources */,
 				E65A66B61EF3BD4700A3FE16 /* ProfileSettingsRouter.swift in Sources */,
 				E661C0BD1F050C4C009CAFB0 /* TouchMoviePresenter.swift in Sources */,
 				E60BA8401F026BA900215DA6 /* WatchListsViewController.swift in Sources */,
 				E65DD65B1EDED8EB0091CA3C /* API.swift in Sources */,
 				E661C0AA1F050C44009CAFB0 /* MoviesDetailsViewModel.swift in Sources */,
+				C514301C1F087AB800A401DC /* TouchTVShowsConfigurator.swift in Sources */,
 				E65A666A1EF397DC00A3FE16 /* SignUpInteractor.swift in Sources */,
 				E6F6BD661F0369F200E43C3D /* WatchListMoviesCollectionViewCell.swift in Sources */,
 				E60BA82A1F026B9C00215DA6 /* MoviesViewController.swift in Sources */,
 				E68D2DCE1EDBD6F10084F01C /* iBeaconPresenter.swift in Sources */,
+				C51430211F087AB800A401DC /* TouchTVShowsViewModel.swift in Sources */,
 				E661C0C01F050C4C009CAFB0 /* TouchMovieViewModel.swift in Sources */,
 				E60BA8291F026B9C00215DA6 /* MoviesRouter.swift in Sources */,
 				E6F6BD6D1F037E1100E43C3D /* UIView+Extension.swift in Sources */,
@@ -2237,6 +2457,7 @@
 				E661C0911F04AEC8009CAFB0 /* LeftSideMenuViewController.swift in Sources */,
 				E6ACAC961EF0EA230090716C /* KeyboardMovable.swift in Sources */,
 				C558B9171EED95E0007D9E3D /* iBeaconReceiveViewController.swift in Sources */,
+				C51430371F087AF500A401DC /* TVShowDetailsRouter.swift in Sources */,
 				E60BA8261F026B9C00215DA6 /* MoviesConfigurator.swift in Sources */,
 				E63D7CEA1EDD4AFC0033F7ED /* MeRouter.swift in Sources */,
 				E65A66B81EF3BD4700A3FE16 /* ProfileSettingsViewModel.swift in Sources */,
@@ -2275,6 +2496,7 @@
 				C5857B711F068792007B4DA9 /* MoviesCollectionViewCell.swift in Sources */,
 				E63D7CE71EDD4AFC0033F7ED /* MeConfigurator.swift in Sources */,
 				E65DD6461EDEB3560091CA3C /* NetworkClient.swift in Sources */,
+				C514303A1F087AF500A401DC /* TVShowDetailsWorker.swift in Sources */,
 				E65B195F1EB9DEBD00237163 /* Strings.swift in Sources */,
 				E60BA7FF1F026B7900215DA6 /* LiveTVViewModel.swift in Sources */,
 				E608ABB81EE0135400FED38D /* ImageStoreProtocol.swift in Sources */,
@@ -2285,6 +2507,7 @@
 				E65A66B51EF3BD4700A3FE16 /* ProfileSettingsPresenter.swift in Sources */,
 				C5B6D6A11F075E90002E5A96 /* ActionRequest.swift in Sources */,
 				E68D2DDA1EDC06030084F01C /* RegionMonitor.swift in Sources */,
+				C51430401F087B6D00A401DC /* TouchTVShowsTableViewCell.swift in Sources */,
 				E60BA7FA1F026B7900215DA6 /* LiveTVConfigurator.swift in Sources */,
 				C5B6D6911F07251A002E5A96 /* TouchMovieTableViewCell.swift in Sources */,
 				E661C0A91F050C44009CAFB0 /* MoviesDetailsViewController.swift in Sources */,
@@ -2309,6 +2532,7 @@
 				E65B195D1EB9DD8000237163 /* Artist.swift in Sources */,
 				E60BA7E81F026B6A00215DA6 /* SupportViewController.swift in Sources */,
 				E65DD6591EDED63F0091CA3C /* ArtistsStoreProtocol.swift in Sources */,
+				C51430391F087AF500A401DC /* TVShowDetailsViewModel.swift in Sources */,
 				E60BA8111F026B9000215DA6 /* TVShowsInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

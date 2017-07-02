@@ -13,6 +13,7 @@ protocol LiveTVRouterProtocol {
     weak var viewController: LiveTVViewController? { get }
 
     func navigateToSomewhere()
+    func navigateToTouchTVShowsViewController()
 }
 
 final class LiveTVRouter {
@@ -38,5 +39,11 @@ extension LiveTVRouter: LiveTVRouterProtocol {
 
     func navigateToSomewhere() {
 
+    }
+    
+    
+    func navigateToTouchTVShowsViewController() {
+        let touchTVViewController = TouchTVShowsViewController()
+        viewController?.present(touchTVViewController, animated: true, completion: nil)
     }
 }

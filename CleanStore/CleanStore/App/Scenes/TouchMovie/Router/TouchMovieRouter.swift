@@ -14,6 +14,7 @@ protocol TouchMovieRouterProtocol {
 
     func navigateToSomewhere()
     func dismissViewController()
+    func navigateToMoviesDetailsViewController()
 }
 
 final class TouchMovieRouter {
@@ -43,5 +44,11 @@ extension TouchMovieRouter: TouchMovieRouterProtocol {
     
     func dismissViewController() {
         self.viewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    func navigateToMoviesDetailsViewController() {
+        let movieDetailViewController = MoviesDetailsViewController()
+        viewController?.present(movieDetailViewController, animated: true, completion: nil)
     }
 }

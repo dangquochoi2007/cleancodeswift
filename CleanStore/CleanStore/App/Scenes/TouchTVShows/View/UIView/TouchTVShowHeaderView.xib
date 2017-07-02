@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Black.ttf">
+            <string>Lato-Black</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TouchTVShowHeaderView" customModule="CleanStore" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="164"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touch_cover" translatesAutoresizingMaskIntoConstraints="NO" id="RWh-uh-kBe">
+                    <rect key="frame" x="0.0" y="0.0" width="189" height="106"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="189" id="DYi-Zd-t7B"/>
+                        <constraint firstAttribute="height" constant="106" id="sS3-7i-HCu"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEAKING BAD" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Yoj-s1-osU">
+                    <rect key="frame" x="0.0" y="116" width="189" height="28"/>
+                    <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="23"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drama - 1h - 2008" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2h-J1-SoJ">
+                    <rect key="frame" x="0.0" y="145" width="189" height="16"/>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="j2h-J1-SoJ" firstAttribute="top" secondItem="Yoj-s1-osU" secondAttribute="bottom" constant="1" id="1Kr-bM-mZJ"/>
+                <constraint firstItem="RWh-uh-kBe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8oI-bR-z0o"/>
+                <constraint firstItem="RWh-uh-kBe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Boc-ry-tS2"/>
+                <constraint firstItem="Yoj-s1-osU" firstAttribute="trailing" secondItem="RWh-uh-kBe" secondAttribute="trailing" id="FTG-63-XBz"/>
+                <constraint firstItem="Yoj-s1-osU" firstAttribute="top" secondItem="RWh-uh-kBe" secondAttribute="bottom" constant="10" id="JSQ-wE-uo3"/>
+                <constraint firstItem="Yoj-s1-osU" firstAttribute="leading" secondItem="RWh-uh-kBe" secondAttribute="leading" id="ZJA-Z9-wqS"/>
+                <constraint firstItem="j2h-J1-SoJ" firstAttribute="leading" secondItem="Yoj-s1-osU" secondAttribute="leading" id="bo6-tx-aKA"/>
+                <constraint firstItem="j2h-J1-SoJ" firstAttribute="trailing" secondItem="Yoj-s1-osU" secondAttribute="trailing" id="cvs-oC-OON"/>
+                <constraint firstAttribute="bottom" secondItem="j2h-J1-SoJ" secondAttribute="bottom" constant="3" id="klw-Dd-5ky"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="14.5" y="-59"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="touch_cover" width="187" height="105"/>
+    </resources>
+</document>

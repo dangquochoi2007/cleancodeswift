@@ -15,6 +15,7 @@ enum TouchMovieAction {
     case PlayLastTrailer
     case ShowLastEpisode
     case ShowAllDetails
+    case ShowTVShowDetails
     
     
     var touchMovieAction: String {
@@ -26,6 +27,8 @@ enum TouchMovieAction {
         case .ShowLastEpisode:
             return "SHOW LAST EPISODE"
         case .ShowAllDetails:
+            return "SHOW ALL DETAILS"
+        case .ShowTVShowDetails:
             return "SHOW ALL DETAILS"
         }
     }
@@ -40,6 +43,8 @@ enum TouchMovieAction {
             return "episode_ico"
         case .ShowAllDetails:
             return "movie_ico"
+        case .ShowTVShowDetails:
+            return "tvshow_ico"
         }
     }
     

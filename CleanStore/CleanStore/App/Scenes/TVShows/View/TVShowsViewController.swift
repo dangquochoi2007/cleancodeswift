@@ -198,4 +198,8 @@ extension TVShowsViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: TVShowsTableViewCell.nibName, for: indexPath) as! TVShowsTableViewCell
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        router.navigateToTouchTVShowsViewController()
+    }
 }
