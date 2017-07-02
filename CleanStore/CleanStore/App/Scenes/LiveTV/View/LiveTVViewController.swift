@@ -166,7 +166,9 @@ final class LiveTVViewController: UIViewController {
     
     
     func MainMenuTapped(sender: UIButton) {
-
+        let menuViewController = SVMenuViewController()
+        let navigationMenu = UISideMenuNavigationController(rootViewController: menuViewController)
+        self.present(navigationMenu, animated: true, completion: nil)
     }
     
   

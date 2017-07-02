@@ -81,10 +81,13 @@ final class TouchMovieViewController: UIViewController {
         self.touchTableView.showsVerticalScrollIndicator = false
         self.touchTableView.showsHorizontalScrollIndicator = false
         self.touchTableView.tableHeaderView = TouchMoviesHeaderView.fromNib()
+        self.touchTableView.contentInset = UIEdgeInsets.zero
         
         let footerView = TouchMoviesFooterView.fromNib()
         footerView.closeTouchMoviesButton.addTarget(self, action: #selector(TouchMovieViewController.closeButtonPressed), for: UIControlEvents.touchUpInside)
         self.touchTableView.tableFooterView = footerView
+        
+        automaticallyAdjustsScrollViewInsets = false
         
         
     }

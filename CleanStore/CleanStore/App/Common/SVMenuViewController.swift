@@ -29,7 +29,7 @@ class SVMenuViewController: UIViewController {
         var tableView = UITableView()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+        tableView.register(TouchMovieTableViewCell.nib, forCellReuseIdentifier: TouchMovieTableViewCell.nibName)
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.separatorStyle = .none
@@ -39,7 +39,7 @@ class SVMenuViewController: UIViewController {
         return tableView
     }()
 
-    let menuItems = [SVMenuOptions.LIVETV, SVMenuOptions.MOVIES, SVMenuOptions.TVSHOWS, SVMenuOptions.WATCHLISTS]
+    let menuItems = [TouchMovieAction.LIVETV, TouchMovieAction.MOVIES, TouchMovieAction.TVSHOWS, TouchMovieAction.WATCHLISTS, TouchMovieAction.PROFILE, TouchMovieAction.LOGOUT]
     
     var menuSelectionClosure: ((SVMenuOptions, Bool)-> Void)!
     
@@ -106,10 +106,9 @@ extension SVMenuViewController:UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: TouchMovieTableViewCell.nibName, for: indexPath) as! TouchMovieTableViewCell
         let menuItem = self.menuItems[indexPath.row]
-        
-        cell.textLabel?.text = menuItem.menuTitle
+        cell.touchAction = menuItem
         return cell
     }
     
