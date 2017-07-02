@@ -56,7 +56,7 @@ final class MoviesDetailsViewController: UIViewController {
 
         super.viewDidLoad()
 
-        doSomethingOnLoad()
+        configureControllerWhenLoad()
     }
 
 
@@ -74,6 +74,13 @@ final class MoviesDetailsViewController: UIViewController {
         movieDetailTable.delegate = self
         movieDetailTable.dataSource = self
         movieDetailTable.register(SYNOPSISTableViewCell.nib, forCellReuseIdentifier: SYNOPSISTableViewCell.nibName)
+        movieDetailTable.rowHeight = UITableViewAutomaticDimension
+        movieDetailTable.estimatedRowHeight = 60
+        movieDetailTable.separatorStyle = UITableViewCellSeparatorStyle.none
+        movieDetailTable.showsVerticalScrollIndicator = false
+        movieDetailTable.showsHorizontalScrollIndicator = false
+        movieDetailTable.tableHeaderView = MoviesDetailsHeaderView.fromNib()
+        movieDetailTable.tableFooterView = MoviesDetailsFooterView.fromNib()
     }
 }
 
@@ -98,7 +105,7 @@ extension MoviesDetailsViewController: UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

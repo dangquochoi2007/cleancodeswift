@@ -17,5 +17,8 @@ class MoviesDetailsHeaderView: UIView {
         // Drawing code
     }
     */
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
 
 }

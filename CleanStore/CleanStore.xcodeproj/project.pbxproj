@@ -36,6 +36,10 @@
 		C514304D1F08A86500A401DC /* MoviesDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514304B1F08A86500A401DC /* MoviesDetailsTableViewCell.xib */; };
 		C51430501F08A94B00A401DC /* SYNOPSISTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514304E1F08A94B00A401DC /* SYNOPSISTableViewCell.swift */; };
 		C51430511F08A94B00A401DC /* SYNOPSISTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514304F1F08A94B00A401DC /* SYNOPSISTableViewCell.xib */; };
+		C51430581F08B84600A401DC /* RecommandationsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51430561F08B84600A401DC /* RecommandationsCollectionViewCell.swift */; };
+		C51430591F08B84600A401DC /* RecommandationsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51430571F08B84600A401DC /* RecommandationsCollectionViewCell.xib */; };
+		C514305B1F08B86000A401DC /* MoviesDetailsFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514305A1F08B86000A401DC /* MoviesDetailsFooterView.swift */; };
+		C514305D1F08B86F00A401DC /* MoviesDetailsFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514305C1F08B86F00A401DC /* MoviesDetailsFooterView.xib */; };
 		C558B90C1EEACCD6007D9E3D /* iBeaconReceiveConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B8FF1EEACCD6007D9E3D /* iBeaconReceiveConfigurator.swift */; };
 		C558B90D1EEACCD6007D9E3D /* iBeaconReceiveInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B9011EEACCD6007D9E3D /* iBeaconReceiveInteractor.swift */; };
 		C558B90E1EEACCD6007D9E3D /* iBeaconReceivePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B9031EEACCD6007D9E3D /* iBeaconReceivePresenter.swift */; };
@@ -288,6 +292,10 @@
 		C514304B1F08A86500A401DC /* MoviesDetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoviesDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		C514304E1F08A94B00A401DC /* SYNOPSISTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYNOPSISTableViewCell.swift; sourceTree = "<group>"; };
 		C514304F1F08A94B00A401DC /* SYNOPSISTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYNOPSISTableViewCell.xib; sourceTree = "<group>"; };
+		C51430561F08B84600A401DC /* RecommandationsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommandationsCollectionViewCell.swift; sourceTree = "<group>"; };
+		C51430571F08B84600A401DC /* RecommandationsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommandationsCollectionViewCell.xib; sourceTree = "<group>"; };
+		C514305A1F08B86000A401DC /* MoviesDetailsFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesDetailsFooterView.swift; sourceTree = "<group>"; };
+		C514305C1F08B86F00A401DC /* MoviesDetailsFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoviesDetailsFooterView.xib; sourceTree = "<group>"; };
 		C558B8FF1EEACCD6007D9E3D /* iBeaconReceiveConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveConfigurator.swift; sourceTree = "<group>"; };
 		C558B9011EEACCD6007D9E3D /* iBeaconReceiveInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveInteractor.swift; sourceTree = "<group>"; };
 		C558B9031EEACCD6007D9E3D /* iBeaconReceivePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceivePresenter.swift; sourceTree = "<group>"; };
@@ -796,6 +804,10 @@
 				C514304B1F08A86500A401DC /* MoviesDetailsTableViewCell.xib */,
 				C514304E1F08A94B00A401DC /* SYNOPSISTableViewCell.swift */,
 				C514304F1F08A94B00A401DC /* SYNOPSISTableViewCell.xib */,
+				C51430561F08B84600A401DC /* RecommandationsCollectionViewCell.swift */,
+				C51430571F08B84600A401DC /* RecommandationsCollectionViewCell.xib */,
+				C514305A1F08B86000A401DC /* MoviesDetailsFooterView.swift */,
+				C514305C1F08B86F00A401DC /* MoviesDetailsFooterView.xib */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -2168,6 +2180,7 @@
 				C51430451F08871400A401DC /* TouchTVShowHeaderView.xib in Resources */,
 				C51430511F08A94B00A401DC /* SYNOPSISTableViewCell.xib in Resources */,
 				C5E400431F0416A100876F86 /* Lato-Heavy.ttf in Resources */,
+				C51430591F08B84600A401DC /* RecommandationsCollectionViewCell.xib in Resources */,
 				C5E400481F0416A100876F86 /* Lato-Medium.ttf in Resources */,
 				C5E4003E1F0416A100876F86 /* Lato-BlackItalic.ttf in Resources */,
 				C5E400411F0416A100876F86 /* Lato-Hairline.ttf in Resources */,
@@ -2195,6 +2208,7 @@
 				E6F6BD5D1F035F2E00E43C3D /* LiveTVTableViewCell.xib in Resources */,
 				E68D2DD81EDBDCA10084F01C /* iBeaconViewController.xib in Resources */,
 				C5E400461F0416A100876F86 /* Lato-Light.ttf in Resources */,
+				C514305D1F08B86F00A401DC /* MoviesDetailsFooterView.xib in Resources */,
 				C5E400471F0416A100876F86 /* Lato-LightItalic.ttf in Resources */,
 				C514303C1F087B2800A401DC /* TouchTVShowsViewController.xib in Resources */,
 				C5E4004E1F0416A100876F86 /* Lato-ThinItalic.ttf in Resources */,
@@ -2395,6 +2409,7 @@
 				E63D7CF61EDD58820033F7ED /* MeTableViewCell.swift in Sources */,
 				C5B6D6941F07257C002E5A96 /* TouchMoviesHeaderView.swift in Sources */,
 				C514301D1F087AB800A401DC /* TouchTVShowsInteractor.swift in Sources */,
+				C514305B1F08B86000A401DC /* MoviesDetailsFooterView.swift in Sources */,
 				E65B19561EB9D71100237163 /* ArtistsViewController.swift in Sources */,
 				E65B18EE1EB98F0000237163 /* CleanStore.xcdatamodeld in Sources */,
 				E65A66821EF397E300A3FE16 /* SignInRouter.swift in Sources */,
@@ -2534,6 +2549,7 @@
 				E60BA7E61F026B6A00215DA6 /* SupportPresenter.swift in Sources */,
 				C558B90F1EEACCD6007D9E3D /* iBeaconReceiveRouter.swift in Sources */,
 				E65A66BB1EF3D04500A3FE16 /* FacebookService.swift in Sources */,
+				C51430581F08B84600A401DC /* RecommandationsCollectionViewCell.swift in Sources */,
 				E63D7CE91EDD4AFC0033F7ED /* MePresenter.swift in Sources */,
 				E63D7CED1EDD4AFC0033F7ED /* MeWorker.swift in Sources */,
 				E65A667F1EF397E300A3FE16 /* SignInConfigurator.swift in Sources */,

@@ -18,46 +18,56 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="159.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74X-C1-Cqg">
-                        <rect key="frame" x="10" y="30" width="355" height="99.5"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <attributedString key="attributedText">
-                            <fragment content="SYNOPSIS">
-                                <attributes>
-                                    <color key="NSColor" red="0.074509803921568626" green="0.090196078431372548" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <font key="NSFont" size="11" name="Lato-Bold"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                </attributes>
-                            </fragment>
-                            <fragment>
-                                <string key="content">:</string>
-                                <attributes>
-                                    <font key="NSFont" size="11" name="Lato-Bold"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                </attributes>
-                            </fragment>
-                            <fragment>
-                                <string key="content">A woman rebels against a tyrannical ruler in postapocalyptic Australia in search for her home-land with the help of a group of female prisoners, a psychotic worshipper, and a drifter named Max.</string>
-                                <attributes>
-                                    <color key="NSColor" red="0.40392156862745099" green="0.41176470588235292" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <font key="NSFont" size="11" name="Lato-Regular"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yns-98-1Ef">
+                        <rect key="frame" x="4" y="0.0" width="371" height="159.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74X-C1-Cqg">
+                                <rect key="frame" x="30" y="30" width="306" height="99.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="SYNOPSIS">
+                                        <attributes>
+                                            <color key="NSColor" red="0.074509803921568626" green="0.090196078431372548" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="11" name="Lato-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">:</string>
+                                        <attributes>
+                                            <font key="NSFont" size="11" name="Lato-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">A woman rebels against a tyrannical ruler in postapocalyptic Australia in search for her home-land with the help of a group of female prisoners, a psychotic worshipper, and a drifter named Max.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.40392156862745099" green="0.41176470588235292" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="11" name="Lato-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="74X-C1-Cqg" secondAttribute="trailing" constant="35" id="cMK-X6-RVy"/>
+                            <constraint firstItem="74X-C1-Cqg" firstAttribute="top" secondItem="yns-98-1Ef" secondAttribute="top" constant="30" id="ekg-6m-dD9"/>
+                            <constraint firstItem="74X-C1-Cqg" firstAttribute="leading" secondItem="yns-98-1Ef" secondAttribute="leading" constant="30" id="mNd-Tj-5BA"/>
+                            <constraint firstAttribute="bottom" secondItem="74X-C1-Cqg" secondAttribute="bottom" constant="30" id="nmS-gV-wvA"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="74X-C1-Cqg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1CM-oK-NYn"/>
-                    <constraint firstItem="74X-C1-Cqg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="4aN-fc-tcp"/>
-                    <constraint firstItem="74X-C1-Cqg" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="eyH-d9-FOP"/>
-                    <constraint firstAttribute="trailing" secondItem="74X-C1-Cqg" secondAttribute="trailing" constant="10" id="jjv-OY-SEt"/>
-                    <constraint firstAttribute="bottom" secondItem="74X-C1-Cqg" secondAttribute="bottom" constant="30" id="pBT-Rc-Ukg"/>
-                    <constraint firstItem="74X-C1-Cqg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="q9A-gD-Cb5"/>
+                    <constraint firstAttribute="trailing" secondItem="yns-98-1Ef" secondAttribute="trailing" id="GkP-a0-htE"/>
+                    <constraint firstItem="yns-98-1Ef" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="am6-9w-lJa"/>
+                    <constraint firstAttribute="bottom" secondItem="yns-98-1Ef" secondAttribute="bottom" id="mQ4-i6-1QB"/>
+                    <constraint firstItem="yns-98-1Ef" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mwh-K0-Esf"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <point key="canvasLocation" x="30.5" y="99"/>
         </tableViewCell>
     </objects>
