@@ -12,13 +12,38 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MoviesDetailsHeaderView" customModule="CleanStore" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="film" translatesAutoresizingMaskIntoConstraints="NO" id="Bak-QL-Pzn">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="Pqk-oy-OFK"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P8E-hS-Skj">
+                    <rect key="frame" x="0.0" y="302" width="375" height="248"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="P8E-hS-Skj" secondAttribute="bottom" id="1x2-uV-gxE"/>
+                <constraint firstItem="P8E-hS-Skj" firstAttribute="top" secondItem="Bak-QL-Pzn" secondAttribute="bottom" constant="2" id="3qt-Hm-fVV"/>
+                <constraint firstItem="P8E-hS-Skj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Bp6-Zh-Gya"/>
+                <constraint firstItem="Bak-QL-Pzn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kGy-lm-alr"/>
+                <constraint firstItem="Bak-QL-Pzn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mzW-OT-Glr"/>
+                <constraint firstAttribute="trailing" secondItem="Bak-QL-Pzn" secondAttribute="trailing" id="nbJ-ge-vH9"/>
+                <constraint firstAttribute="trailing" secondItem="P8E-hS-Skj" secondAttribute="trailing" id="oqv-Db-Dvf"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="25.5" y="52"/>
         </view>
     </objects>
+    <resources>
+        <image name="film" width="125" height="186"/>
+    </resources>
 </document>

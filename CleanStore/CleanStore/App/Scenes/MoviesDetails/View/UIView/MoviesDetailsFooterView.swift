@@ -40,7 +40,7 @@ extension MoviesDetailsFooterView: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecommandationsCollectionViewCell.nibName, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecommandationsCollectionViewCell.nibName, for: indexPath) as! RecommandationsCollectionViewCell
         return cell
     }
     
