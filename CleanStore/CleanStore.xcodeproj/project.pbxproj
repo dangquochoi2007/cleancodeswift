@@ -125,6 +125,11 @@
 		E60BA8411F026BA900215DA6 /* WatchListsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60BA8391F026BA900215DA6 /* WatchListsViewModel.swift */; };
 		E60BA8421F026BA900215DA6 /* WatchListsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60BA83B1F026BA900215DA6 /* WatchListsWorker.swift */; };
 		E60BA8441F026C0400215DA6 /* CustomTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60BA8431F026C0400215DA6 /* CustomTabbarController.swift */; };
+		E62696591F0B34C900980FFE /* ProfileSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62696571F0B34C900980FFE /* ProfileSettingsTableViewCell.swift */; };
+		E626965A1F0B34C900980FFE /* ProfileSettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E62696581F0B34C900980FFE /* ProfileSettingsTableViewCell.xib */; };
+		E626965C1F0B34DE00980FFE /* ProfileSettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E626965B1F0B34DE00980FFE /* ProfileSettingsHeaderView.swift */; };
+		E626965E1F0B34EA00980FFE /* ProfileSettingsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E626965D1F0B34EA00980FFE /* ProfileSettingsHeaderView.xib */; };
+		E62696601F0B35E600980FFE /* ProfileSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E626965F1F0B35E600980FFE /* ProfileSettingsViewController.xib */; };
 		E62B31821F05F38400F42EDE /* SVMenuOptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62B31811F05F38400F42EDE /* SVMenuOptionManager.swift */; };
 		E62B31841F05F3C500F42EDE /* SVMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62B31831F05F3C500F42EDE /* SVMenuViewController.swift */; };
 		E62B31881F06110600F42EDE /* SideMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62B31851F06110600F42EDE /* SideMenuManager.swift */; };
@@ -383,6 +388,11 @@
 		E60BA8391F026BA900215DA6 /* WatchListsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchListsViewModel.swift; sourceTree = "<group>"; };
 		E60BA83B1F026BA900215DA6 /* WatchListsWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchListsWorker.swift; sourceTree = "<group>"; };
 		E60BA8431F026C0400215DA6 /* CustomTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabbarController.swift; sourceTree = "<group>"; };
+		E62696571F0B34C900980FFE /* ProfileSettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingsTableViewCell.swift; sourceTree = "<group>"; };
+		E62696581F0B34C900980FFE /* ProfileSettingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileSettingsTableViewCell.xib; sourceTree = "<group>"; };
+		E626965B1F0B34DE00980FFE /* ProfileSettingsHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingsHeaderView.swift; sourceTree = "<group>"; };
+		E626965D1F0B34EA00980FFE /* ProfileSettingsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileSettingsHeaderView.xib; sourceTree = "<group>"; };
+		E626965F1F0B35E600980FFE /* ProfileSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileSettingsViewController.xib; sourceTree = "<group>"; };
 		E62B31811F05F38400F42EDE /* SVMenuOptionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVMenuOptionManager.swift; sourceTree = "<group>"; };
 		E62B31831F05F3C500F42EDE /* SVMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVMenuViewController.swift; sourceTree = "<group>"; };
 		E62B31851F06110600F42EDE /* SideMenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuManager.swift; sourceTree = "<group>"; };
@@ -1194,6 +1204,17 @@
 			path = Worker;
 			sourceTree = "<group>";
 		};
+		E62696561F0B34A800980FFE /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				E62696571F0B34C900980FFE /* ProfileSettingsTableViewCell.swift */,
+				E62696581F0B34C900980FFE /* ProfileSettingsTableViewCell.xib */,
+				E626965B1F0B34DE00980FFE /* ProfileSettingsHeaderView.swift */,
+				E626965D1F0B34EA00980FFE /* ProfileSettingsHeaderView.xib */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		E63363711EBC7A0F00F79277 /* Opencv */ = {
 			isa = PBXGroup;
 			children = (
@@ -1552,7 +1573,9 @@
 		E65A66AD1EF3BD4700A3FE16 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E62696561F0B34A800980FFE /* UIView */,
 				E65A66AE1EF3BD4700A3FE16 /* ProfileSettingsViewController.swift */,
+				E626965F1F0B35E600980FFE /* ProfileSettingsViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2183,6 +2206,7 @@
 				C51430591F08B84600A401DC /* RecommandationsCollectionViewCell.xib in Resources */,
 				C5E400481F0416A100876F86 /* Lato-Medium.ttf in Resources */,
 				C5E4003E1F0416A100876F86 /* Lato-BlackItalic.ttf in Resources */,
+				E62696601F0B35E600980FFE /* ProfileSettingsViewController.xib in Resources */,
 				C5E400411F0416A100876F86 /* Lato-Hairline.ttf in Resources */,
 				C51430411F087B6D00A401DC /* TouchTVShowsTableViewCell.xib in Resources */,
 				C5E400421F0416A100876F86 /* Lato-HairlineItalic.ttf in Resources */,
@@ -2211,6 +2235,7 @@
 				C514305D1F08B86F00A401DC /* MoviesDetailsFooterView.xib in Resources */,
 				C5E400471F0416A100876F86 /* Lato-LightItalic.ttf in Resources */,
 				C514303C1F087B2800A401DC /* TouchTVShowsViewController.xib in Resources */,
+				E626965E1F0B34EA00980FFE /* ProfileSettingsHeaderView.xib in Resources */,
 				C5E4004E1F0416A100876F86 /* Lato-ThinItalic.ttf in Resources */,
 				C5E400491F0416A100876F86 /* Lato-MediumItalic.ttf in Resources */,
 				E65B18F01EB98F0000237163 /* Assets.xcassets in Resources */,
@@ -2219,6 +2244,7 @@
 				C5E4004D1F0416A100876F86 /* Lato-Thin.ttf in Resources */,
 				C5E400441F0416A100876F86 /* Lato-HeavyItalic.ttf in Resources */,
 				C51430491F088FDF00A401DC /* TouchTVShowFooterView.xib in Resources */,
+				E626965A1F0B34C900980FFE /* ProfileSettingsTableViewCell.xib in Resources */,
 				C514304D1F08A86500A401DC /* MoviesDetailsTableViewCell.xib in Resources */,
 				E6F6BD6B1F036A1100E43C3D /* WatchListTVShowsCollectionViewCellCollectionViewCell.xib in Resources */,
 				E63D7CF71EDD58820033F7ED /* MeTableViewCell.xib in Resources */,
@@ -2415,6 +2441,7 @@
 				E65A66821EF397E300A3FE16 /* SignInRouter.swift in Sources */,
 				E62B31881F06110600F42EDE /* SideMenuManager.swift in Sources */,
 				E60BA8281F026B9C00215DA6 /* MoviesPresenter.swift in Sources */,
+				E626965C1F0B34DE00980FFE /* ProfileSettingsHeaderView.swift in Sources */,
 				E65B194B1EB9D4EF00237163 /* ArtistsConfigurator.swift in Sources */,
 				C51430201F087AB800A401DC /* TouchTVShowsViewController.swift in Sources */,
 				C51430381F087AF500A401DC /* TVShowDetailsViewController.swift in Sources */,
@@ -2477,6 +2504,7 @@
 				C514301C1F087AB800A401DC /* TouchTVShowsConfigurator.swift in Sources */,
 				E65A666A1EF397DC00A3FE16 /* SignUpInteractor.swift in Sources */,
 				E6F6BD661F0369F200E43C3D /* WatchListMoviesCollectionViewCell.swift in Sources */,
+				E62696591F0B34C900980FFE /* ProfileSettingsTableViewCell.swift in Sources */,
 				E60BA82A1F026B9C00215DA6 /* MoviesViewController.swift in Sources */,
 				E68D2DCE1EDBD6F10084F01C /* iBeaconPresenter.swift in Sources */,
 				C51430211F087AB800A401DC /* TouchTVShowsViewModel.swift in Sources */,
