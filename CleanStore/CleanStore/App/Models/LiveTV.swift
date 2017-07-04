@@ -9,6 +9,11 @@
 import Foundation
 
 
-class LiveTV {
-    
+struct LiveTV {
+    var id: String
+    var name: String
+    var hd: String
+    var logo: String
+    var epg_now: String
+    var epg_next: String
 }
