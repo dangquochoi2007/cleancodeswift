@@ -22,6 +22,7 @@ final class ProfileSettingsViewController: UIViewController {
     var output: ProfileSettingsViewControllerOutput!
     var router: ProfileSettingsRouterProtocol!
 
+    @IBOutlet weak var profileSettingTableView: UITableView!
 
     // MARK: - Initializers
 

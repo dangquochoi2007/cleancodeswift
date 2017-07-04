@@ -130,6 +130,9 @@
 		E626965C1F0B34DE00980FFE /* ProfileSettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E626965B1F0B34DE00980FFE /* ProfileSettingsHeaderView.swift */; };
 		E626965E1F0B34EA00980FFE /* ProfileSettingsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E626965D1F0B34EA00980FFE /* ProfileSettingsHeaderView.xib */; };
 		E62696601F0B35E600980FFE /* ProfileSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E626965F1F0B35E600980FFE /* ProfileSettingsViewController.xib */; };
+		E62696621F0B368C00980FFE /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62696611F0B368C00980FFE /* Movie.swift */; };
+		E62696641F0B369900980FFE /* TvShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62696631F0B369900980FFE /* TvShow.swift */; };
+		E62696661F0B36B600980FFE /* LiveTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62696651F0B36B600980FFE /* LiveTV.swift */; };
 		E62B31821F05F38400F42EDE /* SVMenuOptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62B31811F05F38400F42EDE /* SVMenuOptionManager.swift */; };
 		E62B31841F05F3C500F42EDE /* SVMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62B31831F05F3C500F42EDE /* SVMenuViewController.swift */; };
 		E62B31881F06110600F42EDE /* SideMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62B31851F06110600F42EDE /* SideMenuManager.swift */; };
@@ -393,6 +396,9 @@
 		E626965B1F0B34DE00980FFE /* ProfileSettingsHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingsHeaderView.swift; sourceTree = "<group>"; };
 		E626965D1F0B34EA00980FFE /* ProfileSettingsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileSettingsHeaderView.xib; sourceTree = "<group>"; };
 		E626965F1F0B35E600980FFE /* ProfileSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileSettingsViewController.xib; sourceTree = "<group>"; };
+		E62696611F0B368C00980FFE /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		E62696631F0B369900980FFE /* TvShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TvShow.swift; sourceTree = "<group>"; };
+		E62696651F0B36B600980FFE /* LiveTV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTV.swift; sourceTree = "<group>"; };
 		E62B31811F05F38400F42EDE /* SVMenuOptionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVMenuOptionManager.swift; sourceTree = "<group>"; };
 		E62B31831F05F3C500F42EDE /* SVMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVMenuViewController.swift; sourceTree = "<group>"; };
 		E62B31851F06110600F42EDE /* SideMenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuManager.swift; sourceTree = "<group>"; };
@@ -1688,6 +1694,9 @@
 				E608ABAB1EE0090600FED38D /* ErrorViewModel.swift */,
 				E60BA7C91F02603100215DA6 /* Menu.swift */,
 				C5B6D6A01F075E90002E5A96 /* ActionRequest.swift */,
+				E62696611F0B368C00980FFE /* Movie.swift */,
+				E62696631F0B369900980FFE /* TvShow.swift */,
+				E62696651F0B36B600980FFE /* LiveTV.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2425,6 +2434,7 @@
 				E60BA7FC1F026B7900215DA6 /* LiveTVPresenter.swift in Sources */,
 				E65A669F1EF3BD3F00A3FE16 /* FeedsPresenter.swift in Sources */,
 				E60BA8411F026BA900215DA6 /* WatchListsViewModel.swift in Sources */,
+				E62696641F0B369900980FFE /* TvShow.swift in Sources */,
 				E60BA7EA1F026B6A00215DA6 /* SupportWorker.swift in Sources */,
 				E661C0A81F050C44009CAFB0 /* MoviesDetailsRouter.swift in Sources */,
 				C51430471F088FD100A401DC /* TouchTVShowFooterView.swift in Sources */,
@@ -2477,6 +2487,7 @@
 				E65A669E1EF3BD3F00A3FE16 /* FeedsInteractor.swift in Sources */,
 				E65B18E61EB98F0000237163 /* AppDelegate.swift in Sources */,
 				E60BA83D1F026BA900215DA6 /* WatchListsInteractor.swift in Sources */,
+				E62696661F0B36B600980FFE /* LiveTV.swift in Sources */,
 				E608ABAE1EE00AAE00FED38D /* ArtistsView.swift in Sources */,
 				E65A66801EF397E300A3FE16 /* SignInInteractor.swift in Sources */,
 				E65A666B1EF397DC00A3FE16 /* SignUpPresenter.swift in Sources */,
@@ -2525,6 +2536,7 @@
 				E65B19501EB9D4EF00237163 /* ArtistsViewModel.swift in Sources */,
 				E62B31841F05F3C500F42EDE /* SVMenuViewController.swift in Sources */,
 				E60BA82C1F026B9C00215DA6 /* MoviesWorker.swift in Sources */,
+				E62696621F0B368C00980FFE /* Movie.swift in Sources */,
 				E60BA7FD1F026B7900215DA6 /* LiveTVRouter.swift in Sources */,
 				E60BA7FB1F026B7900215DA6 /* LiveTVInteractor.swift in Sources */,
 				E608ABB61EE0132300FED38D /* ImageMemoryStore.swift in Sources */,

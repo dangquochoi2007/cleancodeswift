@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileSettingsViewController" customModule="CleanStore" customModuleProvider="target">
             <connections>
+                <outlet property="profileSettingTableView" destination="u2V-uP-FX7" id="yjV-cM-KSU"/>
                 <outlet property="view" destination="iN0-l3-epB" id="r7R-K9-Dsw"/>
             </connections>
         </placeholder>
