@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 //#https://www.raywenderlich.com/107439/uicollectionview-custom-layout-tutorial-pinterest
 //#http://blog.rinatkhanov.me/ios/transitions.html
@@ -28,6 +29,7 @@ final class MoviesViewController: UIViewController {
     
     
     var moviesList: [String] = ["Movie_#1", "Movie_#2", "Movie_#3", "Movie_#4", "Movie_#5", "Movie_#6"]
+    let sectionInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
     
     var moviesBackgroundColor: UIColor = UIColor(red: 22.0/255.0, green: 23.0/255.0, blue: 27.0/255.0, alpha: 0.95)
     var moviesForegroundColor: UIColor = UIColor(red: 239.0/255.0, green: 26.0/255.0, blue: 81.0/255.0, alpha: 1)
@@ -48,12 +50,10 @@ final class MoviesViewController: UIViewController {
     }()
     
     
-    lazy var collectionViewLayout: UICollectionViewLayout = { [unowned self] in
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 0
-        layout.sectionInset = UIEdgeInsets.zero
+    lazy var collectionViewLayout: PinterestLayout = { [unowned self] in
+        let layout = PinterestLayout()
+
+        layout.delegate = self
 
         return layout
     }()
@@ -195,7 +195,7 @@ extension MoviesViewController: MoviesViewControllerInput {
     }
 }
 
-extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSource, PinterestLayoutDelegate {
     
     
     func constraintsLayoutCollectionView() {
@@ -229,116 +229,116 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         router.navigateTouchMovieViewController()
     }
+
+    func getNumberOfColumn() -> Int {
+       return Int(self.moviesCollectionView.frame.width/160.0)
+    }
     
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //265 × 376
-        guard let image = UIImage(named: moviesList[indexPath.row]) else {
-            return CGSize.zero
-        }
+    func collectionView(collectionView:UICollectionView, heightForPhotoAtIndexPath indexPath:NSIndexPath) -> CGFloat
+    {
+        let itemsPerRow = getNumberOfColumn()
         
-        let ratio = CGFloat(image.size.height/image.size.width)
+        let paddingSpace = self.sectionInsets.left * CGFloat(itemsPerRow + 1)
+        let availableWidth = collectionView.frame.width - paddingSpace
+        let widthPerItem = availableWidth / CGFloat(itemsPerRow)
         
-        
-        let totalwidth = collectionView.bounds.size.width;
-        let numberOfCellsPerRow: Int = Int(totalwidth/160.0)
-        let width: CGFloat = CGFloat(Int(totalwidth)/numberOfCellsPerRow)
-        let height: CGFloat = CGFloat(width)*ratio
-        print("ratio \(ratio) : \(width) : \(height)")
-        return CGSize(width: width, height: height)
+        let boundingRect =  CGRect(x: 0, y: 0, width: widthPerItem, height: CGFloat.greatestFiniteMagnitude);
+        let rect = AVMakeRect(aspectRatio: (UIImage(named: moviesList[indexPath.item])?.size)!, insideRect: boundingRect);
+        return rect.height
     }
 }
 
 protocol PinterestLayoutDelegate {
-    func collectionView(collectionView: UICollectionView, heightForPhotoAtIndexPath
-        indexPath: NSIndexPath, withWidth width: CGFloat) -> CGFloat
-    func collectionView(collectionView: UICollectionView, heightForAnnotationAtIndexPath
-        indexPath: NSIndexPath, withWidth width: CGFloat) -> CGFloat
+    //Method to ask the delegate for the height of the image
+    func collectionView(collectionView:UICollectionView, heightForPhotoAtIndexPath indexPath:NSIndexPath) -> CGFloat
     
+    func getNumberOfColumn() -> Int
 }
 
-class PinterestLayoutAttributes: UICollectionViewLayoutAttributes {
-    var photoHeight: CGFloat = 0
-    override func copyWithZone(zone: NSZone) -> AnyObject {
-        let copy = super.copyWithZone(zone) as! PinterestLayoutAttributes
-        copy.photoHeight = photoHeight
-        return copy
-    }
-    
-    override func isEqual(object: AnyObject?) -> Bool {
-        if let attributes = object as? PinterestLayoutAttributes {
-            if attributes.photoHeight == photoHeight {
-                return super.isEqual(object)
-            }
-        }
-        return false
-    }
-    
-}
+
 
 class PinterestLayout: UICollectionViewLayout {
-    var delegate: PinterestLayoutDelegate!
-    var numberOfColumns = 1
-    var cellPadding: CGFloat = 0
+    let attributeArray = NSMutableDictionary()
+    var contentSize:CGSize!
+    var delegate:PinterestLayoutDelegate!
     
-    private var cache = [PinterestLayoutAttributes]()
-    private var contentHeight: CGFloat = 0
-    private var width: CGFloat {
-        get {
-            let inset = collectionView!.contentInset
-            return CGRectGetWidth(collectionView!.bounds) - (inset.left + inset.right)
-        }
+    override init() {
+        super.init()
     }
     
-    override class func layoutAttributesClass() -> AnyClass {
-        return PinterestLayoutAttributes.self
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
     
-    override func collectionViewContentSize() -> CGSize {
-        return CGSize(width: width, height: contentHeight)
-    }
-    
-    override func prepareLayout() {
-        if cache.isEmpty {
-            let columnWidth = width / CGFloat(numberOfColumns)
-            var xOffsets = [CGFloat]()
-            for column in 0..<numberOfColumns {
-                xOffsets.append(CGFloat(column) * columnWidth)
+    override func prepare()
+    {
+        super.prepare()
+        self.attributeArray.removeAllObjects()
+        let numberOfColumn : Int = self.delegate.getNumberOfColumn();
+        let padding:CGFloat = 0.0;
+        
+        let collectionViewWidth = self.collectionView?.frame.size.width
+        let itemWidth : CGFloat = (collectionViewWidth! - padding * CGFloat((numberOfColumn + 1))) / CGFloat(numberOfColumn)
+        var contentHeight:CGFloat = 0.0;
+        var columnArray = [CGFloat](repeating: 0.0, count: numberOfColumn);
+        
+        //Tính toán kích thước và vị trí của từng cell trong CollectionView
+        for i in 0 ... (self.collectionView?.numberOfItems(inSection: 0))! - 1 {
+            var tempX : CGFloat = 0.0
+            var tempY : CGFloat = 0.0
+            let indexPath = NSIndexPath(item: i, section: 0)
+            let itemHeight:CGFloat = delegate.collectionView(collectionView: (self.collectionView)!, heightForPhotoAtIndexPath: indexPath)
+            
+            //Tìm cột có độ dài ngắn nhất trong CollectionView
+            var minHeight:CGFloat = 0.0;
+            var minIndex:Int = 0;
+            
+            if (numberOfColumn > 0){
+                minHeight = columnArray[0]
+                
+            }
+            for colIndex in 0..<numberOfColumn {
+                if (minHeight > columnArray[colIndex]){
+                    minHeight = columnArray[colIndex]
+                    minIndex = colIndex
+                }
             }
             
-            var yOffsets = [CGFloat](count: numberOfColumns, repeatedValue: 0)
+            //Bổ sung  cell mới vào cột có kích thước ngắn nhất
+            tempX = padding + (itemWidth + padding) *  CGFloat(minIndex);
+            tempY = minHeight + padding;
+            columnArray[minIndex] = tempY + itemHeight;
+            let attributes = UICollectionViewLayoutAttributes(forCellWith:indexPath as IndexPath);
+            attributes.frame = CGRect(x: tempX, y: tempY, width: itemWidth, height: itemHeight);
+            self.attributeArray.setObject(attributes, forKey: indexPath)
             
-            var currentColumn = 0
-            for item in 0..<collectionView!.numberOfItemsInSection(0) {
-                let indexPath = NSIndexPath(forItem: item, inSection: 0)
-                let width = columnWidth - (cellPadding * 2)
-                let photoHeight = delegate.collectionView(collectionView!, heightForPhotoAtIndexPath: indexPath, withWidth: width)
-                let annotationHeight = delegate.collectionView(collectionView!, heightForAnnotationAtIndexPath: indexPath, withWidth: width)
-                let height = cellPadding + photoHeight + annotationHeight + cellPadding
-                
-                //                let height = delegate.collectionView(collectionView!, heightForItemAtIndexPath: indexPath)
-                let frame = CGRect(x: xOffsets[currentColumn], y: yOffsets[currentColumn], width: columnWidth, height: height)
-                let insetFrame = CGRectInset(frame, cellPadding, cellPadding)
-                
-                let attributes = PinterestLayoutAttributes(forCellWithIndexPath: indexPath)
-                attributes.frame = insetFrame
-                attributes.photoHeight = photoHeight
-                cache.append(attributes)
-                contentHeight = max(contentHeight, CGRectGetMaxY(frame))
-                yOffsets[currentColumn] = yOffsets[currentColumn] + height
-                currentColumn = currentColumn >= (numberOfColumns - 1) ? 0 : ++currentColumn
-            }
-        }
-    }
-    
-    override func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject]? {
-        var layoutAttributes = [UICollectionViewLayoutAttributes]()
-        for attribute in cache {
-            if CGRectIntersectsRect(attribute.frame, rect) {
-                layoutAttributes.append(attribute)
+            //Tính toán lại chiều cao Content Size của CollectionView
+            let newContentHeight:CGFloat = tempY + padding + itemHeight + padding;
+            if (newContentHeight > contentHeight){
+                contentHeight = newContentHeight;
             }
         }
         
+        self.contentSize = CGSize(width: (self.collectionView?.frame.size.width)!, height: contentHeight);
+    }
+    
+    override var collectionViewContentSize: CGSize
+    {
+        return self.contentSize
+    }
+    
+    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+        var layoutAttributes = [UICollectionViewLayoutAttributes]()
+        
+        // Duyệt các đối tượng trong attributeArray để tìm ra các cell nằm trong khung nhìn rect
+        for attributes  in self.attributeArray {
+            if (attributes.value as! UICollectionViewLayoutAttributes).frame.intersects(rect ) {
+                layoutAttributes.append((attributes.value as! UICollectionViewLayoutAttributes))
+            }
+        }
         return layoutAttributes
     }
 }
+
+
+

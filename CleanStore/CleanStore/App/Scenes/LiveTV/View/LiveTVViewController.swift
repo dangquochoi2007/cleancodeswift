@@ -22,6 +22,8 @@ final class LiveTVViewController: UIViewController {
     var output: LiveTVViewControllerOutput!
     var router: LiveTVRouterProtocol!
     
+    var liveTvList: [LiveTV] = LiveTVStore.shareInstance.items()
+    
     var liveTVBackgroundColor: UIColor = UIColor(red: 22.0/255.0, green: 23.0/255.0, blue: 27.0/255.0, alpha: 1)
     var liveTVForegroundColor: UIColor = UIColor(red: 233.0/255.0, green: 205.0/255.0, blue: 38.0/255.0, alpha: 1)
     
@@ -219,11 +221,12 @@ extension LiveTVViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 21
+        return liveTvList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LiveTVTableViewCell.nibName, for: indexPath) as! LiveTVTableViewCell
+        cell.liveTv = liveTvList[indexPath.row]
         return cell
     }
     

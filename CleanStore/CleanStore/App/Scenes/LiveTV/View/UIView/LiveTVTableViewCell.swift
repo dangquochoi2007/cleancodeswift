@@ -11,6 +11,16 @@ import UIKit
 
 class LiveTVTableViewCell: UITableViewCell {
     
+    
+    @IBOutlet weak var coverImageView: UIImageView!
+    
+    var liveTv: LiveTV? {
+        didSet {
+            if let imageName = liveTv?.logo {
+                coverImageView.image = UIImage(named: imageName)
+            }
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

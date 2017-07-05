@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol WatchListsViewControllerInput: WatchListsPresenterOutput {
 
@@ -25,6 +26,9 @@ final class WatchListsViewController: UIViewController {
     var watchListsBackgroundColor: UIColor = UIColor(red: 22.0/255.0, green: 23.0/255.0, blue: 27.0/255.0, alpha: 0.95)
     var watchListsForegroundColor: UIColor = UIColor(red: 24.0/255.0, green: 235.0/255.0, blue: 188.0/255.0, alpha: 1)
     
+    var moviesList: [String] = ["Movie_#1", "Movie_#2", "Movie_#3", "Movie_#4", "Movie_#5", "Movie_#6"]
+    let sectionInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+    
     lazy var watchListsCollectionView: UICollectionView = { [unowned self] in
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: self.movieCollectionViewLayout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -40,13 +44,10 @@ final class WatchListsViewController: UIViewController {
     }()
     
     
-    lazy var movieCollectionViewLayout: UICollectionViewLayout = { [unowned self] in
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 0
-        layout.sectionInset = UIEdgeInsets.zero
+    lazy var movieCollectionViewLayout: PinterestLayout = { [unowned self] in
+        let layout = PinterestLayout()
         
+        layout.delegate = self
         return layout
     }()
     
@@ -195,7 +196,7 @@ extension WatchListsViewController: WatchListsViewControllerInput {
     }
 }
 
-extension WatchListsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension WatchListsViewController: UICollectionViewDelegate, UICollectionViewDataSource, PinterestLayoutDelegate {
     
     
     func constraintsLayoutCollectionView() {
@@ -215,24 +216,32 @@ extension WatchListsViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 21
+        return moviesList.count
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WatchListMoviesCollectionViewCell", for: indexPath) as! WatchListMoviesCollectionViewCell
+        cell.moviesImageView.image = UIImage(named: moviesList[indexPath.row])
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //265 × 376
-        let totalwidth = collectionView.bounds.size.width;
-        let numberOfCellsPerRow: Int = Int(totalwidth/160.0)
-        let width: CGFloat = CGFloat(Int(totalwidth)/numberOfCellsPerRow)
-        let height: CGFloat = CGFloat(width)*376.0/256.0
+    func getNumberOfColumn() -> Int {
+        return Int(self.watchListsCollectionView.frame.width/160.0)
+    }
+    
+    func collectionView(collectionView:UICollectionView, heightForPhotoAtIndexPath indexPath:NSIndexPath) -> CGFloat
+    {
+        let itemsPerRow = getNumberOfColumn()
         
-        return CGSize(width: width, height: height)
+        let paddingSpace = self.sectionInsets.left * CGFloat(itemsPerRow + 1)
+        let availableWidth = collectionView.frame.width - paddingSpace
+        let widthPerItem = availableWidth / CGFloat(itemsPerRow)
+        
+        let boundingRect =  CGRect(x: 0, y: 0, width: widthPerItem, height: CGFloat.greatestFiniteMagnitude);
+        let rect = AVMakeRect(aspectRatio: (UIImage(named: moviesList[indexPath.item])?.size)!, insideRect: boundingRect);
+        return rect.height
     }
     
     

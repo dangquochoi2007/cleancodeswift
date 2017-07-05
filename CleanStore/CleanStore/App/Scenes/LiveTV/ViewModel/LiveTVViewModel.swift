@@ -9,5 +9,13 @@
 import UIKit
 
 struct LiveTVViewModel {
-
+    struct FetchLiveTV {
+        struct Request {
+            
+        }
+        
+        struct Response {
+            
+        }
+    }
 }
