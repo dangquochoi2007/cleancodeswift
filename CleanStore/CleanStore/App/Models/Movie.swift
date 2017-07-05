@@ -23,6 +23,6 @@ class Movie {
     var year: String?
     var rating: String?
     var votes: String?
-    var released: St
-    
+    var released: String?
+    var genres: String?
 }

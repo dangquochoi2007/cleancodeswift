@@ -42,7 +42,8 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGw-nl-N2J">
                             <rect key="frame" x="40" y="118" width="150" height="31.5"/>
-                            <string key="text">Action, Adventure, Sci-Fi 2h  -  14 May 2015</string>
+                            <string key="text">Action, Adventure, Sci-Fi 
+2h  -  14 May 2015</string>
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
