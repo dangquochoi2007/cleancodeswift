@@ -55,7 +55,7 @@ final class ProfileSettingsViewController: UIViewController {
 
         super.viewDidLoad()
 
-        doSomethingOnLoad()
+        configureControllerWhenLoad()
     }
 
 
@@ -66,6 +66,14 @@ final class ProfileSettingsViewController: UIViewController {
         // TODO: Ask the Interactor to do some work
 
         output.doSomething()
+    }
+    
+    func configureControllerWhenLoad() {
+        profileSettingTableView.delegate = self
+        profileSettingTableView.dataSource = self
+        profileSettingTableView.register(ProfileSettingsTableViewCell.nib, forCellReuseIdentifier: ProfileSettingsTableViewCell.nibName)
+        profileSettingTableView.tableHeaderView = ProfileSettingsHeaderView.fromNib()
+        
     }
 }
 
@@ -80,5 +88,21 @@ extension ProfileSettingsViewController: ProfileSettingsViewControllerInput {
     func displaySomething(viewModel: ProfileSettingsViewModel) {
 
         // TODO: Update UI
+    }
+}
+
+extension ProfileSettingsViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProfileSettingsTableViewCell.nibName, for: indexPath) as! ProfileSettingsTableViewCell
+        
+        return cell
     }
 }

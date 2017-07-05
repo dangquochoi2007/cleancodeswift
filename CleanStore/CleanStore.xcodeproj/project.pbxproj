@@ -48,6 +48,7 @@
 		C558B9121EEACCD6007D9E3D /* iBeaconReceiveWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B90B1EEACCD6007D9E3D /* iBeaconReceiveWorker.swift */; };
 		C558B9171EED95E0007D9E3D /* iBeaconReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B9151EED95E0007D9E3D /* iBeaconReceiveViewController.swift */; };
 		C558B9181EED95E0007D9E3D /* iBeaconReceiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C558B9161EED95E0007D9E3D /* iBeaconReceiveViewController.xib */; };
+		C560B25C1F0D1EF9000E893E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C560B25B1F0D1EF9000E893E /* SWRevealViewController.m */; };
 		C5857B711F068792007B4DA9 /* MoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5857B6F1F068792007B4DA9 /* MoviesCollectionViewCell.swift */; };
 		C5B6D68D1F07246E002E5A96 /* TouchMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5B6D68C1F07246E002E5A96 /* TouchMovieViewController.xib */; };
 		C5B6D6911F07251A002E5A96 /* TouchMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6D68F1F07251A002E5A96 /* TouchMovieTableViewCell.swift */; };
@@ -312,6 +313,9 @@
 		C558B90B1EEACCD6007D9E3D /* iBeaconReceiveWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveWorker.swift; sourceTree = "<group>"; };
 		C558B9151EED95E0007D9E3D /* iBeaconReceiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconReceiveViewController.swift; sourceTree = "<group>"; };
 		C558B9161EED95E0007D9E3D /* iBeaconReceiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iBeaconReceiveViewController.xib; sourceTree = "<group>"; };
+		C560B2591F0D1EF8000E893E /* CleanStore-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CleanStore-Bridging-Header.h"; sourceTree = "<group>"; };
+		C560B25A1F0D1EF9000E893E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		C560B25B1F0D1EF9000E893E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		C5857B6F1F068792007B4DA9 /* MoviesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewCell.swift; sourceTree = "<group>"; };
 		C5B6D68C1F07246E002E5A96 /* TouchMovieViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouchMovieViewController.xib; sourceTree = "<group>"; };
 		C5B6D68F1F07251A002E5A96 /* TouchMovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchMovieTableViewCell.swift; sourceTree = "<group>"; };
@@ -1305,6 +1309,9 @@
 		E645E2A21EF7ABC9001AA189 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C560B2591F0D1EF8000E893E /* CleanStore-Bridging-Header.h */,
+				C560B25A1F0D1EF9000E893E /* SWRevealViewController.h */,
+				C560B25B1F0D1EF9000E893E /* SWRevealViewController.m */,
 				E645E2A51EF7D06A001AA189 /* KBRoundedButton.swift */,
 				E6F6BD6C1F037E1100E43C3D /* UIView+Extension.swift */,
 				E6F6BD6E1F03AAC700E43C3D /* TZSegmentedControl.swift */,
@@ -2165,6 +2172,7 @@
 					E65B18E11EB98F0000237163 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = B7TG5G5JSN;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -2529,6 +2537,7 @@
 				C51430371F087AF500A401DC /* TVShowDetailsRouter.swift in Sources */,
 				E60BA8261F026B9C00215DA6 /* MoviesConfigurator.swift in Sources */,
 				E63D7CEA1EDD4AFC0033F7ED /* MeRouter.swift in Sources */,
+				C560B25C1F0D1EF9000E893E /* SWRevealViewController.m in Sources */,
 				E65A66B81EF3BD4700A3FE16 /* ProfileSettingsViewModel.swift in Sources */,
 				E65B194C1EB9D4EF00237163 /* ArtistsInteractor.swift in Sources */,
 				C5B6D69D1F074FF9002E5A96 /* MoviesDetailsHeaderView.swift in Sources */,
@@ -2753,6 +2762,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = B7TG5G5JSN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2762,6 +2772,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co8xis.agency.ibeacon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CleanStore/App/Common/CleanStore-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -2772,6 +2784,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = B7TG5G5JSN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2781,6 +2794,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co8xis.agency.ibeacon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CleanStore/App/Common/CleanStore-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
