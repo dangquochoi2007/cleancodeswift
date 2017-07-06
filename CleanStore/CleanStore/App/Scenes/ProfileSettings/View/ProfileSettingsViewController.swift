@@ -8,6 +8,9 @@
 
 import UIKit
 
+// ## 0c0d0f
+// ## 111215
+// ## 9f56dc
 protocol ProfileSettingsViewControllerInput: ProfileSettingsPresenterOutput {
 
 }
@@ -55,7 +58,7 @@ final class ProfileSettingsViewController: UIViewController {
 
         super.viewDidLoad()
 
-        doSomethingOnLoad()
+        configureControllerWhenLoad()
     }
 
 
@@ -74,6 +77,10 @@ final class ProfileSettingsViewController: UIViewController {
         profileSettingTableView.showsVerticalScrollIndicator = false
         profileSettingTableView.showsHorizontalScrollIndicator = false
         profileSettingTableView.register(ProfileSettingsTableViewCell.nib, forCellReuseIdentifier: ProfileSettingsTableViewCell.nibName)
+        profileSettingTableView.rowHeight = UITableViewAutomaticDimension
+        profileSettingTableView.estimatedRowHeight = 60
+        profileSettingTableView.separatorStyle = .none
+        profileSettingTableView.tableHeaderView = ProfileSettingsHeaderView.fromNib()
     }
 }
 

@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 1" translatesAutoresizingMaskIntoConstraints="NO" id="N12-f8-EV2">
-                        <rect key="frame" x="6" y="32" width="40" height="40"/>
+                        <rect key="frame" x="30" y="32" width="40" height="40"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="IoV-Bo-yCt"/>
@@ -27,7 +27,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mf-ab-o7q">
-                        <rect key="frame" x="58" y="8" width="284" height="88"/>
+                        <rect key="frame" x="82" y="8" width="260" height="88"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <attributedString key="attributedText">
                             <fragment content="You">
@@ -80,7 +80,7 @@
                     <constraint firstAttribute="bottom" secondItem="9mf-ab-o7q" secondAttribute="bottom" constant="8" id="Fhq-HB-mIJ"/>
                     <constraint firstItem="9mf-ab-o7q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="HbM-ZA-mIM"/>
                     <constraint firstItem="9mf-ab-o7q" firstAttribute="leading" secondItem="N12-f8-EV2" secondAttribute="trailing" constant="12" id="RPy-9b-JXa"/>
-                    <constraint firstItem="N12-f8-EV2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="bdi-Vp-KJM"/>
+                    <constraint firstItem="N12-f8-EV2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="bdi-Vp-KJM"/>
                     <constraint firstAttribute="trailing" secondItem="9mf-ab-o7q" secondAttribute="trailing" constant="8" id="uBw-Dd-cZb"/>
                     <constraint firstItem="N12-f8-EV2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="32" id="uYb-w3-19p"/>
                 </constraints>
