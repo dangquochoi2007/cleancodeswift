@@ -67,6 +67,14 @@ final class ProfileSettingsViewController: UIViewController {
 
         output.doSomething()
     }
+    
+    func configureControllerWhenLoad() {
+        profileSettingTableView.delegate = self
+        profileSettingTableView.dataSource = self
+        profileSettingTableView.showsVerticalScrollIndicator = false
+        profileSettingTableView.showsHorizontalScrollIndicator = false
+        profileSettingTableView.register(ProfileSettingsTableViewCell.nib, forCellReuseIdentifier: ProfileSettingsTableViewCell.nibName)
+    }
 }
 
 
@@ -80,5 +88,24 @@ extension ProfileSettingsViewController: ProfileSettingsViewControllerInput {
     func displaySomething(viewModel: ProfileSettingsViewModel) {
 
         // TODO: Update UI
+    }
+}
+
+
+extension ProfileSettingsViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProfileSettingsTableViewCell.nibName, for: indexPath) as! ProfileSettingsTableViewCell
+        
+        return cell
     }
 }

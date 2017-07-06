@@ -6,4 +6,15 @@
 //  Copyright © 2017 hoi. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+
+class ProfileSettingsHeaderView: UIView {
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
+    
+}
