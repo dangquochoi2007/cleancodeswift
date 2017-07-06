@@ -88,7 +88,14 @@ extension SVMenuViewController:UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-
+        switch menuItems[indexPath.row] {
+        case .PROFILE:
+            let frontViewController = ProfileSettingsViewController()
+            self.revealViewController().pushFrontViewController(frontViewController, animated: true)
+        default:
+            break
+            
+        }
     }
     
 }

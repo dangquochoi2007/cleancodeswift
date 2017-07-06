@@ -159,19 +159,16 @@ final class LiveTVViewController: UIViewController {
     
     
     func configureRightMenuBarButton() {
-        let mainMenuImage = UIImage(named: "artboard_ico")
-        let mainMenuBarButton = UIBarButtonItem(image: mainMenuImage, style: .plain, target: self, action: #selector(MainMenuTapped))
-
-        //optionButton.action = something (put your action here)
-        self.navigationItem.leftBarButtonItem = mainMenuBarButton
+        
+        if self.revealViewController() != nil {
+            let mainMenuImage = UIImage(named: "artboard_ico")
+            let mainMenuBarButton = UIBarButtonItem(image: mainMenuImage, style: .plain, target: self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
+            self.navigationItem.leftBarButtonItem = mainMenuBarButton
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
     }
     
-    
-    func MainMenuTapped(sender: UIButton) {
-        let menuViewController = SVMenuViewController()
-        let navigationMenu = UISideMenuNavigationController(rootViewController: menuViewController)
-        self.present(navigationMenu, animated: true, completion: nil)
-    }
+   
     
   
     
