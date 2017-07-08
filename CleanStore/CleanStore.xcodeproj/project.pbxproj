@@ -49,6 +49,18 @@
 		C558B9171EED95E0007D9E3D /* iBeaconReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558B9151EED95E0007D9E3D /* iBeaconReceiveViewController.swift */; };
 		C558B9181EED95E0007D9E3D /* iBeaconReceiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C558B9161EED95E0007D9E3D /* iBeaconReceiveViewController.xib */; };
 		C560B25C1F0D1EF9000E893E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C560B25B1F0D1EF9000E893E /* SWRevealViewController.m */; };
+		C56958731F106BF30048F100 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = C569586B1F106BF30048F100 /* .gitkeep */; };
+		C56958741F106BF30048F100 /* SJContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C569586C1F106BF30048F100 /* SJContentView.swift */; };
+		C56958751F106BF30048F100 /* SJSegmentedScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C569586D1F106BF30048F100 /* SJSegmentedScrollView.swift */; };
+		C56958761F106BF30048F100 /* SJSegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C569586E1F106BF30048F100 /* SJSegmentedViewController.swift */; };
+		C56958771F106BF30048F100 /* SJSegmentTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C569586F1F106BF30048F100 /* SJSegmentTab.swift */; };
+		C56958781F106BF30048F100 /* SJSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56958701F106BF30048F100 /* SJSegmentView.swift */; };
+		C56958791F106BF30048F100 /* SJShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56958711F106BF30048F100 /* SJShadow.swift */; };
+		C569587A1F106BF30048F100 /* SJUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56958721F106BF30048F100 /* SJUtil.swift */; };
+		C56958811F1073370048F100 /* LiveTVTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56958801F1073370048F100 /* LiveTVTableHeaderView.swift */; };
+		C56958831F1073470048F100 /* LiveTVTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C56958821F1073470048F100 /* LiveTVTableHeaderView.xib */; };
+		C56958891F109B1B0048F100 /* WBSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56958871F109B1B0048F100 /* WBSegmentControl.swift */; };
+		C569588A1F109B1B0048F100 /* WBSegments.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56958881F109B1B0048F100 /* WBSegments.swift */; };
 		C5857B711F068792007B4DA9 /* MoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5857B6F1F068792007B4DA9 /* MoviesCollectionViewCell.swift */; };
 		C5B6D68D1F07246E002E5A96 /* TouchMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5B6D68C1F07246E002E5A96 /* TouchMovieViewController.xib */; };
 		C5B6D6911F07251A002E5A96 /* TouchMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6D68F1F07251A002E5A96 /* TouchMovieTableViewCell.swift */; };
@@ -316,6 +328,18 @@
 		C560B2591F0D1EF8000E893E /* CleanStore-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CleanStore-Bridging-Header.h"; sourceTree = "<group>"; };
 		C560B25A1F0D1EF9000E893E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		C560B25B1F0D1EF9000E893E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		C569586B1F106BF30048F100 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		C569586C1F106BF30048F100 /* SJContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJContentView.swift; sourceTree = "<group>"; };
+		C569586D1F106BF30048F100 /* SJSegmentedScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJSegmentedScrollView.swift; sourceTree = "<group>"; };
+		C569586E1F106BF30048F100 /* SJSegmentedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJSegmentedViewController.swift; sourceTree = "<group>"; };
+		C569586F1F106BF30048F100 /* SJSegmentTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJSegmentTab.swift; sourceTree = "<group>"; };
+		C56958701F106BF30048F100 /* SJSegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJSegmentView.swift; sourceTree = "<group>"; };
+		C56958711F106BF30048F100 /* SJShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJShadow.swift; sourceTree = "<group>"; };
+		C56958721F106BF30048F100 /* SJUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJUtil.swift; sourceTree = "<group>"; };
+		C56958801F1073370048F100 /* LiveTVTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTVTableHeaderView.swift; sourceTree = "<group>"; };
+		C56958821F1073470048F100 /* LiveTVTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveTVTableHeaderView.xib; sourceTree = "<group>"; };
+		C56958871F109B1B0048F100 /* WBSegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBSegmentControl.swift; sourceTree = "<group>"; };
+		C56958881F109B1B0048F100 /* WBSegments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBSegments.swift; sourceTree = "<group>"; };
 		C5857B6F1F068792007B4DA9 /* MoviesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewCell.swift; sourceTree = "<group>"; };
 		C5B6D68C1F07246E002E5A96 /* TouchMovieViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouchMovieViewController.xib; sourceTree = "<group>"; };
 		C5B6D68F1F07251A002E5A96 /* TouchMovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchMovieTableViewCell.swift; sourceTree = "<group>"; };
@@ -800,6 +824,38 @@
 				C558B90B1EEACCD6007D9E3D /* iBeaconReceiveWorker.swift */,
 			);
 			path = Worker;
+			sourceTree = "<group>";
+		};
+		C56958691F106BF30048F100 /* SJSegmentedScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				C569586A1F106BF30048F100 /* Classes */,
+			);
+			path = SJSegmentedScrollView;
+			sourceTree = "<group>";
+		};
+		C569586A1F106BF30048F100 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C569586B1F106BF30048F100 /* .gitkeep */,
+				C569586C1F106BF30048F100 /* SJContentView.swift */,
+				C569586D1F106BF30048F100 /* SJSegmentedScrollView.swift */,
+				C569586E1F106BF30048F100 /* SJSegmentedViewController.swift */,
+				C569586F1F106BF30048F100 /* SJSegmentTab.swift */,
+				C56958701F106BF30048F100 /* SJSegmentView.swift */,
+				C56958711F106BF30048F100 /* SJShadow.swift */,
+				C56958721F106BF30048F100 /* SJUtil.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C56958861F109B1B0048F100 /* WBSegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				C56958871F109B1B0048F100 /* WBSegmentControl.swift */,
+				C56958881F109B1B0048F100 /* WBSegments.swift */,
+			);
+			path = WBSegmentControl;
 			sourceTree = "<group>";
 		};
 		C5B6D68E1F0724BA002E5A96 /* UIView */ = {
@@ -1321,6 +1377,8 @@
 				E62B31851F06110600F42EDE /* SideMenuManager.swift */,
 				E62B31861F06110600F42EDE /* SideMenuTransition.swift */,
 				E62B31871F06110600F42EDE /* UISideMenuNavigationController.swift */,
+				C56958861F109B1B0048F100 /* WBSegmentControl */,
+				C56958691F106BF30048F100 /* SJSegmentedScrollView */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -2070,6 +2128,8 @@
 			children = (
 				E6F6BD5A1F035F2E00E43C3D /* LiveTVTableViewCell.swift */,
 				E6F6BD5B1F035F2E00E43C3D /* LiveTVTableViewCell.xib */,
+				C56958801F1073370048F100 /* LiveTVTableHeaderView.swift */,
+				C56958821F1073470048F100 /* LiveTVTableHeaderView.xib */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -2230,6 +2290,7 @@
 				C5B6D69F1F07500B002E5A96 /* MoviesDetailsHeaderView.xib in Resources */,
 				C5E4004C1F0416A100876F86 /* Lato-SemiboldItalic.ttf in Resources */,
 				C5B6D6921F07251A002E5A96 /* TouchMovieTableViewCell.xib in Resources */,
+				C56958831F1073470048F100 /* LiveTVTableHeaderView.xib in Resources */,
 				C5B6D68D1F07246E002E5A96 /* TouchMovieViewController.xib in Resources */,
 				E6F6BD671F0369F200E43C3D /* WatchListMoviesCollectionViewCell.xib in Resources */,
 				E65A66891EF3B5A100A3FE16 /* SignUpViewController.xib in Resources */,
@@ -2264,6 +2325,7 @@
 				E626965A1F0B34C900980FFE /* ProfileSettingsTableViewCell.xib in Resources */,
 				C514304D1F08A86500A401DC /* MoviesDetailsTableViewCell.xib in Resources */,
 				E6F6BD6B1F036A1100E43C3D /* WatchListTVShowsCollectionViewCellCollectionViewCell.xib in Resources */,
+				C56958731F106BF30048F100 /* .gitkeep in Resources */,
 				E63D7CF71EDD58820033F7ED /* MeTableViewCell.xib in Resources */,
 				E65A66871EF3980700A3FE16 /* SignInViewController.xib in Resources */,
 				C5E4003D1F0416A100876F86 /* Lato-Black.ttf in Resources */,
@@ -2499,6 +2561,7 @@
 				E608ABAE1EE00AAE00FED38D /* ArtistsView.swift in Sources */,
 				E65A66801EF397E300A3FE16 /* SignInInteractor.swift in Sources */,
 				E65A666B1EF397DC00A3FE16 /* SignUpPresenter.swift in Sources */,
+				C569588A1F109B1B0048F100 /* WBSegments.swift in Sources */,
 				C51430341F087AF500A401DC /* TVShowDetailsConfigurator.swift in Sources */,
 				E65DD6501EDEC3B70091CA3C /* Parsable.swift in Sources */,
 				E65A66851EF397E300A3FE16 /* SignInWorker.swift in Sources */,
@@ -2508,6 +2571,7 @@
 				E6F6BD5C1F035F2E00E43C3D /* LiveTVTableViewCell.swift in Sources */,
 				E68D2DCC1EDBD6F10084F01C /* iBeaconConfigurator.swift in Sources */,
 				C51430351F087AF500A401DC /* TVShowDetailsInteractor.swift in Sources */,
+				C56958771F106BF30048F100 /* SJSegmentTab.swift in Sources */,
 				E60BA7E41F026B6A00215DA6 /* SupportConfigurator.swift in Sources */,
 				E68D2DD11EDBD6F10084F01C /* iBeaconViewModel.swift in Sources */,
 				E645E2A61EF7D06A001AA189 /* KBRoundedButton.swift in Sources */,
@@ -2551,16 +2615,19 @@
 				E608ABB61EE0132300FED38D /* ImageMemoryStore.swift in Sources */,
 				E65DD63B1EDE66A80091CA3C /* Promotion.swift in Sources */,
 				E65DD6441EDEB1B00091CA3C /* PromotionWorker.swift in Sources */,
+				C569587A1F106BF30048F100 /* SJUtil.swift in Sources */,
 				E60BA7E91F026B6A00215DA6 /* SupportViewModel.swift in Sources */,
 				E65DD6401EDEB0710091CA3C /* PromotionAPIStore.swift in Sources */,
 				E65A666C1EF397DC00A3FE16 /* SignUpRouter.swift in Sources */,
 				E661C0A71F050C44009CAFB0 /* MoviesDetailsPresenter.swift in Sources */,
 				E68D2DD71EDBDCA10084F01C /* iBeaconViewController.swift in Sources */,
 				E65DD64C1EDEBDC90091CA3C /* URLRequest+JSON.swift in Sources */,
+				C56958791F106BF30048F100 /* SJShadow.swift in Sources */,
 				E68D2DCF1EDBD6F10084F01C /* iBeaconRouter.swift in Sources */,
 				E661C0BF1F050C4C009CAFB0 /* TouchMovieViewController.swift in Sources */,
 				E60BA8121F026B9000215DA6 /* TVShowsPresenter.swift in Sources */,
 				E65A66831EF397E300A3FE16 /* SignInViewController.swift in Sources */,
+				C56958741F106BF30048F100 /* SJContentView.swift in Sources */,
 				E65A66A21EF3BD3F00A3FE16 /* FeedsViewModel.swift in Sources */,
 				E65A66A11EF3BD3F00A3FE16 /* FeedsViewController.swift in Sources */,
 				E661C0AB1F050C44009CAFB0 /* MoviesDetailsWorker.swift in Sources */,
@@ -2572,6 +2639,7 @@
 				E60BA8141F026B9000215DA6 /* TVShowsViewController.swift in Sources */,
 				E60BA82B1F026B9C00215DA6 /* MoviesViewModel.swift in Sources */,
 				C558B9111EEACCD6007D9E3D /* iBeaconReceiveViewModel.swift in Sources */,
+				C56958891F109B1B0048F100 /* WBSegmentControl.swift in Sources */,
 				E68D2DD21EDBD6F10084F01C /* iBeaconWorker.swift in Sources */,
 				C5857B711F068792007B4DA9 /* MoviesCollectionViewCell.swift in Sources */,
 				E63D7CE71EDD4AFC0033F7ED /* MeConfigurator.swift in Sources */,
@@ -2601,18 +2669,22 @@
 				C51430581F08B84600A401DC /* RecommandationsCollectionViewCell.swift in Sources */,
 				E63D7CE91EDD4AFC0033F7ED /* MePresenter.swift in Sources */,
 				E63D7CED1EDD4AFC0033F7ED /* MeWorker.swift in Sources */,
+				C56958761F106BF30048F100 /* SJSegmentedViewController.swift in Sources */,
 				E65A667F1EF397E300A3FE16 /* SignInConfigurator.swift in Sources */,
 				E65DD6421EDEB0CF0091CA3C /* PromotionStoreProtocol.swift in Sources */,
+				C56958751F106BF30048F100 /* SJSegmentedScrollView.swift in Sources */,
 				C558B90E1EEACCD6007D9E3D /* iBeaconReceivePresenter.swift in Sources */,
 				E661C0C11F050C4C009CAFB0 /* TouchMovieWorker.swift in Sources */,
 				E65A66841EF397E300A3FE16 /* SignInViewModel.swift in Sources */,
 				E63D7CEC1EDD4AFC0033F7ED /* MeViewModel.swift in Sources */,
 				E65A666F1EF397DC00A3FE16 /* SignUpWorker.swift in Sources */,
 				E65A66811EF397E300A3FE16 /* SignInPresenter.swift in Sources */,
+				C56958781F106BF30048F100 /* SJSegmentView.swift in Sources */,
 				E60BA83E1F026BA900215DA6 /* WatchListsPresenter.swift in Sources */,
 				E65B195D1EB9DD8000237163 /* Artist.swift in Sources */,
 				E60BA7E81F026B6A00215DA6 /* SupportViewController.swift in Sources */,
 				E65DD6591EDED63F0091CA3C /* ArtistsStoreProtocol.swift in Sources */,
+				C56958811F1073370048F100 /* LiveTVTableHeaderView.swift in Sources */,
 				C51430391F087AF500A401DC /* TVShowDetailsViewModel.swift in Sources */,
 				E60BA8111F026B9000215DA6 /* TVShowsInteractor.swift in Sources */,
 			);

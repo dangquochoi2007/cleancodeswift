@@ -40,6 +40,7 @@ final class LiveTVViewController: UIViewController {
         tableView.backgroundColor = self.liveTVBackgroundColor
         tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         tableView.tableHeaderView = self.segmentControl
+        
         return tableView
     }()
     
