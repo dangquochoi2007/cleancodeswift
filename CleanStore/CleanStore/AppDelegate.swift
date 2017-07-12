@@ -25,9 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: screen.bounds)
         self.window?.makeKeyAndVisible()
         
-        let revealController = SWRevealViewController(rearViewController: SVMenuViewController(), frontViewController: CustomTabbarController())
-        
-        self.window?.rootViewController = revealController
+//        let revealController = SWRevealViewController(rearViewController: SVMenuViewController(), frontViewController: CustomTabbarController())
+//        
+        self.window?.rootViewController = iBeaconReceiveViewController()
         application.statusBarStyle = .lightContent
         
   

@@ -201,6 +201,7 @@
 		E65B195D1EB9DD8000237163 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B195C1EB9DD8000237163 /* Artist.swift */; };
 		E65B195F1EB9DEBD00237163 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B195E1EB9DEBD00237163 /* Strings.swift */; };
 		E65B19611EB9E3FC00237163 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B19601EB9E3FC00237163 /* User.swift */; };
+		E65B27721F147CAD00461D32 /* KBCircledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B27711F147CAD00461D32 /* KBCircledButton.swift */; };
 		E65DD6371EDE63CB0091CA3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E65DD6361EDE63CB0091CA3C /* GoogleService-Info.plist */; };
 		E65DD63B1EDE66A80091CA3C /* Promotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD63A1EDE66A80091CA3C /* Promotion.swift */; };
 		E65DD6401EDEB0710091CA3C /* PromotionAPIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DD63F1EDEB0710091CA3C /* PromotionAPIStore.swift */; };
@@ -476,6 +477,7 @@
 		E65B195C1EB9DD8000237163 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		E65B195E1EB9DEBD00237163 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		E65B19601EB9E3FC00237163 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E65B27711F147CAD00461D32 /* KBCircledButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBCircledButton.swift; sourceTree = "<group>"; };
 		E65DD6361EDE63CB0091CA3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E65DD63A1EDE66A80091CA3C /* Promotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promotion.swift; sourceTree = "<group>"; };
 		E65DD63F1EDEB0710091CA3C /* PromotionAPIStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionAPIStore.swift; sourceTree = "<group>"; };
@@ -1312,6 +1314,7 @@
 				C560B2591F0D1EF8000E893E /* CleanStore-Bridging-Header.h */,
 				C560B25A1F0D1EF9000E893E /* SWRevealViewController.h */,
 				C560B25B1F0D1EF9000E893E /* SWRevealViewController.m */,
+				E65B27711F147CAD00461D32 /* KBCircledButton.swift */,
 				E645E2A51EF7D06A001AA189 /* KBRoundedButton.swift */,
 				E6F6BD6C1F037E1100E43C3D /* UIView+Extension.swift */,
 				E6F6BD6E1F03AAC700E43C3D /* TZSegmentedControl.swift */,
@@ -2589,6 +2592,7 @@
 				E68D2DDA1EDC06030084F01C /* RegionMonitor.swift in Sources */,
 				C51430401F087B6D00A401DC /* TouchTVShowsTableViewCell.swift in Sources */,
 				E60BA7FA1F026B7900215DA6 /* LiveTVConfigurator.swift in Sources */,
+				E65B27721F147CAD00461D32 /* KBCircledButton.swift in Sources */,
 				C5B6D6911F07251A002E5A96 /* TouchMovieTableViewCell.swift in Sources */,
 				E661C0A91F050C44009CAFB0 /* MoviesDetailsViewController.swift in Sources */,
 				E60BA7FE1F026B7900215DA6 /* LiveTVViewController.swift in Sources */,
