@@ -11,8 +11,12 @@ import UIKit
 struct iBeaconReceiveViewModel {
     struct iBeaconSpot {
         struct Request {
-            static let uuid: String = "B88173F8-5680-4C39-B95C-534CB46B4E7A"
+            
+//            static let uuid: String = "f7826da6-4fa2-4e98-8024-bc5b71e0893e"
+            //PYUm
+            static let uuid: String = "f7826da6-4fa2-4e98-8024-bc5b71e0893e"
             static let beaconIdentifier = "ibeacon.co8xis"
+            //
         }
     }
 }
