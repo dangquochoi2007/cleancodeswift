@@ -8,6 +8,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Black.ttf">
+            <string>Lato-Black</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -15,35 +23,153 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="film" translatesAutoresizingMaskIntoConstraints="NO" id="Bak-QL-Pzn">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover-film" translatesAutoresizingMaskIntoConstraints="NO" id="Bak-QL-Pzn">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="300" id="Pqk-oy-OFK"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P8E-hS-Skj">
                     <rect key="frame" x="0.0" y="302" width="375" height="248"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogI-Uk-Amf">
+                            <rect key="frame" x="45" y="-7" width="295" height="14"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Movie">
+                                    <attributes>
+                                        <color key="NSColor" red="0.93725490196078431" green="0.10196078431372549" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" size="12" name=".SFNSText"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content=" ">
+                                    <attributes>
+                                        <font key="NSFont" size="12" name=".SFNSText"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="2015">
+                                    <attributes>
+                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" size="12" name=".SFNSText"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAX MAB FURRY ROAD" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6MA-Xf-GsE">
+                            <rect key="frame" x="45" y="15" width="295" height="86.5"/>
+                            <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="36"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action, Adventure, Sci-Fi   -  2h  -  14 May 2015" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eS9-rY-T0w">
+                            <rect key="frame" x="45" y="126" width="295" height="15"/>
+                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12.5"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="likes_ico" translatesAutoresizingMaskIntoConstraints="NO" id="tJD-fD-xBt">
+                            <rect key="frame" x="45" y="191" width="15" height="15"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="0.4039215686" green="0.41176470590000003" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="15" id="gBb-06-58S"/>
+                                <constraint firstAttribute="height" constant="15" id="lIz-Gs-ton"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.251 likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imC-dE-UAr">
+                            <rect key="frame" x="68" y="191" width="57" height="15"/>
+                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
+                            <color key="textColor" red="0.40392156862745099" green="0.41176470588235292" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Comment_ico-1" translatesAutoresizingMaskIntoConstraints="NO" id="IHk-B5-5Lf">
+                            <rect key="frame" x="45" y="218" width="15" height="15"/>
+                            <color key="tintColor" red="0.4039215686" green="0.41176470590000003" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+200 comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOi-Wb-yxT">
+                            <rect key="frame" x="68" y="218" width="86" height="15"/>
+                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
+                            <color key="textColor" red="0.4039215686" green="0.41176470590000003" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="tJD-fD-xBt" firstAttribute="leading" secondItem="eS9-rY-T0w" secondAttribute="leading" id="3X8-ou-zIL"/>
+                        <constraint firstItem="imC-dE-UAr" firstAttribute="height" secondItem="tJD-fD-xBt" secondAttribute="height" id="3aW-BT-wPL"/>
+                        <constraint firstItem="imC-dE-UAr" firstAttribute="leading" secondItem="tJD-fD-xBt" secondAttribute="trailing" constant="8" id="4A2-ru-BBa"/>
+                        <constraint firstItem="6MA-Xf-GsE" firstAttribute="leading" secondItem="ogI-Uk-Amf" secondAttribute="leading" id="9bf-4E-93d"/>
+                        <constraint firstItem="IHk-B5-5Lf" firstAttribute="height" secondItem="tJD-fD-xBt" secondAttribute="height" id="A3q-8B-RE3"/>
+                        <constraint firstItem="eS9-rY-T0w" firstAttribute="top" secondItem="6MA-Xf-GsE" secondAttribute="bottom" constant="24.5" id="Pbp-F3-JxO"/>
+                        <constraint firstAttribute="trailing" secondItem="ogI-Uk-Amf" secondAttribute="trailing" constant="35" id="Rom-mq-tBe"/>
+                        <constraint firstItem="SOi-Wb-yxT" firstAttribute="height" secondItem="IHk-B5-5Lf" secondAttribute="height" id="XIl-6b-2Se"/>
+                        <constraint firstItem="IHk-B5-5Lf" firstAttribute="leading" secondItem="tJD-fD-xBt" secondAttribute="leading" id="Z53-yd-e4J"/>
+                        <constraint firstItem="SOi-Wb-yxT" firstAttribute="centerY" secondItem="IHk-B5-5Lf" secondAttribute="centerY" id="ZdC-HX-FaV"/>
+                        <constraint firstItem="ogI-Uk-Amf" firstAttribute="leading" secondItem="P8E-hS-Skj" secondAttribute="leading" constant="45" id="ajU-rY-sn0"/>
+                        <constraint firstItem="eS9-rY-T0w" firstAttribute="trailing" secondItem="6MA-Xf-GsE" secondAttribute="trailing" id="ayc-il-Nb4"/>
+                        <constraint firstItem="tJD-fD-xBt" firstAttribute="top" secondItem="eS9-rY-T0w" secondAttribute="bottom" constant="50" id="c0n-Br-BnU"/>
+                        <constraint firstItem="6MA-Xf-GsE" firstAttribute="trailing" secondItem="ogI-Uk-Amf" secondAttribute="trailing" id="h0R-y4-osW"/>
+                        <constraint firstItem="IHk-B5-5Lf" firstAttribute="width" secondItem="tJD-fD-xBt" secondAttribute="width" id="hGj-in-OeA"/>
+                        <constraint firstItem="SOi-Wb-yxT" firstAttribute="leading" secondItem="IHk-B5-5Lf" secondAttribute="trailing" constant="8" id="js7-RK-RdZ"/>
+                        <constraint firstItem="IHk-B5-5Lf" firstAttribute="top" secondItem="tJD-fD-xBt" secondAttribute="bottom" constant="12" id="khR-hz-cyY"/>
+                        <constraint firstItem="6MA-Xf-GsE" firstAttribute="top" secondItem="ogI-Uk-Amf" secondAttribute="bottom" constant="8" id="oWi-xM-TrP"/>
+                        <constraint firstItem="imC-dE-UAr" firstAttribute="centerY" secondItem="tJD-fD-xBt" secondAttribute="centerY" id="vWe-pO-OiT"/>
+                        <constraint firstItem="eS9-rY-T0w" firstAttribute="leading" secondItem="6MA-Xf-GsE" secondAttribute="leading" id="yJF-u4-PUI"/>
+                    </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axa-l5-G24">
+                    <rect key="frame" x="0.0" y="32" width="70" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="ENw-Jw-ATh"/>
+                        <constraint firstAttribute="height" constant="55" id="Rdr-oG-nyK"/>
+                    </constraints>
+                    <state key="normal" image="back_ico"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ton-vb-OPu">
+                    <rect key="frame" x="305" y="32" width="70" height="55"/>
+                    <state key="normal" image="watchlist_ico"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEW-Q6-MHk">
+                    <rect key="frame" x="165" y="129" width="45" height="45"/>
+                    <state key="normal" image="play_movies_ico"/>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="axa-l5-G24" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0KA-yd-N9G"/>
+                <constraint firstItem="mEW-Q6-MHk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="129" id="1eB-E2-RFP"/>
                 <constraint firstAttribute="bottom" secondItem="P8E-hS-Skj" secondAttribute="bottom" id="1x2-uV-gxE"/>
+                <constraint firstItem="ton-vb-OPu" firstAttribute="height" secondItem="axa-l5-G24" secondAttribute="height" id="2JM-xZ-fFR"/>
                 <constraint firstItem="P8E-hS-Skj" firstAttribute="top" secondItem="Bak-QL-Pzn" secondAttribute="bottom" constant="2" id="3qt-Hm-fVV"/>
                 <constraint firstItem="P8E-hS-Skj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Bp6-Zh-Gya"/>
+                <constraint firstItem="mEW-Q6-MHk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="EjA-wi-Swf"/>
+                <constraint firstItem="ton-vb-OPu" firstAttribute="bottom" secondItem="axa-l5-G24" secondAttribute="bottom" id="QE1-NZ-zq0"/>
+                <constraint firstAttribute="trailing" secondItem="ton-vb-OPu" secondAttribute="trailing" id="SnX-ka-KeA"/>
+                <constraint firstItem="ton-vb-OPu" firstAttribute="width" secondItem="axa-l5-G24" secondAttribute="width" id="fnk-Gs-EqE"/>
+                <constraint firstItem="ogI-Uk-Amf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="295" id="ge8-aN-kOp"/>
                 <constraint firstItem="Bak-QL-Pzn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kGy-lm-alr"/>
                 <constraint firstItem="Bak-QL-Pzn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mzW-OT-Glr"/>
                 <constraint firstAttribute="trailing" secondItem="Bak-QL-Pzn" secondAttribute="trailing" id="nbJ-ge-vH9"/>
                 <constraint firstAttribute="trailing" secondItem="P8E-hS-Skj" secondAttribute="trailing" id="oqv-Db-Dvf"/>
+                <constraint firstItem="axa-l5-G24" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="32" id="sBg-ai-NBE"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backButton" destination="axa-l5-G24" id="kVY-12-VAd"/>
+            </connections>
             <point key="canvasLocation" x="25.5" y="52"/>
         </view>
     </objects>
     <resources>
-        <image name="film" width="125" height="186"/>
+        <image name="Comment_ico-1" width="15" height="13"/>
+        <image name="back_ico" width="20" height="13"/>
+        <image name="cover-film" width="350" height="281"/>
+        <image name="likes_ico" width="17" height="15"/>
+        <image name="play_movies_ico" width="45" height="45"/>
+        <image name="watchlist_ico" width="23" height="20"/>
     </resources>
 </document>

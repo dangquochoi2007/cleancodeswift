@@ -94,6 +94,9 @@ Next: 2016</string>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.066666666666666666" green="0.070588235294117646" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="coverImageView" destination="5Rj-HL-sfF" id="mCx-aP-KWm"/>
+            </connections>
             <point key="canvasLocation" x="23.5" y="70"/>
         </tableViewCell>
     </objects>

@@ -80,7 +80,16 @@ final class ProfileSettingsViewController: UIViewController {
         profileSettingTableView.rowHeight = UITableViewAutomaticDimension
         profileSettingTableView.estimatedRowHeight = 60
         profileSettingTableView.separatorStyle = .none
-        profileSettingTableView.tableHeaderView = ProfileSettingsHeaderView.fromNib()
+        
+        if let profileSettingsHeaderView = ProfileSettingsHeaderView.fromNib() as? ProfileSettingsHeaderView {
+            profileSettingsHeaderView.backButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+            profileSettingTableView.tableHeaderView = profileSettingsHeaderView
+        }
+    
+    }
+    
+    func buttonAction(sender: UIButton!) {
+       dismiss(animated: true, completion: nil)
     }
 }
 
@@ -107,7 +116,7 @@ extension ProfileSettingsViewController: UITableViewDelegate, UITableViewDataSou
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

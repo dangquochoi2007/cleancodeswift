@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="125" height="187"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="film" translatesAutoresizingMaskIntoConstraints="NO" id="Zi5-2F-gIf">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="film" translatesAutoresizingMaskIntoConstraints="NO" id="Zi5-2F-gIf">
                         <rect key="frame" x="0.0" y="0.0" width="125" height="187"/>
                     </imageView>
                 </subviews>
@@ -31,6 +31,9 @@
                 <constraint firstAttribute="bottom" secondItem="Zi5-2F-gIf" secondAttribute="bottom" id="ziT-Z0-75j"/>
             </constraints>
             <size key="customSize" width="68" height="147"/>
+            <connections>
+                <outlet property="movieCoverImageView" destination="Zi5-2F-gIf" id="2PJ-jN-vqG"/>
+            </connections>
             <point key="canvasLocation" x="42.5" y="102.5"/>
         </collectionViewCell>
     </objects>

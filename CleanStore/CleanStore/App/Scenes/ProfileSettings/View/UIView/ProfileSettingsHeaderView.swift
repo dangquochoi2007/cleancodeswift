@@ -11,6 +11,9 @@ import UIKit
 
 class ProfileSettingsHeaderView: UIView {
     
+    @IBOutlet weak var backButton: UIButton!
+    
+    
     let profileForegroundColor = UIColor(red: 159.0/255.0, green: 86.0/255.0, blue: 220.0/255.0, alpha: 1)
     let profileBackgroundColor = UIColor(red: 22.0/255.0, green: 23.0/255.0, blue: 27.0/255.0, alpha: 0.95)
     @IBOutlet weak var profileSegmentControl: TZSegmentedControl!

@@ -10,6 +10,9 @@ import UIKit
 
 class RecommandationsCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var movieCoverImageView: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

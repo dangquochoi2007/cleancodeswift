@@ -9,6 +9,9 @@
 import UIKit
 
 class MoviesDetailsHeaderView: UIView {
+    
+    @IBOutlet weak var backButton: UIButton!
+    
 
     /*
     // Only override draw() if you perform custom drawing.

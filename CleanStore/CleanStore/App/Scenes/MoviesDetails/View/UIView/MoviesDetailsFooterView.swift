@@ -11,12 +11,16 @@ import UIKit
 class MoviesDetailsFooterView: UIView {
     
     
+    
+    
     @IBOutlet weak var recommandCollectionView: UICollectionView!
 
-    
+    lazy var moviesLikeAlsoList: [String] = ["Movie_#5","Movie_#4", "Movie_#2"] 
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        configureViewWhenAwake()
     }
     
     func configureViewWhenAwake() {
@@ -36,13 +40,20 @@ extension MoviesDetailsFooterView: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 21
+        return moviesLikeAlsoList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecommandationsCollectionViewCell.nibName, for: indexPath) as! RecommandationsCollectionViewCell
+        
+        cell.movieCoverImageView.image = UIImage(named: moviesLikeAlsoList[indexPath.row])
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+    
+        return CGSize(width: 138, height: collectionView.frame.size.height)
+    }
     
 }

@@ -24,6 +24,8 @@ final class TVShowsViewController: UIViewController {
     
     var tvShowsBackgrounColor: UIColor = UIColor(red: 22.0/255.0, green: 23.0/255.0, blue: 27.0/255.0, alpha: 0.95)
     var tvShowsForegroundColor: UIColor = UIColor(red: 26.0/255.0, green: 206.0/255.0, blue: 239.0/255.0, alpha: 1)
+    
+    var liveTvList: [LiveTV] = LiveTVStore.shareInstance.items()
 
     lazy var tvShowsTableView: UITableView = { [unowned self] in
         
@@ -145,16 +147,13 @@ final class TVShowsViewController: UIViewController {
     
     
     func configureRightMenuBarButton() {
-        let mainMenuImage = UIImage(named: "artboard_ico")
-        let mainMenuBarButton = UIBarButtonItem(image: mainMenuImage, style: .plain, target: self, action: #selector(MainMenuTapped))
         
-        //optionButton.action = something (put your action here)
-        self.navigationItem.leftBarButtonItem = mainMenuBarButton
-    }
-    
-    
-    func MainMenuTapped(sender: UIButton) {
-        
+        if self.revealViewController() != nil {
+            let mainMenuImage = UIImage(named: "artboard_ico")
+            let mainMenuBarButton = UIBarButtonItem(image: mainMenuImage, style: .plain, target: self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
+            self.navigationItem.leftBarButtonItem = mainMenuBarButton
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
     }
 }
 
@@ -191,11 +190,12 @@ extension TVShowsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return liveTvList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TVShowsTableViewCell.nibName, for: indexPath) as! TVShowsTableViewCell
+        cell.liveTv = liveTvList[indexPath.row]
         return cell
     }
     

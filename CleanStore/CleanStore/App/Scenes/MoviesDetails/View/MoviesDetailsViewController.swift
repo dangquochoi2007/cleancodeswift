@@ -79,9 +79,17 @@ final class MoviesDetailsViewController: UIViewController {
         movieDetailTable.separatorStyle = UITableViewCellSeparatorStyle.none
         movieDetailTable.showsVerticalScrollIndicator = false
         movieDetailTable.showsHorizontalScrollIndicator = false
-        movieDetailTable.tableHeaderView = MoviesDetailsHeaderView.fromNib()
+        
+        let moviesDetailsHeaderView = MoviesDetailsHeaderView.fromNib()
+        moviesDetailsHeaderView.backButton.addTarget(self, action: #selector(MoviesDetailsViewController.buttonAction), for: .touchUpInside)
+        movieDetailTable.tableHeaderView = moviesDetailsHeaderView
         movieDetailTable.tableFooterView = MoviesDetailsFooterView.fromNib()
     }
+    
+    func buttonAction(sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 
